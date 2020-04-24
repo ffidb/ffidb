@@ -1,0 +1,33 @@
+# This is free and unencumbered software released into the public domain.
+
+require 'ffidb'
+require 'open-uri'
+require 'rake'
+
+task default: %i[update]
+
+task :update do
+  URI.open('https://curl.haxx.se/docs/releases.csv') do |file|
+    stable_version = nil
+    file.each_line do |line|
+      _, version, _, date = line.chomp.split(';')
+      version = version.split('.').map(&:to_i)
+      version << 0 if version.size == 2
+      stable_version = version if !stable_version || (version <=> stable_version).positive?
+
+      puts "ln -sfh #{version.join('.')} #{version[0..1].join('.')}" if version.last.zero?
+      puts "mkdir -p #{version.join('.')}"
+      puts "touch #{version.join('.')}/.gitkeep"
+      puts
+    end
+    puts "ln -sfh #{stable_version.join('.')} stable"
+  end
+end
+
+task :download do
+  # TODO
+end
+
+task :parse do
+  # TODO
+end

@@ -1,0 +1,32 @@
+# This is free and unencumbered software released into the public domain.
+
+require 'ffidb'
+require 'open-uri'
+require 'rake'
+
+task default: %i[update]
+
+task :update do
+  URI.open('https://www.musl-libc.org/releases/') do |file|
+    stable_version = nil
+    file.read.scan(/<a href="[^"]+">musl-(\d+).(\d+).(\d+).tar.gz<\/a>/) do |matches|
+      version = matches.map { |m| m&.to_i }.compact
+      version << 0 if version.size == 2
+      stable_version = version if !stable_version || (version <=> stable_version).positive?
+
+      puts "ln -sfh #{version.join('.')} #{version[0..1].join('.')}" if version.last.zero?
+      puts "mkdir -p #{version.join('.')}"
+      puts "touch #{version.join('.')}/.gitkeep"
+      puts
+    end
+    puts "ln -sfh #{stable_version.join('.')} stable"
+  end
+end
+
+task :download do
+  # TODO
+end
+
+task :parse do
+  # TODO
+end
