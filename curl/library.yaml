@@ -1,0 +1,23 @@
+--- !library
+name: curl
+summary: Command-line tool and library for transferring data with URLs
+website: https://curl.haxx.se
+source: https://github.com/curl/curl
+packages:
+  alpine: libcurl
+  debian: libcurl4
+  homebrew: curl
+  ubuntu: libcurl4
+objects:
+  - libcurl.so.4
+  - libcurl.4.dylib
+headers:
+  - curl.h
+  - curlver.h
+  - easy.h
+  - mprintf.h
+  - multi.h
+  - stdcheaders.h
+  - system.h
+  - typecheck-gcc.h
+  - urlapi.h

@@ -1,0 +1,13 @@
+--- !library
+name: musl
+summary: A lightweight implementation of the standard C library
+website: https://musl.libc.org
+source: https://git.musl-libc.org/cgit/musl
+packages:
+  alpine: musl
+  debian: musl
+  homebrew:
+  ubuntu: musl
+objects:
+  - libc.so
+headers:
