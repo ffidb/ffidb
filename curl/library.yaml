@@ -8,6 +8,7 @@ packages:
   debian: libcurl4
   homebrew: curl
   ubuntu: libcurl4
+dlopen: curl
 objects:
   - libcurl.so.4
   - libcurl.4.dylib

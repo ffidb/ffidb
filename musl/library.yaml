@@ -8,6 +8,7 @@ packages:
   debian: musl
   homebrew:
   ubuntu: musl
+dlopen: c
 objects:
   - libc.so
 headers:
