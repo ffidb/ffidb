@@ -1,0 +1,21 @@
+--- !library
+name: lua
+summary: Powerful, efficient, lightweight, and embeddable scripting language
+website: https://www.lua.org
+source: https://github.com/lua/lua
+packages:
+  alpine: lua5.3-libs
+  debian: liblua5.3-0
+  homebrew: lua
+  ubuntu: liblua5.3-0
+dlopen: lua
+objects:
+  - liblua5.3.so.0    # Debian, Ubuntu
+  - liblua-5.3.so.0   # Alpine
+  - liblua.5.3.dylib  # Homebrew
+headers:
+  - lua.h
+  - lua.hpp
+  - luaconf.h
+  - lualib.h
+  - lauxlib.h

@@ -10,8 +10,8 @@ packages:
   ubuntu: libcurl4
 dlopen: curl
 objects:
-  - libcurl.so.4
-  - libcurl.4.dylib
+  - libcurl.so.4     # Alpine, Debian, Ubuntu
+  - libcurl.4.dylib  # Homebrew
 headers:
   - curl.h
   - curlver.h

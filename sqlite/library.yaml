@@ -1,0 +1,17 @@
+--- !library
+name: sqlite
+summary: A small, fast, self-contained, and full-featured SQL database engine
+website: https://www.sqlite.org
+source: https://github.com/sqlite/sqlite
+packages:
+  alpine: sqlite-libs
+  debian: libsqlite3-0
+  homebrew: sqlite
+  ubuntu: libsqlite3-0
+dlopen: sqlite3
+objects:
+  - libsqlite3.so.0     # Alpine, Debian, Ubuntu
+  - libsqlite3.0.dylib  # Homebrew
+headers:
+  - sqlite3.h
+  - sqlite3ext.h

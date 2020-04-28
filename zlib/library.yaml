@@ -10,8 +10,8 @@ packages:
   ubuntu: zlib1g
 dlopen: z
 objects:
-  - libz.so.1
-  - libz.1.dylib
+  - libz.so.1     # Alpine, Debian, Ubuntu
+  - libz.1.dylib  # Homebrew
 headers:
   - zlib.h
   - zconf.h
