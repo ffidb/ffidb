@@ -1,0 +1,34 @@
+# This is free and unencumbered software released into the public domain.
+
+#require 'ffidb'
+require 'open-uri'
+require 'rake'
+
+task default: %i[update]
+
+task :update do
+  URI.open('https://www.sqlite.org/chronology.html') do |file|
+    stable_version = nil
+    file.read.scan(/<a href="releaselog\/[\d_]+\.html">(\d+).(\d+).?(\d+)?.?(\d+)?<\/a>/) do |matches|
+      version = matches.map { |m| m&.to_i }.compact
+      version << 0 if version.size == 2
+      next if (version <=> [3, 10, 0]).negative? # ignore old versions
+      stable_version = version if !stable_version || (version <=> stable_version).positive?
+
+      puts "ln -sfh #{version.join('.')} #{version[0..1].join('.')}" if version.last.zero?
+      puts "mkdir -p #{version.join('.')}"
+      puts "touch #{version.join('.')}/.gitkeep"
+      puts
+      break if version == [3, 10, 0] # ignore old versions
+    end
+    puts "ln -sfh #{stable_version.join('.')} stable"
+  end
+end
+
+task :download do
+  # TODO
+end
+
+task :parse do
+  # TODO
+end
