@@ -10,8 +10,26 @@ packages:
   ubuntu: zlib1g
 dlopen: z
 objects:
-  - libz.so.1     # Alpine, Debian, Ubuntu
-  - libz.1.dylib  # Homebrew
+  - libz.so.1         # Alpine, Debian, Ubuntu
+  - libz.1.dylib      # Homebrew
 headers:
   - zlib.h
   - zconf.h
+configure:
+  - STDC
+  - STDC99
+  - HAVE_UNISTD_H
+  - HAVE_STDARG_H
+  - z_off_t=off_t
+  - z_size_t=size_t
+exclude:
+  - zError            # undocumented
+  - inflateSyncPoint  # undocumented
+  - get_crc_table     # undocumented
+  - inflateUndermine  # undocumented
+  - inflateValidate   # undocumented
+  - inflateCodesUsed  # undocumented
+  - inflateResetKeep  # undocumented
+  - deflateResetKeep  # undocumented
+  - gzopen_w          # undocumented
+  - gzvprintf         # undocumented
