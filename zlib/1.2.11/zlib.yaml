@@ -1,0 +1,796 @@
+# uLong adler32(uLong, const Bytef *, uInt)
+--- !function
+name: adler32
+type: unsigned long
+parameters:
+  adler: unsigned long
+  buf: const unsigned char *
+  len: unsigned int
+definition:
+  file: zlib.h
+  line: 1688
+
+# uLong adler32_combine(uLong, uLong, off_t)
+--- !function
+name: adler32_combine
+type: unsigned long
+parameters:
+  _1: unsigned long
+  _2: unsigned long
+  _3: off_t
+definition:
+  file: zlib.h
+  line: 1876
+
+# uLong adler32_z(uLong, const Bytef *, size_t)
+--- !function
+name: adler32_z
+type: unsigned long
+parameters:
+  adler: unsigned long
+  buf: const unsigned char *
+  len: size_t
+definition:
+  file: zlib.h
+  line: 1707
+
+# int compress(Bytef *, uLongf *, const Bytef *, uLong)
+--- !function
+name: compress
+type: int
+parameters:
+  dest: unsigned char *
+  destLen: unsigned long *
+  source: const unsigned char *
+  sourceLen: unsigned long
+definition:
+  file: zlib.h
+  line: 1227
+
+# int compress2(Bytef *, uLongf *, const Bytef *, uLong, int)
+--- !function
+name: compress2
+type: int
+parameters:
+  dest: unsigned char *
+  destLen: unsigned long *
+  source: const unsigned char *
+  sourceLen: unsigned long
+  level: int
+definition:
+  file: zlib.h
+  line: 1242
+
+# uLong compressBound(uLong)
+--- !function
+name: compressBound
+type: unsigned long
+parameters:
+  sourceLen: unsigned long
+definition:
+  file: zlib.h
+  line: 1258
+
+# uLong crc32(uLong, const Bytef *, uInt)
+--- !function
+name: crc32
+type: unsigned long
+parameters:
+  crc: unsigned long
+  buf: const unsigned char *
+  len: unsigned int
+definition:
+  file: zlib.h
+  line: 1725
+
+# uLong crc32_combine(uLong, uLong, off_t)
+--- !function
+name: crc32_combine
+type: unsigned long
+parameters:
+  _1: unsigned long
+  _2: unsigned long
+  _3: off_t
+definition:
+  file: zlib.h
+  line: 1877
+
+# uLong crc32_z(uLong, const Bytef *, size_t)
+--- !function
+name: crc32_z
+type: unsigned long
+parameters:
+  adler: unsigned long
+  buf: const unsigned char *
+  len: size_t
+definition:
+  file: zlib.h
+  line: 1742
+
+# int deflate(z_streamp, int)
+--- !function
+name: deflate
+type: int
+parameters:
+  strm: struct z_stream_s *
+  flush: int
+definition:
+  file: zlib.h
+  line: 250
+
+# uLong deflateBound(z_streamp, uLong)
+--- !function
+name: deflateBound
+type: unsigned long
+parameters:
+  strm: struct z_stream_s *
+  sourceLen: unsigned long
+definition:
+  file: zlib.h
+  line: 760
+
+# int deflateCopy(z_streamp, z_streamp)
+--- !function
+name: deflateCopy
+type: int
+parameters:
+  dest: struct z_stream_s *
+  source: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 677
+
+# int deflateEnd(z_streamp)
+--- !function
+name: deflateEnd
+type: int
+parameters:
+  strm: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 363
+
+# int deflateGetDictionary(z_streamp, Bytef *, uInt *)
+--- !function
+name: deflateGetDictionary
+type: int
+parameters:
+  strm: struct z_stream_s *
+  dictionary: unsigned char *
+  dictLength: unsigned int *
+definition:
+  file: zlib.h
+  line: 655
+
+# int deflateInit2_(z_streamp, int, int, int, int, int, const char *, int)
+--- !function
+name: deflateInit2_
+type: int
+parameters:
+  strm: struct z_stream_s *
+  level: int
+  method: int
+  windowBits: int
+  memLevel: int
+  strategy: int
+  version: const char *
+  stream_size: int
+definition:
+  file: zlib.h
+  line: 1768
+
+# int deflateInit_(z_streamp, int, const char *, int)
+--- !function
+name: deflateInit_
+type: int
+parameters:
+  strm: struct z_stream_s *
+  level: int
+  version: const char *
+  stream_size: int
+definition:
+  file: zlib.h
+  line: 1764
+
+# int deflateParams(z_streamp, int, int)
+--- !function
+name: deflateParams
+type: int
+parameters:
+  strm: struct z_stream_s *
+  level: int
+  strategy: int
+definition:
+  file: zlib.h
+  line: 706
+
+# int deflatePending(z_streamp, unsigned int *, int *)
+--- !function
+name: deflatePending
+type: int
+parameters:
+  strm: struct z_stream_s *
+  pending: unsigned int *
+  bits: int *
+definition:
+  file: zlib.h
+  line: 775
+
+# int deflatePrime(z_streamp, int, int)
+--- !function
+name: deflatePrime
+type: int
+parameters:
+  strm: struct z_stream_s *
+  bits: int
+  value: int
+definition:
+  file: zlib.h
+  line: 790
+
+# int deflateReset(z_streamp)
+--- !function
+name: deflateReset
+type: int
+parameters:
+  strm: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 695
+
+# int deflateSetDictionary(z_streamp, const Bytef *, uInt)
+--- !function
+name: deflateSetDictionary
+type: int
+parameters:
+  strm: struct z_stream_s *
+  dictionary: const unsigned char *
+  dictLength: unsigned int
+definition:
+  file: zlib.h
+  line: 611
+
+# int deflateSetHeader(z_streamp, gz_headerp)
+--- !function
+name: deflateSetHeader
+type: int
+parameters:
+  strm: struct z_stream_s *
+  head: struct gz_header_s *
+definition:
+  file: zlib.h
+  line: 807
+
+# int deflateTune(z_streamp, int, int, int, int)
+--- !function
+name: deflateTune
+type: int
+parameters:
+  strm: struct z_stream_s *
+  good_length: int
+  max_lazy: int
+  nice_length: int
+  max_chain: int
+definition:
+  file: zlib.h
+  line: 743
+
+# int gzbuffer(gzFile, unsigned int)
+--- !function
+name: gzbuffer
+type: int
+parameters:
+  file: struct gzFile_s *
+  size: unsigned int
+definition:
+  file: zlib.h
+  line: 1363
+
+# void gzclearerr(gzFile)
+--- !function
+name: gzclearerr
+type: void
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1671
+
+# int gzclose(gzFile)
+--- !function
+name: gzclose
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1630
+
+# int gzclose_r(gzFile)
+--- !function
+name: gzclose_r
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1643
+
+# int gzclose_w(gzFile)
+--- !function
+name: gzclose_w
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1644
+
+# int gzdirect(gzFile)
+--- !function
+name: gzdirect
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1609
+
+# gzFile gzdopen(int, const char *)
+--- !function
+name: gzdopen
+type: struct gzFile_s *
+parameters:
+  fd: int
+  mode: const char *
+definition:
+  file: zlib.h
+  line: 1340
+
+# int gzeof(gzFile)
+--- !function
+name: gzeof
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1594
+
+# const char * gzerror(gzFile, int *)
+--- !function
+name: gzerror
+type: const char *
+parameters:
+  file: struct gzFile_s *
+  errnum: int *
+definition:
+  file: zlib.h
+  line: 1655
+
+# int gzflush(gzFile, int)
+--- !function
+name: gzflush
+type: int
+parameters:
+  file: struct gzFile_s *
+  flush: int
+definition:
+  file: zlib.h
+  line: 1531
+
+# size_t gzfread(voidp, size_t, size_t, gzFile)
+--- !function
+name: gzfread
+type: size_t
+parameters:
+  buf: void *
+  size: size_t
+  nitems: size_t
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1420
+
+# size_t gzfwrite(voidpc, size_t, size_t, gzFile)
+--- !function
+name: gzfwrite
+type: size_t
+parameters:
+  buf: const void *
+  size: size_t
+  nitems: size_t
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1454
+
+# int gzgetc(gzFile)
+--- !function
+name: gzgetc
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1510
+
+# int gzgetc_(gzFile)
+--- !function
+name: gzgetc_
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1822
+
+# char * gzgets(gzFile, char *, int)
+--- !function
+name: gzgets
+type: char *
+parameters:
+  file: struct gzFile_s *
+  buf: char *
+  len: int
+definition:
+  file: zlib.h
+  line: 1491
+
+# off_t gzoffset(gzFile)
+--- !function
+name: gzoffset
+type: off_t
+parameters:
+  _1: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1875
+
+# gzFile gzopen(const char *, const char *)
+--- !function
+name: gzopen
+type: struct gzFile_s *
+parameters:
+  _1: const char *
+  _2: const char *
+definition:
+  file: zlib.h
+  line: 1872
+
+# int gzprintf(gzFile, const char *, ...)
+--- !function
+name: gzprintf
+type: int
+parameters:
+  file: struct gzFile_s *
+  format: const char *
+definition:
+  file: zlib.h
+  line: 1468
+
+# int gzputc(gzFile, int)
+--- !function
+name: gzputc
+type: int
+parameters:
+  file: struct gzFile_s *
+  c: int
+definition:
+  file: zlib.h
+  line: 1504
+
+# int gzputs(gzFile, const char *)
+--- !function
+name: gzputs
+type: int
+parameters:
+  file: struct gzFile_s *
+  s: const char *
+definition:
+  file: zlib.h
+  line: 1483
+
+# int gzread(gzFile, voidp, unsigned int)
+--- !function
+name: gzread
+type: int
+parameters:
+  file: struct gzFile_s *
+  buf: void *
+  len: unsigned int
+definition:
+  file: zlib.h
+  line: 1390
+
+# int gzrewind(gzFile)
+--- !function
+name: gzrewind
+type: int
+parameters:
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1566
+
+# off_t gzseek(gzFile, off_t, int)
+--- !function
+name: gzseek
+type: off_t
+parameters:
+  _1: struct gzFile_s *
+  _2: off_t
+  _3: int
+definition:
+  file: zlib.h
+  line: 1873
+
+# int gzsetparams(gzFile, int, int)
+--- !function
+name: gzsetparams
+type: int
+parameters:
+  file: struct gzFile_s *
+  level: int
+  strategy: int
+definition:
+  file: zlib.h
+  line: 1379
+
+# off_t gztell(gzFile)
+--- !function
+name: gztell
+type: off_t
+parameters:
+  _1: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1874
+
+# int gzungetc(int, gzFile)
+--- !function
+name: gzungetc
+type: int
+parameters:
+  c: int
+  file: struct gzFile_s *
+definition:
+  file: zlib.h
+  line: 1519
+
+# int gzwrite(gzFile, voidpc, unsigned int)
+--- !function
+name: gzwrite
+type: int
+parameters:
+  file: struct gzFile_s *
+  buf: const void *
+  len: unsigned int
+definition:
+  file: zlib.h
+  line: 1446
+
+# int inflate(z_streamp, int)
+--- !function
+name: inflate
+type: int
+parameters:
+  strm: struct z_stream_s *
+  flush: int
+definition:
+  file: zlib.h
+  line: 400
+
+# int inflateBack(z_streamp, in_func, void *, out_func, void *)
+--- !function
+name: inflateBack
+type: int
+parameters:
+  strm: struct z_stream_s *
+  in: unsigned int (*)(void *, unsigned char **)
+  in_desc: void *
+  out: int (*)(void *, unsigned char *, unsigned int)
+  out_desc: void *
+definition:
+  file: zlib.h
+  line: 1096
+
+# int inflateBackEnd(z_streamp)
+--- !function
+name: inflateBackEnd
+type: int
+parameters:
+  strm: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 1166
+
+# int inflateBackInit_(z_streamp, int, unsigned char *, const char *, int)
+--- !function
+name: inflateBackInit_
+type: int
+parameters:
+  strm: struct z_stream_s *
+  windowBits: int
+  window: unsigned char *
+  version: const char *
+  stream_size: int
+definition:
+  file: zlib.h
+  line: 1774
+
+# int inflateCopy(z_streamp, z_streamp)
+--- !function
+name: inflateCopy
+type: int
+parameters:
+  dest: struct z_stream_s *
+  source: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 941
+
+# int inflateEnd(z_streamp)
+--- !function
+name: inflateEnd
+type: int
+parameters:
+  strm: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 520
+
+# int inflateGetDictionary(z_streamp, Bytef *, uInt *)
+--- !function
+name: inflateGetDictionary
+type: int
+parameters:
+  strm: struct z_stream_s *
+  dictionary: unsigned char *
+  dictLength: unsigned int *
+definition:
+  file: zlib.h
+  line: 907
+
+# int inflateGetHeader(z_streamp, gz_headerp)
+--- !function
+name: inflateGetHeader
+type: int
+parameters:
+  strm: struct z_stream_s *
+  head: struct gz_header_s *
+definition:
+  file: zlib.h
+  line: 1030
+
+# int inflateInit2_(z_streamp, int, const char *, int)
+--- !function
+name: inflateInit2_
+type: int
+parameters:
+  strm: struct z_stream_s *
+  windowBits: int
+  version: const char *
+  stream_size: int
+definition:
+  file: zlib.h
+  line: 1772
+
+# int inflateInit_(z_streamp, const char *, int)
+--- !function
+name: inflateInit_
+type: int
+parameters:
+  strm: struct z_stream_s *
+  version: const char *
+  stream_size: int
+definition:
+  file: zlib.h
+  line: 1766
+
+# long inflateMark(z_streamp)
+--- !function
+name: inflateMark
+type: long
+parameters:
+  strm: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 1002
+
+# int inflatePrime(z_streamp, int, int)
+--- !function
+name: inflatePrime
+type: int
+parameters:
+  strm: struct z_stream_s *
+  bits: int
+  value: int
+definition:
+  file: zlib.h
+  line: 981
+
+# int inflateReset(z_streamp)
+--- !function
+name: inflateReset
+type: int
+parameters:
+  strm: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 957
+
+# int inflateReset2(z_streamp, int)
+--- !function
+name: inflateReset2
+type: int
+parameters:
+  strm: struct z_stream_s *
+  windowBits: int
+definition:
+  file: zlib.h
+  line: 967
+
+# int inflateSetDictionary(z_streamp, const Bytef *, uInt)
+--- !function
+name: inflateSetDictionary
+type: int
+parameters:
+  strm: struct z_stream_s *
+  dictionary: const unsigned char *
+  dictLength: unsigned int
+definition:
+  file: zlib.h
+  line: 884
+
+# int inflateSync(z_streamp)
+--- !function
+name: inflateSync
+type: int
+parameters:
+  strm: struct z_stream_s *
+definition:
+  file: zlib.h
+  line: 922
+
+# int uncompress(Bytef *, uLongf *, const Bytef *, uLong)
+--- !function
+name: uncompress
+type: int
+parameters:
+  dest: unsigned char *
+  destLen: unsigned long *
+  source: const unsigned char *
+  sourceLen: unsigned long
+definition:
+  file: zlib.h
+  line: 1265
+
+# int uncompress2(Bytef *, uLongf *, const Bytef *, uLong *)
+--- !function
+name: uncompress2
+type: int
+parameters:
+  dest: unsigned char *
+  destLen: unsigned long *
+  source: const unsigned char *
+  sourceLen: unsigned long *
+definition:
+  file: zlib.h
+  line: 1283
+
+# uLong zlibCompileFlags(void)
+--- !function
+name: zlibCompileFlags
+type: unsigned long
+definition:
+  file: zlib.h
+  line: 1174
+
+# const char * zlibVersion(void)
+--- !function
+name: zlibVersion
+type: const char *
+definition:
+  file: zlib.h
+  line: 220
