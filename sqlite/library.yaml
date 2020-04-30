@@ -14,4 +14,7 @@ objects:
   - libsqlite3.0.dylib  # Homebrew
 headers:
   - sqlite3.h
-  - sqlite3ext.h
+exclude:
+  - sqlite3_win32_set_directory    # Windows only
+  - sqlite3_win32_set_directory8   # Windows only
+  - sqlite3_win32_set_directory16  # Windows only
