@@ -1,0 +1,1038 @@
+# int lua_absindex(lua_State *, int)
+--- !function
+name: lua_absindex
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 158
+
+# void lua_arith(lua_State *, int)
+--- !function
+name: lua_arith
+type: void
+parameters:
+  L: struct lua_State *
+  op: int
+definition:
+  file: lua.h
+  line: 211
+
+# lua_CFunction lua_atpanic(lua_State *, lua_CFunction)
+--- !function
+name: lua_atpanic
+type: int (*)(struct lua_State *)
+parameters:
+  L: struct lua_State *
+  panicf: int (*)(struct lua_State *)
+definition:
+  file: lua.h
+  line: 149
+
+# void lua_callk(lua_State *, int, int, lua_KContext, lua_KFunction)
+--- !function
+name: lua_callk
+type: void
+parameters:
+  L: struct lua_State *
+  nargs: int
+  nresults: int
+  ctx: long
+  k: int (*)(struct lua_State *, int, long)
+definition:
+  file: lua.h
+  line: 272
+
+# int lua_checkstack(lua_State *, int)
+--- !function
+name: lua_checkstack
+type: int
+parameters:
+  L: struct lua_State *
+  n: int
+definition:
+  file: lua.h
+  line: 164
+
+# void lua_close(lua_State *)
+--- !function
+name: lua_close
+type: void
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 146
+
+# int lua_compare(lua_State *, int, int, int)
+--- !function
+name: lua_compare
+type: int
+parameters:
+  L: struct lua_State *
+  idx1: int
+  idx2: int
+  op: int
+definition:
+  file: lua.h
+  line: 218
+
+# void lua_concat(lua_State *, int)
+--- !function
+name: lua_concat
+type: void
+parameters:
+  L: struct lua_State *
+  n: int
+definition:
+  file: lua.h
+  line: 323
+
+# void lua_copy(lua_State *, int, int)
+--- !function
+name: lua_copy
+type: void
+parameters:
+  L: struct lua_State *
+  fromidx: int
+  toidx: int
+definition:
+  file: lua.h
+  line: 163
+
+# void lua_createtable(lua_State *, int, int)
+--- !function
+name: lua_createtable
+type: void
+parameters:
+  L: struct lua_State *
+  narr: int
+  nrec: int
+definition:
+  file: lua.h
+  line: 249
+
+# int lua_dump(lua_State *, lua_Writer, void *, int)
+--- !function
+name: lua_dump
+type: int
+parameters:
+  L: struct lua_State *
+  writer: int (*)(struct lua_State *, const void *, unsigned long, void *)
+  data: void *
+  strip: int
+definition:
+  file: lua.h
+  line: 283
+
+# int lua_error(lua_State *)
+--- !function
+name: lua_error
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 319
+
+# int lua_gc(lua_State *, int, int)
+--- !function
+name: lua_gc
+type: int
+parameters:
+  L: struct lua_State *
+  what: int
+  data: int
+definition:
+  file: lua.h
+  line: 312
+
+# lua_Alloc lua_getallocf(lua_State *, void **)
+--- !function
+name: lua_getallocf
+type: void *(*)(void *, void *, unsigned long, unsigned long)
+parameters:
+  L: struct lua_State *
+  ud: void **
+definition:
+  file: lua.h
+  line: 328
+
+# int lua_getfield(lua_State *, int, const char *)
+--- !function
+name: lua_getfield
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+  k: const char *
+definition:
+  file: lua.h
+  line: 243
+
+# int lua_getglobal(lua_State *, const char *)
+--- !function
+name: lua_getglobal
+type: int
+parameters:
+  L: struct lua_State *
+  name: const char *
+definition:
+  file: lua.h
+  line: 241
+
+# lua_Hook lua_gethook(lua_State *)
+--- !function
+name: lua_gethook
+type: void (*)(struct lua_State *, struct lua_Debug *)
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 436
+
+# int lua_gethookcount(lua_State *)
+--- !function
+name: lua_gethookcount
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 438
+
+# int lua_gethookmask(lua_State *)
+--- !function
+name: lua_gethookmask
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 437
+
+# int lua_geti(lua_State *, int, lua_Integer)
+--- !function
+name: lua_geti
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+  n: long long
+definition:
+  file: lua.h
+  line: 244
+
+# int lua_getinfo(lua_State *, const char *, lua_Debug *)
+--- !function
+name: lua_getinfo
+type: int
+parameters:
+  L: struct lua_State *
+  what: const char *
+  ar: struct lua_Debug *
+definition:
+  file: lua.h
+  line: 425
+
+# const char * lua_getlocal(lua_State *, const lua_Debug *, int)
+--- !function
+name: lua_getlocal
+type: const char *
+parameters:
+  L: struct lua_State *
+  ar: const struct lua_Debug *
+  n: int
+definition:
+  file: lua.h
+  line: 426
+
+# int lua_getmetatable(lua_State *, int)
+--- !function
+name: lua_getmetatable
+type: int
+parameters:
+  L: struct lua_State *
+  objindex: int
+definition:
+  file: lua.h
+  line: 251
+
+# int lua_getstack(lua_State *, int, lua_Debug *)
+--- !function
+name: lua_getstack
+type: int
+parameters:
+  L: struct lua_State *
+  level: int
+  ar: struct lua_Debug *
+definition:
+  file: lua.h
+  line: 424
+
+# int lua_gettable(lua_State *, int)
+--- !function
+name: lua_gettable
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 242
+
+# int lua_gettop(lua_State *)
+--- !function
+name: lua_gettop
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 159
+
+# const char * lua_getupvalue(lua_State *, int, int)
+--- !function
+name: lua_getupvalue
+type: const char *
+parameters:
+  L: struct lua_State *
+  funcindex: int
+  n: int
+definition:
+  file: lua.h
+  line: 428
+
+# int lua_getuservalue(lua_State *, int)
+--- !function
+name: lua_getuservalue
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 252
+
+# int lua_iscfunction(lua_State *, int)
+--- !function
+name: lua_iscfunction
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 175
+
+# int lua_isinteger(lua_State *, int)
+--- !function
+name: lua_isinteger
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 176
+
+# int lua_isnumber(lua_State *, int)
+--- !function
+name: lua_isnumber
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 173
+
+# int lua_isstring(lua_State *, int)
+--- !function
+name: lua_isstring
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 174
+
+# int lua_isuserdata(lua_State *, int)
+--- !function
+name: lua_isuserdata
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 177
+
+# int lua_isyieldable(lua_State *)
+--- !function
+name: lua_isyieldable
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 293
+
+# void lua_len(lua_State *, int)
+--- !function
+name: lua_len
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 324
+
+# int lua_load(lua_State *, lua_Reader, void *, const char *, const char *)
+--- !function
+name: lua_load
+type: int
+parameters:
+  L: struct lua_State *
+  reader: const char *(*)(struct lua_State *, void *, unsigned long *)
+  dt: void *
+  chunkname: const char *
+  mode: const char *
+definition:
+  file: lua.h
+  line: 280
+
+# lua_State * lua_newstate(lua_Alloc, void *)
+--- !function
+name: lua_newstate
+type: struct lua_State *
+parameters:
+  f: void *(*)(void *, void *, unsigned long, unsigned long)
+  ud: void *
+definition:
+  file: lua.h
+  line: 145
+
+# lua_State * lua_newthread(lua_State *)
+--- !function
+name: lua_newthread
+type: struct lua_State *
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 147
+
+# void * lua_newuserdata(lua_State *, size_t)
+--- !function
+name: lua_newuserdata
+type: void *
+parameters:
+  L: struct lua_State *
+  sz: size_t
+definition:
+  file: lua.h
+  line: 250
+
+# int lua_next(lua_State *, int)
+--- !function
+name: lua_next
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 321
+
+# int lua_pcallk(lua_State *, int, int, int, lua_KContext, lua_KFunction)
+--- !function
+name: lua_pcallk
+type: int
+parameters:
+  L: struct lua_State *
+  nargs: int
+  nresults: int
+  errfunc: int
+  ctx: long
+  k: int (*)(struct lua_State *, int, long)
+definition:
+  file: lua.h
+  line: 276
+
+# void lua_pushboolean(lua_State *, int)
+--- !function
+name: lua_pushboolean
+type: void
+parameters:
+  L: struct lua_State *
+  b: int
+definition:
+  file: lua.h
+  line: 233
+
+# void lua_pushcclosure(lua_State *, lua_CFunction, int)
+--- !function
+name: lua_pushcclosure
+type: void
+parameters:
+  L: struct lua_State *
+  fn: int (*)(struct lua_State *)
+  n: int
+definition:
+  file: lua.h
+  line: 232
+
+# const char * lua_pushfstring(lua_State *, const char *, ...)
+--- !function
+name: lua_pushfstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  fmt: const char *
+definition:
+  file: lua.h
+  line: 231
+
+# void lua_pushinteger(lua_State *, lua_Integer)
+--- !function
+name: lua_pushinteger
+type: void
+parameters:
+  L: struct lua_State *
+  n: long long
+definition:
+  file: lua.h
+  line: 226
+
+# void lua_pushlightuserdata(lua_State *, void *)
+--- !function
+name: lua_pushlightuserdata
+type: void
+parameters:
+  L: struct lua_State *
+  p: void *
+definition:
+  file: lua.h
+  line: 234
+
+# const char * lua_pushlstring(lua_State *, const char *, size_t)
+--- !function
+name: lua_pushlstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  s: const char *
+  len: size_t
+definition:
+  file: lua.h
+  line: 227
+
+# void lua_pushnil(lua_State *)
+--- !function
+name: lua_pushnil
+type: void
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 224
+
+# void lua_pushnumber(lua_State *, lua_Number)
+--- !function
+name: lua_pushnumber
+type: void
+parameters:
+  L: struct lua_State *
+  n: double
+definition:
+  file: lua.h
+  line: 225
+
+# const char * lua_pushstring(lua_State *, const char *)
+--- !function
+name: lua_pushstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  s: const char *
+definition:
+  file: lua.h
+  line: 228
+
+# int lua_pushthread(lua_State *)
+--- !function
+name: lua_pushthread
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 235
+
+# void lua_pushvalue(lua_State *, int)
+--- !function
+name: lua_pushvalue
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 161
+
+# const char * lua_pushvfstring(lua_State *, const char *, struct __va_list_tag *)
+--- !function
+name: lua_pushvfstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  fmt: const char *
+  argp: va_list
+definition:
+  file: lua.h
+  line: 229
+
+# int lua_rawequal(lua_State *, int, int)
+--- !function
+name: lua_rawequal
+type: int
+parameters:
+  L: struct lua_State *
+  idx1: int
+  idx2: int
+definition:
+  file: lua.h
+  line: 217
+
+# int lua_rawget(lua_State *, int)
+--- !function
+name: lua_rawget
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 245
+
+# int lua_rawgeti(lua_State *, int, lua_Integer)
+--- !function
+name: lua_rawgeti
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+  n: long long
+definition:
+  file: lua.h
+  line: 246
+
+# int lua_rawgetp(lua_State *, int, const void *)
+--- !function
+name: lua_rawgetp
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+  p: const void *
+definition:
+  file: lua.h
+  line: 247
+
+# size_t lua_rawlen(lua_State *, int)
+--- !function
+name: lua_rawlen
+type: size_t
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 185
+
+# void lua_rawset(lua_State *, int)
+--- !function
+name: lua_rawset
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 262
+
+# void lua_rawseti(lua_State *, int, lua_Integer)
+--- !function
+name: lua_rawseti
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+  n: long long
+definition:
+  file: lua.h
+  line: 263
+
+# void lua_rawsetp(lua_State *, int, const void *)
+--- !function
+name: lua_rawsetp
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+  p: const void *
+definition:
+  file: lua.h
+  line: 264
+
+# int lua_resume(lua_State *, lua_State *, int)
+--- !function
+name: lua_resume
+type: int
+parameters:
+  L: struct lua_State *
+  from: struct lua_State *
+  narg: int
+definition:
+  file: lua.h
+  line: 291
+
+# void lua_rotate(lua_State *, int, int)
+--- !function
+name: lua_rotate
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+  n: int
+definition:
+  file: lua.h
+  line: 162
+
+# void lua_setallocf(lua_State *, lua_Alloc, void *)
+--- !function
+name: lua_setallocf
+type: void
+parameters:
+  L: struct lua_State *
+  f: void *(*)(void *, void *, unsigned long, unsigned long)
+  ud: void *
+definition:
+  file: lua.h
+  line: 329
+
+# void lua_setfield(lua_State *, int, const char *)
+--- !function
+name: lua_setfield
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+  k: const char *
+definition:
+  file: lua.h
+  line: 260
+
+# void lua_setglobal(lua_State *, const char *)
+--- !function
+name: lua_setglobal
+type: void
+parameters:
+  L: struct lua_State *
+  name: const char *
+definition:
+  file: lua.h
+  line: 258
+
+# void lua_sethook(lua_State *, lua_Hook, int, int)
+--- !function
+name: lua_sethook
+type: void
+parameters:
+  L: struct lua_State *
+  func: void (*)(struct lua_State *, struct lua_Debug *)
+  mask: int
+  count: int
+definition:
+  file: lua.h
+  line: 435
+
+# void lua_seti(lua_State *, int, lua_Integer)
+--- !function
+name: lua_seti
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+  n: long long
+definition:
+  file: lua.h
+  line: 261
+
+# const char * lua_setlocal(lua_State *, const lua_Debug *, int)
+--- !function
+name: lua_setlocal
+type: const char *
+parameters:
+  L: struct lua_State *
+  ar: const struct lua_Debug *
+  n: int
+definition:
+  file: lua.h
+  line: 427
+
+# int lua_setmetatable(lua_State *, int)
+--- !function
+name: lua_setmetatable
+type: int
+parameters:
+  L: struct lua_State *
+  objindex: int
+definition:
+  file: lua.h
+  line: 265
+
+# void lua_settable(lua_State *, int)
+--- !function
+name: lua_settable
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 259
+
+# void lua_settop(lua_State *, int)
+--- !function
+name: lua_settop
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 160
+
+# const char * lua_setupvalue(lua_State *, int, int)
+--- !function
+name: lua_setupvalue
+type: const char *
+parameters:
+  L: struct lua_State *
+  funcindex: int
+  n: int
+definition:
+  file: lua.h
+  line: 429
+
+# void lua_setuservalue(lua_State *, int)
+--- !function
+name: lua_setuservalue
+type: void
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 266
+
+# int lua_status(lua_State *)
+--- !function
+name: lua_status
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 292
+
+# size_t lua_stringtonumber(lua_State *, const char *)
+--- !function
+name: lua_stringtonumber
+type: size_t
+parameters:
+  L: struct lua_State *
+  s: const char *
+definition:
+  file: lua.h
+  line: 326
+
+# int lua_toboolean(lua_State *, int)
+--- !function
+name: lua_toboolean
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 183
+
+# lua_CFunction lua_tocfunction(lua_State *, int)
+--- !function
+name: lua_tocfunction
+type: int (*)(struct lua_State *)
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 186
+
+# lua_Integer lua_tointegerx(lua_State *, int, int *)
+--- !function
+name: lua_tointegerx
+type: long long
+parameters:
+  L: struct lua_State *
+  idx: int
+  isnum: int *
+definition:
+  file: lua.h
+  line: 182
+
+# const char * lua_tolstring(lua_State *, int, size_t *)
+--- !function
+name: lua_tolstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  idx: int
+  len: size_t *
+definition:
+  file: lua.h
+  line: 184
+
+# lua_Number lua_tonumberx(lua_State *, int, int *)
+--- !function
+name: lua_tonumberx
+type: double
+parameters:
+  L: struct lua_State *
+  idx: int
+  isnum: int *
+definition:
+  file: lua.h
+  line: 181
+
+# const void * lua_topointer(lua_State *, int)
+--- !function
+name: lua_topointer
+type: const void *
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 189
+
+# lua_State * lua_tothread(lua_State *, int)
+--- !function
+name: lua_tothread
+type: struct lua_State *
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 188
+
+# void * lua_touserdata(lua_State *, int)
+--- !function
+name: lua_touserdata
+type: void *
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 187
+
+# int lua_type(lua_State *, int)
+--- !function
+name: lua_type
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lua.h
+  line: 178
+
+# const char * lua_typename(lua_State *, int)
+--- !function
+name: lua_typename
+type: const char *
+parameters:
+  L: struct lua_State *
+  tp: int
+definition:
+  file: lua.h
+  line: 179
+
+# void * lua_upvalueid(lua_State *, int, int)
+--- !function
+name: lua_upvalueid
+type: void *
+parameters:
+  L: struct lua_State *
+  fidx: int
+  n: int
+definition:
+  file: lua.h
+  line: 431
+
+# void lua_upvaluejoin(lua_State *, int, int, int, int)
+--- !function
+name: lua_upvaluejoin
+type: void
+parameters:
+  L: struct lua_State *
+  fidx1: int
+  n1: int
+  fidx2: int
+  n2: int
+definition:
+  file: lua.h
+  line: 432
+
+# const lua_Number * lua_version(lua_State *)
+--- !function
+name: lua_version
+type: const double *
+parameters:
+  L: struct lua_State *
+definition:
+  file: lua.h
+  line: 152
+
+# void lua_xmove(lua_State *, lua_State *, int)
+--- !function
+name: lua_xmove
+type: void
+parameters:
+  from: struct lua_State *
+  to: struct lua_State *
+  n: int
+definition:
+  file: lua.h
+  line: 166
+
+# int lua_yieldk(lua_State *, int, lua_KContext, lua_KFunction)
+--- !function
+name: lua_yieldk
+type: int
+parameters:
+  L: struct lua_State *
+  nresults: int
+  ctx: long
+  k: int (*)(struct lua_State *, int, long)
+definition:
+  file: lua.h
+  line: 289

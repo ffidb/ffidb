@@ -15,7 +15,5 @@ objects:
   - liblua.5.3.dylib  # Homebrew
 headers:
   - lua.h
-  - lua.hpp
-  - luaconf.h
   - lualib.h
   - lauxlib.h

@@ -1,0 +1,119 @@
+# void luaL_openlibs(lua_State *)
+--- !function
+name: luaL_openlibs
+type: void
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 52
+
+# int luaopen_base(lua_State *)
+--- !function
+name: luaopen_base
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 18
+
+# int luaopen_bit32(lua_State *)
+--- !function
+name: luaopen_bit32
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 39
+
+# int luaopen_coroutine(lua_State *)
+--- !function
+name: luaopen_coroutine
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 21
+
+# int luaopen_debug(lua_State *)
+--- !function
+name: luaopen_debug
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 45
+
+# int luaopen_io(lua_State *)
+--- !function
+name: luaopen_io
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 27
+
+# int luaopen_math(lua_State *)
+--- !function
+name: luaopen_math
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 42
+
+# int luaopen_os(lua_State *)
+--- !function
+name: luaopen_os
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 30
+
+# int luaopen_package(lua_State *)
+--- !function
+name: luaopen_package
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 48
+
+# int luaopen_string(lua_State *)
+--- !function
+name: luaopen_string
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 33
+
+# int luaopen_table(lua_State *)
+--- !function
+name: luaopen_table
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 24
+
+# int luaopen_utf8(lua_State *)
+--- !function
+name: luaopen_utf8
+type: int
+parameters:
+  L: struct lua_State *
+definition:
+  file: lualib.h
+  line: 36

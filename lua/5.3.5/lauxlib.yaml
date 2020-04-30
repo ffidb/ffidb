@@ -1,0 +1,499 @@
+# void luaL_addlstring(luaL_Buffer *, const char *, size_t)
+--- !function
+name: luaL_addlstring
+type: void
+parameters:
+  B: struct luaL_Buffer *
+  s: const char *
+  l: size_t
+definition:
+  file: lauxlib.h
+  line: 165
+
+# void luaL_addstring(luaL_Buffer *, const char *)
+--- !function
+name: luaL_addstring
+type: void
+parameters:
+  B: struct luaL_Buffer *
+  s: const char *
+definition:
+  file: lauxlib.h
+  line: 166
+
+# void luaL_addvalue(luaL_Buffer *)
+--- !function
+name: luaL_addvalue
+type: void
+parameters:
+  B: struct luaL_Buffer *
+definition:
+  file: lauxlib.h
+  line: 167
+
+# int luaL_argerror(lua_State *, int, const char *)
+--- !function
+name: luaL_argerror
+type: int
+parameters:
+  L: struct lua_State *
+  arg: int
+  extramsg: const char *
+definition:
+  file: lauxlib.h
+  line: 46
+
+# void luaL_buffinit(lua_State *, luaL_Buffer *)
+--- !function
+name: luaL_buffinit
+type: void
+parameters:
+  L: struct lua_State *
+  B: struct luaL_Buffer *
+definition:
+  file: lauxlib.h
+  line: 163
+
+# char * luaL_buffinitsize(lua_State *, luaL_Buffer *, size_t)
+--- !function
+name: luaL_buffinitsize
+type: char *
+parameters:
+  L: struct lua_State *
+  B: struct luaL_Buffer *
+  sz: size_t
+definition:
+  file: lauxlib.h
+  line: 170
+
+# int luaL_callmeta(lua_State *, int, const char *)
+--- !function
+name: luaL_callmeta
+type: int
+parameters:
+  L: struct lua_State *
+  obj: int
+  e: const char *
+definition:
+  file: lauxlib.h
+  line: 44
+
+# void luaL_checkany(lua_State *, int)
+--- !function
+name: luaL_checkany
+type: void
+parameters:
+  L: struct lua_State *
+  arg: int
+definition:
+  file: lauxlib.h
+  line: 60
+
+# lua_Integer luaL_checkinteger(lua_State *, int)
+--- !function
+name: luaL_checkinteger
+type: long long
+parameters:
+  L: struct lua_State *
+  arg: int
+definition:
+  file: lauxlib.h
+  line: 54
+
+# const char * luaL_checklstring(lua_State *, int, size_t *)
+--- !function
+name: luaL_checklstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  arg: int
+  l: size_t *
+definition:
+  file: lauxlib.h
+  line: 47
+
+# lua_Number luaL_checknumber(lua_State *, int)
+--- !function
+name: luaL_checknumber
+type: double
+parameters:
+  L: struct lua_State *
+  arg: int
+definition:
+  file: lauxlib.h
+  line: 51
+
+# int luaL_checkoption(lua_State *, int, const char *, const char *const *)
+--- !function
+name: luaL_checkoption
+type: int
+parameters:
+  L: struct lua_State *
+  arg: int
+  def: const char *
+  lst: const char *const[]
+definition:
+  file: lauxlib.h
+  line: 70
+
+# void luaL_checkstack(lua_State *, int, const char *)
+--- !function
+name: luaL_checkstack
+type: void
+parameters:
+  L: struct lua_State *
+  sz: int
+  msg: const char *
+definition:
+  file: lauxlib.h
+  line: 58
+
+# void luaL_checktype(lua_State *, int, int)
+--- !function
+name: luaL_checktype
+type: void
+parameters:
+  L: struct lua_State *
+  arg: int
+  t: int
+definition:
+  file: lauxlib.h
+  line: 59
+
+# void * luaL_checkudata(lua_State *, int, const char *)
+--- !function
+name: luaL_checkudata
+type: void *
+parameters:
+  L: struct lua_State *
+  ud: int
+  tname: const char *
+definition:
+  file: lauxlib.h
+  line: 65
+
+# void luaL_checkversion_(lua_State *, lua_Number, size_t)
+--- !function
+name: luaL_checkversion_
+type: void
+parameters:
+  L: struct lua_State *
+  ver: double
+  sz: size_t
+definition:
+  file: lauxlib.h
+  line: 39
+
+# int luaL_error(lua_State *, const char *, ...)
+--- !function
+name: luaL_error
+type: int
+parameters:
+  L: struct lua_State *
+  fmt: const char *
+definition:
+  file: lauxlib.h
+  line: 68
+
+# int luaL_execresult(lua_State *, int)
+--- !function
+name: luaL_execresult
+type: int
+parameters:
+  L: struct lua_State *
+  stat: int
+definition:
+  file: lauxlib.h
+  line: 74
+
+# int luaL_fileresult(lua_State *, int, const char *)
+--- !function
+name: luaL_fileresult
+type: int
+parameters:
+  L: struct lua_State *
+  stat: int
+  fname: const char *
+definition:
+  file: lauxlib.h
+  line: 73
+
+# int luaL_getmetafield(lua_State *, int, const char *)
+--- !function
+name: luaL_getmetafield
+type: int
+parameters:
+  L: struct lua_State *
+  obj: int
+  e: const char *
+definition:
+  file: lauxlib.h
+  line: 43
+
+# int luaL_getsubtable(lua_State *, int, const char *)
+--- !function
+name: luaL_getsubtable
+type: int
+parameters:
+  L: struct lua_State *
+  idx: int
+  fname: const char *
+definition:
+  file: lauxlib.h
+  line: 101
+
+# const char * luaL_gsub(lua_State *, const char *, const char *, const char *)
+--- !function
+name: luaL_gsub
+type: const char *
+parameters:
+  L: struct lua_State *
+  s: const char *
+  p: const char *
+  r: const char *
+definition:
+  file: lauxlib.h
+  line: 96
+
+# lua_Integer luaL_len(lua_State *, int)
+--- !function
+name: luaL_len
+type: long long
+parameters:
+  L: struct lua_State *
+  idx: int
+definition:
+  file: lauxlib.h
+  line: 94
+
+# int luaL_loadbufferx(lua_State *, const char *, size_t, const char *, const char *)
+--- !function
+name: luaL_loadbufferx
+type: int
+parameters:
+  L: struct lua_State *
+  buff: const char *
+  sz: size_t
+  name: const char *
+  mode: const char *
+definition:
+  file: lauxlib.h
+  line: 88
+
+# int luaL_loadfilex(lua_State *, const char *, const char *)
+--- !function
+name: luaL_loadfilex
+type: int
+parameters:
+  L: struct lua_State *
+  filename: const char *
+  mode: const char *
+definition:
+  file: lauxlib.h
+  line: 83
+
+# int luaL_loadstring(lua_State *, const char *)
+--- !function
+name: luaL_loadstring
+type: int
+parameters:
+  L: struct lua_State *
+  s: const char *
+definition:
+  file: lauxlib.h
+  line: 90
+
+# int luaL_newmetatable(lua_State *, const char *)
+--- !function
+name: luaL_newmetatable
+type: int
+parameters:
+  L: struct lua_State *
+  tname: const char *
+definition:
+  file: lauxlib.h
+  line: 62
+
+# lua_State * luaL_newstate(void)
+--- !function
+name: luaL_newstate
+type: struct lua_State *
+definition:
+  file: lauxlib.h
+  line: 92
+
+# lua_Integer luaL_optinteger(lua_State *, int, lua_Integer)
+--- !function
+name: luaL_optinteger
+type: long long
+parameters:
+  L: struct lua_State *
+  arg: int
+  def: long long
+definition:
+  file: lauxlib.h
+  line: 55
+
+# const char * luaL_optlstring(lua_State *, int, const char *, size_t *)
+--- !function
+name: luaL_optlstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  arg: int
+  def: const char *
+  l: size_t *
+definition:
+  file: lauxlib.h
+  line: 49
+
+# lua_Number luaL_optnumber(lua_State *, int, lua_Number)
+--- !function
+name: luaL_optnumber
+type: double
+parameters:
+  L: struct lua_State *
+  arg: int
+  def: double
+definition:
+  file: lauxlib.h
+  line: 52
+
+# char * luaL_prepbuffsize(luaL_Buffer *, size_t)
+--- !function
+name: luaL_prepbuffsize
+type: char *
+parameters:
+  B: struct luaL_Buffer *
+  sz: size_t
+definition:
+  file: lauxlib.h
+  line: 164
+
+# void luaL_pushresult(luaL_Buffer *)
+--- !function
+name: luaL_pushresult
+type: void
+parameters:
+  B: struct luaL_Buffer *
+definition:
+  file: lauxlib.h
+  line: 168
+
+# void luaL_pushresultsize(luaL_Buffer *, size_t)
+--- !function
+name: luaL_pushresultsize
+type: void
+parameters:
+  B: struct luaL_Buffer *
+  sz: size_t
+definition:
+  file: lauxlib.h
+  line: 169
+
+# int luaL_ref(lua_State *, int)
+--- !function
+name: luaL_ref
+type: int
+parameters:
+  L: struct lua_State *
+  t: int
+definition:
+  file: lauxlib.h
+  line: 80
+
+# void luaL_requiref(lua_State *, const char *, lua_CFunction, int)
+--- !function
+name: luaL_requiref
+type: void
+parameters:
+  L: struct lua_State *
+  modname: const char *
+  openf: int (*)(struct lua_State *)
+  glb: int
+definition:
+  file: lauxlib.h
+  line: 106
+
+# void luaL_setfuncs(lua_State *, const luaL_Reg *, int)
+--- !function
+name: luaL_setfuncs
+type: void
+parameters:
+  L: struct lua_State *
+  l: const struct luaL_Reg *
+  nup: int
+definition:
+  file: lauxlib.h
+  line: 99
+
+# void luaL_setmetatable(lua_State *, const char *)
+--- !function
+name: luaL_setmetatable
+type: void
+parameters:
+  L: struct lua_State *
+  tname: const char *
+definition:
+  file: lauxlib.h
+  line: 63
+
+# void * luaL_testudata(lua_State *, int, const char *)
+--- !function
+name: luaL_testudata
+type: void *
+parameters:
+  L: struct lua_State *
+  ud: int
+  tname: const char *
+definition:
+  file: lauxlib.h
+  line: 64
+
+# const char * luaL_tolstring(lua_State *, int, size_t *)
+--- !function
+name: luaL_tolstring
+type: const char *
+parameters:
+  L: struct lua_State *
+  idx: int
+  len: size_t *
+definition:
+  file: lauxlib.h
+  line: 45
+
+# void luaL_traceback(lua_State *, lua_State *, const char *, int)
+--- !function
+name: luaL_traceback
+type: void
+parameters:
+  L: struct lua_State *
+  L1: struct lua_State *
+  msg: const char *
+  level: int
+definition:
+  file: lauxlib.h
+  line: 103
+
+# void luaL_unref(lua_State *, int, int)
+--- !function
+name: luaL_unref
+type: void
+parameters:
+  L: struct lua_State *
+  t: int
+  ref: int
+definition:
+  file: lauxlib.h
+  line: 81
+
+# void luaL_where(lua_State *, int)
+--- !function
+name: luaL_where
+type: void
+parameters:
+  L: struct lua_State *
+  lvl: int
+definition:
+  file: lauxlib.h
+  line: 67
