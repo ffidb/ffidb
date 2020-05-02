@@ -1,0 +1,872 @@
+# XrResult xrAcquireSwapchainImage(XrSwapchain, const XrSwapchainImageAcquireInfo *, uint32_t *)
+--- !function
+name: xrAcquireSwapchainImage
+type: enum XrResult
+parameters:
+  swapchain: struct XrSwapchain_T *
+  acquireInfo: const struct XrSwapchainImageAcquireInfo *
+  index: uint32_t *
+definition:
+  file: openxr.h
+  line: 1134
+
+# XrResult xrApplyHapticFeedback(XrSession, const XrHapticActionInfo *, const XrHapticBaseHeader *)
+--- !function
+name: xrApplyHapticFeedback
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  hapticActionInfo: const struct XrHapticActionInfo *
+  hapticFeedback: const struct XrHapticBaseHeader *
+definition:
+  file: openxr.h
+  line: 1257
+
+# XrResult xrAttachSessionActionSets(XrSession, const XrSessionActionSetsAttachInfo *)
+--- !function
+name: xrAttachSessionActionSets
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  attachInfo: const struct XrSessionActionSetsAttachInfo *
+definition:
+  file: openxr.h
+  line: 1210
+
+# XrResult xrBeginFrame(XrSession, const XrFrameBeginInfo *)
+--- !function
+name: xrBeginFrame
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  frameBeginInfo: const struct XrFrameBeginInfo *
+definition:
+  file: openxr.h
+  line: 1162
+
+# XrResult xrBeginSession(XrSession, const XrSessionBeginInfo *)
+--- !function
+name: xrBeginSession
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  beginInfo: const struct XrSessionBeginInfo *
+definition:
+  file: openxr.h
+  line: 1147
+
+# XrResult xrCreateAction(XrActionSet, const XrActionCreateInfo *, XrAction *)
+--- !function
+name: xrCreateAction
+type: enum XrResult
+parameters:
+  actionSet: struct XrActionSet_T *
+  createInfo: const struct XrActionCreateInfo *
+  action: struct XrAction_T **
+definition:
+  file: openxr.h
+  line: 1198
+
+# XrResult xrCreateActionSet(XrInstance, const XrActionSetCreateInfo *, XrActionSet *)
+--- !function
+name: xrCreateActionSet
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  createInfo: const struct XrActionSetCreateInfo *
+  actionSet: struct XrActionSet_T **
+definition:
+  file: openxr.h
+  line: 1190
+
+# XrResult xrCreateActionSpace(XrSession, const XrActionSpaceCreateInfo *, XrSpace *)
+--- !function
+name: xrCreateActionSpace
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  createInfo: const struct XrActionSpaceCreateInfo *
+  space: struct XrSpace_T **
+definition:
+  file: openxr.h
+  line: 1079
+
+# XrResult xrCreateDebugUtilsMessengerEXT(XrInstance, const XrDebugUtilsMessengerCreateInfoEXT *, XrDebugUtilsMessengerEXT *)
+--- !function
+name: xrCreateDebugUtilsMessengerEXT
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  createInfo: const struct XrDebugUtilsMessengerCreateInfoEXT *
+  messenger: struct XrDebugUtilsMessengerEXT_T **
+definition:
+  file: openxr.h
+  line: 1516
+
+# XrResult xrCreateInstance(const XrInstanceCreateInfo *, XrInstance *)
+--- !function
+name: xrCreateInstance
+type: enum XrResult
+parameters:
+  createInfo: const struct XrInstanceCreateInfo *
+  instance: struct XrInstance_T **
+definition:
+  file: openxr.h
+  line: 1012
+
+# XrResult xrCreateReferenceSpace(XrSession, const XrReferenceSpaceCreateInfo *, XrSpace *)
+--- !function
+name: xrCreateReferenceSpace
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  createInfo: const struct XrReferenceSpaceCreateInfo *
+  space: struct XrSpace_T **
+definition:
+  file: openxr.h
+  line: 1069
+
+# XrResult xrCreateSession(XrInstance, const XrSessionCreateInfo *, XrSession *)
+--- !function
+name: xrCreateSession
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  createInfo: const struct XrSessionCreateInfo *
+  session: struct XrSession_T **
+definition:
+  file: openxr.h
+  line: 1055
+
+# XrResult xrCreateSpatialAnchorMSFT(XrSession, const XrSpatialAnchorCreateInfoMSFT *, XrSpatialAnchorMSFT *)
+--- !function
+name: xrCreateSpatialAnchorMSFT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  createInfo: const struct XrSpatialAnchorCreateInfoMSFT *
+  anchor: struct XrSpatialAnchorMSFT_T **
+definition:
+  file: openxr.h
+  line: 1623
+
+# XrResult xrCreateSpatialAnchorSpaceMSFT(XrSession, const XrSpatialAnchorSpaceCreateInfoMSFT *, XrSpace *)
+--- !function
+name: xrCreateSpatialAnchorSpaceMSFT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  createInfo: const struct XrSpatialAnchorSpaceCreateInfoMSFT *
+  space: struct XrSpace_T **
+definition:
+  file: openxr.h
+  line: 1628
+
+# XrResult xrCreateSwapchain(XrSession, const XrSwapchainCreateInfo *, XrSwapchain *)
+--- !function
+name: xrCreateSwapchain
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  createInfo: const struct XrSwapchainCreateInfo *
+  swapchain: struct XrSwapchain_T **
+definition:
+  file: openxr.h
+  line: 1120
+
+# XrResult xrDestroyAction(XrAction)
+--- !function
+name: xrDestroyAction
+type: enum XrResult
+parameters:
+  action: struct XrAction_T *
+definition:
+  file: openxr.h
+  line: 1203
+
+# XrResult xrDestroyActionSet(XrActionSet)
+--- !function
+name: xrDestroyActionSet
+type: enum XrResult
+parameters:
+  actionSet: struct XrActionSet_T *
+definition:
+  file: openxr.h
+  line: 1195
+
+# XrResult xrDestroyDebugUtilsMessengerEXT(XrDebugUtilsMessengerEXT)
+--- !function
+name: xrDestroyDebugUtilsMessengerEXT
+type: enum XrResult
+parameters:
+  messenger: struct XrDebugUtilsMessengerEXT_T *
+definition:
+  file: openxr.h
+  line: 1521
+
+# XrResult xrDestroyInstance(XrInstance)
+--- !function
+name: xrDestroyInstance
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+definition:
+  file: openxr.h
+  line: 1016
+
+# XrResult xrDestroySession(XrSession)
+--- !function
+name: xrDestroySession
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+definition:
+  file: openxr.h
+  line: 1060
+
+# XrResult xrDestroySpace(XrSpace)
+--- !function
+name: xrDestroySpace
+type: enum XrResult
+parameters:
+  space: struct XrSpace_T *
+definition:
+  file: openxr.h
+  line: 1090
+
+# XrResult xrDestroySpatialAnchorMSFT(XrSpatialAnchorMSFT)
+--- !function
+name: xrDestroySpatialAnchorMSFT
+type: enum XrResult
+parameters:
+  anchor: struct XrSpatialAnchorMSFT_T *
+definition:
+  file: openxr.h
+  line: 1633
+
+# XrResult xrDestroySwapchain(XrSwapchain)
+--- !function
+name: xrDestroySwapchain
+type: enum XrResult
+parameters:
+  swapchain: struct XrSwapchain_T *
+definition:
+  file: openxr.h
+  line: 1125
+
+# XrResult xrEndFrame(XrSession, const XrFrameEndInfo *)
+--- !function
+name: xrEndFrame
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  frameEndInfo: const struct XrFrameEndInfo *
+definition:
+  file: openxr.h
+  line: 1166
+
+# XrResult xrEndSession(XrSession)
+--- !function
+name: xrEndSession
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+definition:
+  file: openxr.h
+  line: 1151
+
+# XrResult xrEnumerateApiLayerProperties(uint32_t, uint32_t *, XrApiLayerProperties *)
+--- !function
+name: xrEnumerateApiLayerProperties
+type: enum XrResult
+parameters:
+  propertyCapacityInput: uint32_t
+  propertyCountOutput: uint32_t *
+  properties: struct XrApiLayerProperties *
+definition:
+  file: openxr.h
+  line: 1001
+
+# XrResult xrEnumerateBoundSourcesForAction(XrSession, const XrBoundSourcesForActionEnumerateInfo *, uint32_t, uint32_t *, XrPath *)
+--- !function
+name: xrEnumerateBoundSourcesForAction
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  enumerateInfo: const struct XrBoundSourcesForActionEnumerateInfo *
+  sourceCapacityInput: uint32_t
+  sourceCountOutput: uint32_t *
+  sources: unsigned long long *
+definition:
+  file: openxr.h
+  line: 1243
+
+# XrResult xrEnumerateEnvironmentBlendModes(XrInstance, XrSystemId, XrViewConfigurationType, uint32_t, uint32_t *, XrEnvironmentBlendMode *)
+--- !function
+name: xrEnumerateEnvironmentBlendModes
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  systemId: unsigned long long
+  viewConfigurationType: enum XrViewConfigurationType
+  environmentBlendModeCapacityInput: uint32_t
+  environmentBlendModeCountOutput: uint32_t *
+  environmentBlendModes: enum XrEnvironmentBlendMode *
+definition:
+  file: openxr.h
+  line: 1047
+
+# XrResult xrEnumerateInstanceExtensionProperties(const char *, uint32_t, uint32_t *, XrExtensionProperties *)
+--- !function
+name: xrEnumerateInstanceExtensionProperties
+type: enum XrResult
+parameters:
+  layerName: const char *
+  propertyCapacityInput: uint32_t
+  propertyCountOutput: uint32_t *
+  properties: struct XrExtensionProperties *
+definition:
+  file: openxr.h
+  line: 1006
+
+# XrResult xrEnumerateReferenceSpaces(XrSession, uint32_t, uint32_t *, XrReferenceSpaceType *)
+--- !function
+name: xrEnumerateReferenceSpaces
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  spaceCapacityInput: uint32_t
+  spaceCountOutput: uint32_t *
+  spaces: enum XrReferenceSpaceType *
+definition:
+  file: openxr.h
+  line: 1063
+
+# XrResult xrEnumerateSwapchainFormats(XrSession, uint32_t, uint32_t *, int64_t *)
+--- !function
+name: xrEnumerateSwapchainFormats
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  formatCapacityInput: uint32_t
+  formatCountOutput: uint32_t *
+  formats: int64_t *
+definition:
+  file: openxr.h
+  line: 1114
+
+# XrResult xrEnumerateSwapchainImages(XrSwapchain, uint32_t, uint32_t *, XrSwapchainImageBaseHeader *)
+--- !function
+name: xrEnumerateSwapchainImages
+type: enum XrResult
+parameters:
+  swapchain: struct XrSwapchain_T *
+  imageCapacityInput: uint32_t
+  imageCountOutput: uint32_t *
+  images: struct XrSwapchainImageBaseHeader *
+definition:
+  file: openxr.h
+  line: 1128
+
+# XrResult xrEnumerateViewConfigurationViews(XrInstance, XrSystemId, XrViewConfigurationType, uint32_t, uint32_t *, XrViewConfigurationView *)
+--- !function
+name: xrEnumerateViewConfigurationViews
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  systemId: unsigned long long
+  viewConfigurationType: enum XrViewConfigurationType
+  viewCapacityInput: uint32_t
+  viewCountOutput: uint32_t *
+  views: struct XrViewConfigurationView *
+definition:
+  file: openxr.h
+  line: 1106
+
+# XrResult xrEnumerateViewConfigurations(XrInstance, XrSystemId, uint32_t, uint32_t *, XrViewConfigurationType *)
+--- !function
+name: xrEnumerateViewConfigurations
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  systemId: unsigned long long
+  viewConfigurationTypeCapacityInput: uint32_t
+  viewConfigurationTypeCountOutput: uint32_t *
+  viewConfigurationTypes: enum XrViewConfigurationType *
+definition:
+  file: openxr.h
+  line: 1093
+
+# XrResult xrGetActionStateBoolean(XrSession, const XrActionStateGetInfo *, XrActionStateBoolean *)
+--- !function
+name: xrGetActionStateBoolean
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  getInfo: const struct XrActionStateGetInfo *
+  state: struct XrActionStateBoolean *
+definition:
+  file: openxr.h
+  line: 1219
+
+# XrResult xrGetActionStateFloat(XrSession, const XrActionStateGetInfo *, XrActionStateFloat *)
+--- !function
+name: xrGetActionStateFloat
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  getInfo: const struct XrActionStateGetInfo *
+  state: struct XrActionStateFloat *
+definition:
+  file: openxr.h
+  line: 1224
+
+# XrResult xrGetActionStatePose(XrSession, const XrActionStateGetInfo *, XrActionStatePose *)
+--- !function
+name: xrGetActionStatePose
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  getInfo: const struct XrActionStateGetInfo *
+  state: struct XrActionStatePose *
+definition:
+  file: openxr.h
+  line: 1234
+
+# XrResult xrGetActionStateVector2f(XrSession, const XrActionStateGetInfo *, XrActionStateVector2f *)
+--- !function
+name: xrGetActionStateVector2f
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  getInfo: const struct XrActionStateGetInfo *
+  state: struct XrActionStateVector2f *
+definition:
+  file: openxr.h
+  line: 1229
+
+# XrResult xrGetCurrentInteractionProfile(XrSession, XrPath, XrInteractionProfileState *)
+--- !function
+name: xrGetCurrentInteractionProfile
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  topLevelUserPath: unsigned long long
+  interactionProfile: struct XrInteractionProfileState *
+definition:
+  file: openxr.h
+  line: 1214
+
+# XrResult xrGetInputSourceLocalizedName(XrSession, const XrInputSourceLocalizedNameGetInfo *, uint32_t, uint32_t *, char *)
+--- !function
+name: xrGetInputSourceLocalizedName
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  getInfo: const struct XrInputSourceLocalizedNameGetInfo *
+  bufferCapacityInput: uint32_t
+  bufferCountOutput: uint32_t *
+  buffer: char *
+definition:
+  file: openxr.h
+  line: 1250
+
+# XrResult xrGetInstanceProcAddr(XrInstance, const char *, PFN_xrVoidFunction *)
+--- !function
+name: xrGetInstanceProcAddr
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  name: const char *
+  function: void (**)(void)
+definition:
+  file: openxr.h
+  line: 996
+
+# XrResult xrGetInstanceProperties(XrInstance, XrInstanceProperties *)
+--- !function
+name: xrGetInstanceProperties
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  instanceProperties: struct XrInstanceProperties *
+definition:
+  file: openxr.h
+  line: 1019
+
+# XrResult xrGetReferenceSpaceBoundsRect(XrSession, XrReferenceSpaceType, XrExtent2Df *)
+--- !function
+name: xrGetReferenceSpaceBoundsRect
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  referenceSpaceType: enum XrReferenceSpaceType
+  bounds: struct XrExtent2Df *
+definition:
+  file: openxr.h
+  line: 1074
+
+# XrResult xrGetSystem(XrInstance, const XrSystemGetInfo *, XrSystemId *)
+--- !function
+name: xrGetSystem
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  getInfo: const struct XrSystemGetInfo *
+  systemId: unsigned long long *
+definition:
+  file: openxr.h
+  line: 1037
+
+# XrResult xrGetSystemProperties(XrInstance, XrSystemId, XrSystemProperties *)
+--- !function
+name: xrGetSystemProperties
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  systemId: unsigned long long
+  properties: struct XrSystemProperties *
+definition:
+  file: openxr.h
+  line: 1042
+
+# XrResult xrGetViewConfigurationProperties(XrInstance, XrSystemId, XrViewConfigurationType, XrViewConfigurationProperties *)
+--- !function
+name: xrGetViewConfigurationProperties
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  systemId: unsigned long long
+  viewConfigurationType: enum XrViewConfigurationType
+  configurationProperties: struct XrViewConfigurationProperties *
+definition:
+  file: openxr.h
+  line: 1100
+
+# XrResult xrGetVisibilityMaskKHR(XrSession, XrViewConfigurationType, uint32_t, XrVisibilityMaskTypeKHR, XrVisibilityMaskKHR *)
+--- !function
+name: xrGetVisibilityMaskKHR
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  viewConfigurationType: enum XrViewConfigurationType
+  viewIndex: uint32_t
+  visibilityMaskType: enum XrVisibilityMaskTypeKHR
+  visibilityMask: struct XrVisibilityMaskKHR *
+definition:
+  file: openxr.h
+  line: 1367
+
+# XrResult xrLocateSpace(XrSpace, XrSpace, XrTime, XrSpaceLocation *)
+--- !function
+name: xrLocateSpace
+type: enum XrResult
+parameters:
+  space: struct XrSpace_T *
+  baseSpace: struct XrSpace_T *
+  time: long long
+  location: struct XrSpaceLocation *
+definition:
+  file: openxr.h
+  line: 1084
+
+# XrResult xrLocateViews(XrSession, const XrViewLocateInfo *, XrViewState *, uint32_t, uint32_t *, XrView *)
+--- !function
+name: xrLocateViews
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  viewLocateInfo: const struct XrViewLocateInfo *
+  viewState: struct XrViewState *
+  viewCapacityInput: uint32_t
+  viewCountOutput: uint32_t *
+  views: struct XrView *
+definition:
+  file: openxr.h
+  line: 1170
+
+# XrResult xrPathToString(XrInstance, XrPath, uint32_t, uint32_t *, char *)
+--- !function
+name: xrPathToString
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  path: unsigned long long
+  bufferCapacityInput: uint32_t
+  bufferCountOutput: uint32_t *
+  buffer: char *
+definition:
+  file: openxr.h
+  line: 1183
+
+# XrResult xrPerfSettingsSetPerformanceLevelEXT(XrSession, XrPerfSettingsDomainEXT, XrPerfSettingsLevelEXT)
+--- !function
+name: xrPerfSettingsSetPerformanceLevelEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  domain: enum XrPerfSettingsDomainEXT
+  level: enum XrPerfSettingsLevelEXT
+definition:
+  file: openxr.h
+  line: 1419
+
+# XrResult xrPollEvent(XrInstance, XrEventDataBuffer *)
+--- !function
+name: xrPollEvent
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  eventData: struct XrEventDataBuffer *
+definition:
+  file: openxr.h
+  line: 1023
+
+# XrResult xrReleaseSwapchainImage(XrSwapchain, const XrSwapchainImageReleaseInfo *)
+--- !function
+name: xrReleaseSwapchainImage
+type: enum XrResult
+parameters:
+  swapchain: struct XrSwapchain_T *
+  releaseInfo: const struct XrSwapchainImageReleaseInfo *
+definition:
+  file: openxr.h
+  line: 1143
+
+# XrResult xrRequestExitSession(XrSession)
+--- !function
+name: xrRequestExitSession
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+definition:
+  file: openxr.h
+  line: 1154
+
+# XrResult xrResultToString(XrInstance, XrResult, char *)
+--- !function
+name: xrResultToString
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  value: enum XrResult
+  buffer: char [64]
+definition:
+  file: openxr.h
+  line: 1027
+
+# XrResult xrSessionBeginDebugUtilsLabelRegionEXT(XrSession, const XrDebugUtilsLabelEXT *)
+--- !function
+name: xrSessionBeginDebugUtilsLabelRegionEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  labelInfo: const struct XrDebugUtilsLabelEXT *
+definition:
+  file: openxr.h
+  line: 1530
+
+# XrResult xrSessionEndDebugUtilsLabelRegionEXT(XrSession)
+--- !function
+name: xrSessionEndDebugUtilsLabelRegionEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+definition:
+  file: openxr.h
+  line: 1534
+
+# XrResult xrSessionInsertDebugUtilsLabelEXT(XrSession, const XrDebugUtilsLabelEXT *)
+--- !function
+name: xrSessionInsertDebugUtilsLabelEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  labelInfo: const struct XrDebugUtilsLabelEXT *
+definition:
+  file: openxr.h
+  line: 1537
+
+# XrResult xrSetDebugUtilsObjectNameEXT(XrInstance, const XrDebugUtilsObjectNameInfoEXT *)
+--- !function
+name: xrSetDebugUtilsObjectNameEXT
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  nameInfo: const struct XrDebugUtilsObjectNameInfoEXT *
+definition:
+  file: openxr.h
+  line: 1512
+
+# XrResult xrSetInputDeviceActiveEXT(XrSession, XrPath, XrPath, XrBool32)
+--- !function
+name: xrSetInputDeviceActiveEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  interactionProfile: unsigned long long
+  topLevelPath: unsigned long long
+  isActive: unsigned int
+definition:
+  file: openxr.h
+  line: 1672
+
+# XrResult xrSetInputDeviceLocationEXT(XrSession, XrPath, XrPath, XrSpace, XrPosef)
+--- !function
+name: xrSetInputDeviceLocationEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  topLevelPath: unsigned long long
+  inputSourcePath: unsigned long long
+  space: struct XrSpace_T *
+  pose: struct XrPosef
+definition:
+  file: openxr.h
+  line: 1696
+
+# XrResult xrSetInputDeviceStateBoolEXT(XrSession, XrPath, XrPath, XrBool32)
+--- !function
+name: xrSetInputDeviceStateBoolEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  topLevelPath: unsigned long long
+  inputSourcePath: unsigned long long
+  state: unsigned int
+definition:
+  file: openxr.h
+  line: 1678
+
+# XrResult xrSetInputDeviceStateFloatEXT(XrSession, XrPath, XrPath, float)
+--- !function
+name: xrSetInputDeviceStateFloatEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  topLevelPath: unsigned long long
+  inputSourcePath: unsigned long long
+  state: float
+definition:
+  file: openxr.h
+  line: 1684
+
+# XrResult xrSetInputDeviceStateVector2fEXT(XrSession, XrPath, XrPath, XrVector2f)
+--- !function
+name: xrSetInputDeviceStateVector2fEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  topLevelPath: unsigned long long
+  inputSourcePath: unsigned long long
+  state: struct XrVector2f
+definition:
+  file: openxr.h
+  line: 1690
+
+# XrResult xrStopHapticFeedback(XrSession, const XrHapticActionInfo *)
+--- !function
+name: xrStopHapticFeedback
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  hapticActionInfo: const struct XrHapticActionInfo *
+definition:
+  file: openxr.h
+  line: 1262
+
+# XrResult xrStringToPath(XrInstance, const char *, XrPath *)
+--- !function
+name: xrStringToPath
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  pathString: const char *
+  path: unsigned long long *
+definition:
+  file: openxr.h
+  line: 1178
+
+# XrResult xrStructureTypeToString(XrInstance, XrStructureType, char *)
+--- !function
+name: xrStructureTypeToString
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  value: enum XrStructureType
+  buffer: char [64]
+definition:
+  file: openxr.h
+  line: 1032
+
+# XrResult xrSubmitDebugUtilsMessageEXT(XrInstance, XrDebugUtilsMessageSeverityFlagsEXT, XrDebugUtilsMessageTypeFlagsEXT, const XrDebugUtilsMessengerCallbackDataEXT *)
+--- !function
+name: xrSubmitDebugUtilsMessageEXT
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  messageSeverity: unsigned long long
+  messageTypes: unsigned long long
+  callbackData: const struct XrDebugUtilsMessengerCallbackDataEXT *
+definition:
+  file: openxr.h
+  line: 1524
+
+# XrResult xrSuggestInteractionProfileBindings(XrInstance, const XrInteractionProfileSuggestedBinding *)
+--- !function
+name: xrSuggestInteractionProfileBindings
+type: enum XrResult
+parameters:
+  instance: struct XrInstance_T *
+  suggestedBindings: const struct XrInteractionProfileSuggestedBinding *
+definition:
+  file: openxr.h
+  line: 1206
+
+# XrResult xrSyncActions(XrSession, const XrActionsSyncInfo *)
+--- !function
+name: xrSyncActions
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  syncInfo: const struct XrActionsSyncInfo *
+definition:
+  file: openxr.h
+  line: 1239
+
+# XrResult xrThermalGetTemperatureTrendEXT(XrSession, XrPerfSettingsDomainEXT, XrPerfSettingsNotificationLevelEXT *, float *, float *)
+--- !function
+name: xrThermalGetTemperatureTrendEXT
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  domain: enum XrPerfSettingsDomainEXT
+  notificationLevel: enum XrPerfSettingsNotificationLevelEXT *
+  tempHeadroom: float *
+  tempSlope: float *
+definition:
+  file: openxr.h
+  line: 1432
+
+# XrResult xrWaitFrame(XrSession, const XrFrameWaitInfo *, XrFrameState *)
+--- !function
+name: xrWaitFrame
+type: enum XrResult
+parameters:
+  session: struct XrSession_T *
+  frameWaitInfo: const struct XrFrameWaitInfo *
+  frameState: struct XrFrameState *
+definition:
+  file: openxr.h
+  line: 1157
+
+# XrResult xrWaitSwapchainImage(XrSwapchain, const XrSwapchainImageWaitInfo *)
+--- !function
+name: xrWaitSwapchainImage
+type: enum XrResult
+parameters:
+  swapchain: struct XrSwapchain_T *
+  waitInfo: const struct XrSwapchainImageWaitInfo *
+definition:
+  file: openxr.h
+  line: 1139
