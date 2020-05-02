@@ -1,6 +1,6 @@
 # This is free and unencumbered software released into the public domain.
 
-require 'ffidb'
+#require 'ffidb'
 require 'open-uri'
 require 'rake'
 
