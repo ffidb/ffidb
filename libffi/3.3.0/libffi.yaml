@@ -1,0 +1,201 @@
+# void ffi_call(ffi_cif *, void (*)(void), void *, void **)
+--- !function
+name: ffi_call
+type: void
+parameters:
+  cif: ffi_cif *
+  fn: void (*)(void)
+  rvalue: void *
+  avalue: void **
+definition:
+  file: ffi.h
+  line: 470
+
+# void ffi_call_go(ffi_cif *, void (*)(void), void *, void **, void *)
+--- !function
+name: ffi_call_go
+type: void
+parameters:
+  cif: ffi_cif *
+  fn: void (*)(void)
+  rvalue: void *
+  avalue: void **
+  closure: void *
+definition:
+  file: ffi.h
+  line: 447
+
+# void * ffi_closure_alloc(size_t, void **)
+--- !function
+name: ffi_closure_alloc
+type: void *
+parameters:
+  size: size_t
+  code: void **
+definition:
+  file: ffi.h
+  line: 330
+
+# void ffi_closure_free(void *)
+--- !function
+name: ffi_closure_free
+type: void
+parameters:
+  _1: void *
+definition:
+  file: ffi.h
+  line: 331
+
+# ffi_status ffi_get_struct_offsets(ffi_abi, ffi_type *, size_t *)
+--- !function
+name: ffi_get_struct_offsets
+type: ffi_status
+parameters:
+  abi: enum ffi_abi
+  struct_type: struct _ffi_type *
+  offsets: size_t *
+definition:
+  file: ffi.h
+  line: 476
+
+# ffi_status ffi_prep_cif(ffi_cif *, ffi_abi, unsigned int, ffi_type *, ffi_type **)
+--- !function
+name: ffi_prep_cif
+type: ffi_status
+parameters:
+  cif: ffi_cif *
+  abi: enum ffi_abi
+  nargs: unsigned int
+  rtype: struct _ffi_type *
+  atypes: struct _ffi_type **
+definition:
+  file: ffi.h
+  line: 455
+
+# ffi_status ffi_prep_cif_var(ffi_cif *, ffi_abi, unsigned int, unsigned int, ffi_type *, ffi_type **)
+--- !function
+name: ffi_prep_cif_var
+type: ffi_status
+parameters:
+  cif: ffi_cif *
+  abi: enum ffi_abi
+  nfixedargs: unsigned int
+  ntotalargs: unsigned int
+  rtype: struct _ffi_type *
+  atypes: struct _ffi_type **
+definition:
+  file: ffi.h
+  line: 462
+
+# ffi_status ffi_prep_closure(ffi_closure *, ffi_cif *, void (*)(ffi_cif *, void *, void **, void *), void *)
+--- !function
+name: ffi_prep_closure
+type: ffi_status
+parameters:
+  _1: ffi_closure *
+  _2: ffi_cif *
+  fun: void (*)(ffi_cif *, void *, void **, void *)
+  user_data: void *
+definition:
+  file: ffi.h
+  line: 334
+
+# ffi_status ffi_prep_closure_loc(ffi_closure *, ffi_cif *, void (*)(ffi_cif *, void *, void **, void *), void *, void *)
+--- !function
+name: ffi_prep_closure_loc
+type: ffi_status
+parameters:
+  _1: ffi_closure *
+  _2: ffi_cif *
+  fun: void (*)(ffi_cif *, void *, void **, void *)
+  user_data: void *
+  codeloc: void *
+definition:
+  file: ffi.h
+  line: 346
+
+# ffi_status ffi_prep_go_closure(ffi_go_closure *, ffi_cif *, void (*)(ffi_cif *, void *, void **, void *))
+--- !function
+name: ffi_prep_go_closure
+type: ffi_status
+parameters:
+  _1: ffi_go_closure *
+  _2: ffi_cif *
+  fun: void (*)(ffi_cif *, void *, void **, void *)
+definition:
+  file: ffi.h
+  line: 444
+
+# ffi_status ffi_prep_raw_closure(ffi_raw_closure *, ffi_cif *, void (*)(ffi_cif *, void *, ffi_raw *, void *), void *)
+--- !function
+name: ffi_prep_raw_closure
+type: ffi_status
+parameters:
+  _1: ffi_raw_closure *
+  cif: ffi_cif *
+  fun: void (*)(ffi_cif *, void *, ffi_raw *, void *)
+  user_data: void *
+definition:
+  file: ffi.h
+  line: 407
+
+# ffi_status ffi_prep_raw_closure_loc(ffi_raw_closure *, ffi_cif *, void (*)(ffi_cif *, void *, ffi_raw *, void *), void *, void *)
+--- !function
+name: ffi_prep_raw_closure_loc
+type: ffi_status
+parameters:
+  _1: ffi_raw_closure *
+  cif: ffi_cif *
+  fun: void (*)(ffi_cif *, void *, ffi_raw *, void *)
+  user_data: void *
+  codeloc: void *
+definition:
+  file: ffi.h
+  line: 413
+
+# void ffi_ptrarray_to_raw(ffi_cif *, void **, ffi_raw *)
+--- !function
+name: ffi_ptrarray_to_raw
+type: void
+parameters:
+  cif: ffi_cif *
+  args: void **
+  raw: ffi_raw *
+definition:
+  file: ffi.h
+  line: 278
+
+# void ffi_raw_call(ffi_cif *, void (*)(void), void *, ffi_raw *)
+--- !function
+name: ffi_raw_call
+type: void
+parameters:
+  cif: ffi_cif *
+  fn: void (*)(void)
+  rvalue: void *
+  avalue: ffi_raw *
+definition:
+  file: ffi.h
+  line: 273
+
+# size_t ffi_raw_size(ffi_cif *)
+--- !function
+name: ffi_raw_size
+type: size_t
+parameters:
+  cif: ffi_cif *
+definition:
+  file: ffi.h
+  line: 280
+
+# void ffi_raw_to_ptrarray(ffi_cif *, ffi_raw *, void **)
+--- !function
+name: ffi_raw_to_ptrarray
+type: void
+parameters:
+  cif: ffi_cif *
+  raw: ffi_raw *
+  args: void **
+definition:
+  file: ffi.h
+  line: 279
