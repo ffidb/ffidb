@@ -6,7 +6,7 @@ require 'rake'
 task default: %w(readme)
 
 task :readme do
-  $cols = [13, 7, 13, 34]; #p 2 + ($cols.size-1)*3 + $cols.sum + 2
+  $cols = [13, 7, 15, 32]; #p 2 + ($cols.size-1)*3 + $cols.sum + 2
   def print_row(*vals)
     print '| ', vals.each_with_index.map { |s, i| s.send((i!=1) ? :ljust : :rjust, $cols[i]) }.join(' | '), " |\n"
   end
