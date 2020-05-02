@@ -1,0 +1,31 @@
+--- !library
+name: libffi
+summary: A portable foreign-function interface (FFI) library
+website: https://sourceware.org/libffi/
+source: https://github.com/libffi/libffi
+packages:
+  alpine: libffi
+  debian: libffi7
+  homebrew: libffi
+  ubuntu: libffi7
+dlopen: ffi
+objects:
+  - libffi.so.7       # Alpine, Debian, Ubuntu
+  - libffi.7.dylib    # Homebrew
+headers:
+  - ffi.h
+substitute:
+  - '@VERSION@=3.3'
+  - '@TARGET@=X86_64'
+  - '@HAVE_LONG_DOUBLE@=0'
+  - '@FFI_EXEC_TRAMPOLINE_TABLE@=0'
+configure:
+#  - FFI_CLOSURES=1
+#  - FFI_GO_CLOSURES=1
+exclude:
+  - ffi_java_ptrarray_to_raw       # deprecated
+  - ffi_java_raw_call              # deprecated
+  - ffi_java_raw_size              # deprecated
+  - ffi_java_raw_to_ptrarray       # deprecated
+  - ffi_prep_java_raw_closure      # deprecated
+  - ffi_prep_java_raw_closure_loc  # deprecated
