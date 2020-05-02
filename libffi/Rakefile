@@ -1,0 +1,40 @@
+# This is free and unencumbered software released into the public domain.
+
+require 'ffidb'
+require 'net/ftp'
+require 'rake'
+
+task default: %w(update)
+
+task :update do
+  versions = []
+  Net::FTP.open('sourceware.org') do |ftp| # ftp://sourceware.org/pub/libffi/
+    ftp.login
+    ftp.chdir 'pub/libffi/'
+    ftp.nlst.each do |path|
+      next unless /^libffi-(\d+).(\d+).?(\d+)?.tar.gz$/ === path
+      versions << [$1, $2, $3 || 0].map(&:to_i)
+    end
+    ftp.close
+  end
+  versions.reject! { |version| (version <=> [3, 0, 0]).negative? }
+  versions.sort!
+
+  stable_version = nil
+  versions.each do |version|
+    stable_version = version if !stable_version || (version <=> stable_version).positive?
+    puts "ln -sfh #{version.join('.')} #{version[0..1].join('.')}" if version.last.zero?
+    puts "mkdir -p #{version.join('.')}"
+    puts "touch #{version.join('.')}/.gitkeep"
+    puts
+  end
+  puts "ln -sfh #{stable_version.join('.')} stable" if stable_version
+end
+
+task :download do
+  # TODO
+end
+
+task :parse do
+  # TODO
+end
