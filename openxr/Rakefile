@@ -1,0 +1,19 @@
+# This is free and unencumbered software released into the public domain.
+
+require 'ffidb'
+require 'open-uri'
+require 'rake'
+
+task default: %w(update)
+
+task :update do
+  # TODO: https://github.com/KhronosGroup/OpenXR-SDK/tags
+end
+
+task :download do
+  # TODO
+end
+
+task :parse do
+  # TODO
+end
