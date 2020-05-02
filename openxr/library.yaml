@@ -1,0 +1,15 @@
+--- !library
+name: openxr
+summary: An open standard for access to VR/AR platforms and devices
+website: https://www.khronos.org/openxr/
+source: https://github.com/KhronosGroup/OpenXR-SDK
+packages:
+  alpine:
+  debian: libopenxr-loader1
+  homebrew:
+  ubuntu:
+dlopen: openxr_loader
+objects:
+  - libopenxr_loader.so.1  # Debian
+headers:
+  - openxr.h
