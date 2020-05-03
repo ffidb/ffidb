@@ -22,7 +22,7 @@ task :readme do
       stable_version = File.readlink("#{library.name}/stable")
       print_row *[library.name,
         stable_version,
-        "`#{library.dlopen}`",
+        "`#{library.dlopen.first}`",
         library.headers.map { |s| "`#{s}`" }.join(', ')
       ]
     end
