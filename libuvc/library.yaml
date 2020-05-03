@@ -1,0 +1,16 @@
+--- !library
+name: libuvc
+summary: A cross-platform library for USB video devices
+website: https://ken.tossell.net/libuvc/
+source: https://github.com/libuvc/libuvc
+packages:
+  alpine:
+  debian: libuvc0
+  homebrew: libuvc
+  ubuntu: libuvc0
+dlopen: uvc
+objects:
+  - libuvc.so.0   # Debian, Ubuntu
+  - libuvc.dylib  # Homebrew
+headers:
+  - libuvc.h
