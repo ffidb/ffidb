@@ -1,0 +1,18 @@
+--- !library
+name: hidapi
+summary: A cross-platform library for USB and Bluetooth HID devices
+website: https://github.com/libusb/hidapi
+source: https://github.com/libusb/hidapi
+packages:
+  alpine: hidapi
+  debian: libhidapi-libusb0
+  homebrew: hidapi
+  ubuntu: libhidapi-libusb0
+dlopen:
+  - hidapi
+  - hidapi-libusb
+objects:
+  - libhidapi-libusb.so.0   # Alpine, Debian, Ubuntu
+  - libhidapi.0.dylib       # Homebrew
+headers:
+  - hidapi.h
