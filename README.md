@@ -6,6 +6,7 @@ Libraries
 
 | Library       | Release | `dlopen()`      | `#include`                       |
 | :------------ | ------: | :-------------- | :------------------------------- |
+| glew          |   2.1.0 | `GLEW`          | `GL/glew.h`                      |
 | hidapi        |   0.9.0 | `hidapi`        | `hidapi.h`                       |
 | libffi        |   3.3.0 | `ffi`           | `ffi.h`                          |
 | libuvc        |   0.0.6 | `uvc`           | `libuvc/libuvc.h`                |

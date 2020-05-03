@@ -1,0 +1,47 @@
+# const GLubyte * glewGetErrorString(GLenum)
+--- !function
+name: glewGetErrorString
+type: const unsigned char *
+parameters:
+  error: unsigned int
+definition:
+  file: GL/glew.h
+  line: 23661
+
+# GLboolean glewGetExtension(const char *)
+--- !function
+name: glewGetExtension
+type: unsigned char
+parameters:
+  name: const char *
+definition:
+  file: GL/glew.h
+  line: 23660
+
+# const GLubyte * glewGetString(GLenum)
+--- !function
+name: glewGetString
+type: const unsigned char *
+parameters:
+  name: unsigned int
+definition:
+  file: GL/glew.h
+  line: 23662
+
+# GLenum glewInit(void)
+--- !function
+name: glewInit
+type: unsigned int
+definition:
+  file: GL/glew.h
+  line: 23647
+
+# GLboolean glewIsSupported(const char *)
+--- !function
+name: glewIsSupported
+type: unsigned char
+parameters:
+  name: const char *
+definition:
+  file: GL/glew.h
+  line: 23648
