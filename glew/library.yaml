@@ -1,0 +1,24 @@
+--- !library
+name: glew
+summary: The OpenGL Extension Wrangler Library (GLEW)
+website: http://glew.sourceforge.net
+source: https://github.com/nigels-com/glew
+packages:
+  alpine: glew
+  debian: libglew2.1
+  homebrew: glew
+  ubuntu: libglew2.1
+dlopen: GLEW
+objects:
+  - libGLEW.so.2.1     # Alpine, Debian, Ubuntu
+  - libGLEW.2.1.dylib  # Homebrew
+headers:
+  - GL/glew.h
+configure:
+  - GLEW_NO_GLU
+include:
+  - glewGetErrorString
+  - glewGetExtension
+  - glewGetString
+  - glewInit
+  - glewIsSupported
