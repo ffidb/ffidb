@@ -1,0 +1,16 @@
+--- !library
+name: libsodium
+summary: A modern, portable, easy-to-use crypto library
+website: https://libsodium.org
+source: https://github.com/jedisct1/libsodium
+packages:
+  alpine: libsodium
+  debian: libsodium23
+  homebrew: libsodium
+  ubuntu: libsodium23
+dlopen: sodium
+objects:
+  - libsodium.so.23     # Alpine, Debian, Ubuntu
+  - libsodium.23.dylib  # Homebrew
+headers:
+  - sodium.h
