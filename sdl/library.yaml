@@ -1,0 +1,16 @@
+--- !library
+name: sdl
+summary: A cross-platform library for low-level access to multimedia hardware
+website: https://libsdl.org
+source: https://github.com/SDL-mirror/SDL
+packages:
+  alpine: sdl2
+  debian: libsdl2-2.0-0
+  homebrew: sdl2
+  ubuntu: libsdl2-2.0-0
+dlopen: libSDL2
+objects:
+  - libSDL2-2.0.so.0  # Alpine, Debian, Ubuntu
+  - libSDL2.dylib     # Homebrew
+headers:
+  - SDL2/SDL.h
