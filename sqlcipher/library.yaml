@@ -1,0 +1,20 @@
+--- !library
+name: sqlcipher
+summary: An SQLite extension that provides AES encryption of database files
+website: https://www.zetetic.net/sqlcipher/
+source: https://github.com/sqlcipher/sqlcipher
+packages:
+  alpine:
+  debian: libsqlcipher0
+  homebrew: sqlcipher
+  ubuntu: libsqlcipher0
+dlopen: sqlcipher
+objects:
+  - libsqlcipher.so.0     # Debian, Ubuntu
+  - libsqlcipher.0.dylib  # Homebrew
+headers:
+  - sqlite3.h
+exclude:
+  - sqlite3_win32_set_directory    # Windows only
+  - sqlite3_win32_set_directory8   # Windows only
+  - sqlite3_win32_set_directory16  # Windows only
