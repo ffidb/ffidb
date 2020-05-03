@@ -1,0 +1,1603 @@
+# uvc_frame_t * uvc_allocate_frame(size_t)
+--- !function
+name: uvc_allocate_frame
+type: struct uvc_frame *
+parameters:
+  data_bytes: size_t
+definition:
+  file: libuvc/libuvc.h
+  line: 716
+
+# uvc_error_t uvc_any2bgr(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_any2bgr
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 727
+
+# uvc_error_t uvc_any2rgb(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_any2rgb
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 723
+
+# void uvc_close(uvc_device_handle_t *)
+--- !function
+name: uvc_close
+type: void
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 513
+
+# uvc_error_t uvc_duplicate_frame(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_duplicate_frame
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 719
+
+# void uvc_exit(uvc_context_t *)
+--- !function
+name: uvc_exit
+type: void
+parameters:
+  ctx: struct uvc_context *
+definition:
+  file: libuvc/libuvc.h
+  line: 484
+
+# uvc_error_t uvc_find_device(uvc_context_t *, uvc_device_t **, int, int, const char *)
+--- !function
+name: uvc_find_device
+type: enum uvc_error
+parameters:
+  ctx: struct uvc_context *
+  dev: struct uvc_device **
+  vid: int
+  pid: int
+  sn: const char *
+definition:
+  file: libuvc/libuvc.h
+  line: 500
+
+# uvc_error_t uvc_find_devices(uvc_context_t *, uvc_device_t ***, int, int, const char *)
+--- !function
+name: uvc_find_devices
+type: enum uvc_error
+parameters:
+  ctx: struct uvc_context *
+  devs: struct uvc_device ***
+  vid: int
+  pid: int
+  sn: const char *
+definition:
+  file: libuvc/libuvc.h
+  line: 505
+
+# void uvc_free_device_descriptor(uvc_device_descriptor_t *)
+--- !function
+name: uvc_free_device_descriptor
+type: void
+parameters:
+  desc: struct uvc_device_descriptor *
+definition:
+  file: libuvc/libuvc.h
+  line: 494
+
+# void uvc_free_device_list(uvc_device_t **, uint8_t)
+--- !function
+name: uvc_free_device_list
+type: void
+parameters:
+  list: struct uvc_device **
+  unref_devices: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 489
+
+# void uvc_free_frame(uvc_frame_t *)
+--- !function
+name: uvc_free_frame
+type: void
+parameters:
+  frame: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 717
+
+# uvc_error_t uvc_get_ae_mode(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_ae_mode
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  mode: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 593
+
+# uvc_error_t uvc_get_ae_priority(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_ae_priority
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  priority: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 596
+
+# uvc_error_t uvc_get_analog_video_lock_status(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_analog_video_lock_status
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  status: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 704
+
+# uvc_error_t uvc_get_analog_video_standard(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_analog_video_standard
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  video_standard: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 701
+
+# uvc_error_t uvc_get_backlight_compensation(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_backlight_compensation
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  backlight_compensation: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 650
+
+# uvc_error_t uvc_get_brightness(uvc_device_handle_t *, int16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_brightness
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  brightness: int16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 653
+
+# uint8_t uvc_get_bus_number(uvc_device_t *)
+--- !function
+name: uvc_get_bus_number
+type: uint8_t
+parameters:
+  dev: struct uvc_device *
+definition:
+  file: libuvc/libuvc.h
+  line: 497
+
+# const uvc_input_terminal_t * uvc_get_camera_terminal(uvc_device_handle_t *)
+--- !function
+name: uvc_get_camera_terminal
+type: const struct uvc_input_terminal *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 529
+
+# uvc_error_t uvc_get_contrast(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_contrast
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  contrast: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 656
+
+# uvc_error_t uvc_get_contrast_auto(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_contrast_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  contrast_auto: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 659
+
+# int uvc_get_ctrl(uvc_device_handle_t *, uint8_t, uint8_t, void *, int, enum uvc_req_code)
+--- !function
+name: uvc_get_ctrl
+type: int
+parameters:
+  devh: struct uvc_device_handle *
+  unit: uint8_t
+  ctrl: uint8_t
+  data: void *
+  len: int
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 583
+
+# int uvc_get_ctrl_len(uvc_device_handle_t *, uint8_t, uint8_t)
+--- !function
+name: uvc_get_ctrl_len
+type: int
+parameters:
+  devh: struct uvc_device_handle *
+  unit: uint8_t
+  ctrl: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 582
+
+# uvc_device_t * uvc_get_device(uvc_device_handle_t *)
+--- !function
+name: uvc_get_device
+type: struct uvc_device *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 515
+
+# uint8_t uvc_get_device_address(uvc_device_t *)
+--- !function
+name: uvc_get_device_address
+type: uint8_t
+parameters:
+  dev: struct uvc_device *
+definition:
+  file: libuvc/libuvc.h
+  line: 498
+
+# uvc_error_t uvc_get_device_descriptor(uvc_device_t *, uvc_device_descriptor_t **)
+--- !function
+name: uvc_get_device_descriptor
+type: enum uvc_error
+parameters:
+  dev: struct uvc_device *
+  desc: struct uvc_device_descriptor **
+definition:
+  file: libuvc/libuvc.h
+  line: 491
+
+# uvc_error_t uvc_get_device_list(uvc_context_t *, uvc_device_t ***)
+--- !function
+name: uvc_get_device_list
+type: enum uvc_error
+parameters:
+  ctx: struct uvc_context *
+  list: struct uvc_device ***
+definition:
+  file: libuvc/libuvc.h
+  line: 486
+
+# uvc_error_t uvc_get_digital_multiplier(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_digital_multiplier
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  multiplier_step: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 695
+
+# uvc_error_t uvc_get_digital_multiplier_limit(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_digital_multiplier_limit
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  multiplier_step: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 698
+
+# uvc_error_t uvc_get_digital_roi(uvc_device_handle_t *, uint16_t *, uint16_t *, uint16_t *, uint16_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_digital_roi
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  roi_top: uint16_t *
+  roi_left: uint16_t *
+  roi_bottom: uint16_t *
+  roi_right: uint16_t *
+  auto_controls: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 647
+
+# uvc_error_t uvc_get_digital_window(uvc_device_handle_t *, uint16_t *, uint16_t *, uint16_t *, uint16_t *, uint16_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_digital_window
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  window_top: uint16_t *
+  window_left: uint16_t *
+  window_bottom: uint16_t *
+  window_right: uint16_t *
+  num_steps: uint16_t *
+  num_steps_units: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 644
+
+# uvc_error_t uvc_get_exposure_abs(uvc_device_handle_t *, uint32_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_exposure_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  time: uint32_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 599
+
+# uvc_error_t uvc_get_exposure_rel(uvc_device_handle_t *, int8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_exposure_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  step: int8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 602
+
+# const uvc_extension_unit_t * uvc_get_extension_units(uvc_device_handle_t *)
+--- !function
+name: uvc_get_extension_units
+type: const struct uvc_extension_unit *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 534
+
+# uvc_error_t uvc_get_focus_abs(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_focus_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focus: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 605
+
+# uvc_error_t uvc_get_focus_auto(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_focus_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  state: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 614
+
+# uvc_error_t uvc_get_focus_rel(uvc_device_handle_t *, int8_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_focus_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focus_rel: int8_t *
+  speed: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 608
+
+# uvc_error_t uvc_get_focus_simple_range(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_focus_simple_range
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focus: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 611
+
+# const uvc_format_desc_t * uvc_get_format_descs(uvc_device_handle_t *)
+--- !function
+name: uvc_get_format_descs
+type: const struct uvc_format_desc *
+parameters:
+  _1: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 544
+
+# uvc_error_t uvc_get_gain(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_gain
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  gain: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 662
+
+# uvc_error_t uvc_get_gamma(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_gamma
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  gamma: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 680
+
+# uvc_error_t uvc_get_hue(uvc_device_handle_t *, int16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_hue
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  hue: int16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 668
+
+# uvc_error_t uvc_get_hue_auto(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_hue_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  hue_auto: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 671
+
+# uvc_error_t uvc_get_input_select(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_input_select
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  selector: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 707
+
+# const uvc_input_terminal_t * uvc_get_input_terminals(uvc_device_handle_t *)
+--- !function
+name: uvc_get_input_terminals
+type: const struct uvc_input_terminal *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 530
+
+# uvc_error_t uvc_get_iris_abs(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_iris_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  iris: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 617
+
+# uvc_error_t uvc_get_iris_rel(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_iris_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  iris_rel: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 620
+
+# struct libusb_device_handle * uvc_get_libusb_handle(uvc_device_handle_t *)
+--- !function
+name: uvc_get_libusb_handle
+type: struct libusb_device_handle *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 516
+
+# const uvc_output_terminal_t * uvc_get_output_terminals(uvc_device_handle_t *)
+--- !function
+name: uvc_get_output_terminals
+type: const struct uvc_output_terminal *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 531
+
+# uvc_error_t uvc_get_pantilt_abs(uvc_device_handle_t *, int32_t *, int32_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_pantilt_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  pan: int32_t *
+  tilt: int32_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 629
+
+# uvc_error_t uvc_get_pantilt_rel(uvc_device_handle_t *, int8_t *, uint8_t *, int8_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_pantilt_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  pan_rel: int8_t *
+  pan_speed: uint8_t *
+  tilt_rel: int8_t *
+  tilt_speed: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 632
+
+# uvc_error_t uvc_get_power_line_frequency(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_power_line_frequency
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  power_line_frequency: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 665
+
+# uvc_error_t uvc_get_power_mode(uvc_device_handle_t *, enum uvc_device_power_mode *, enum uvc_req_code)
+--- !function
+name: uvc_get_power_mode
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  mode: enum uvc_device_power_mode *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 586
+
+# uvc_error_t uvc_get_privacy(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_privacy
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  privacy: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 641
+
+# const uvc_processing_unit_t * uvc_get_processing_units(uvc_device_handle_t *)
+--- !function
+name: uvc_get_processing_units
+type: const struct uvc_processing_unit *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 533
+
+# uvc_error_t uvc_get_roll_abs(uvc_device_handle_t *, int16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_roll_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  roll: int16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 635
+
+# uvc_error_t uvc_get_roll_rel(uvc_device_handle_t *, int8_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_roll_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  roll_rel: int8_t *
+  speed: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 638
+
+# uvc_error_t uvc_get_saturation(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_saturation
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  saturation: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 674
+
+# uvc_error_t uvc_get_scanning_mode(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_scanning_mode
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  mode: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 590
+
+# const uvc_selector_unit_t * uvc_get_selector_units(uvc_device_handle_t *)
+--- !function
+name: uvc_get_selector_units
+type: const struct uvc_selector_unit *
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 532
+
+# uvc_error_t uvc_get_sharpness(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_sharpness
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  sharpness: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 677
+
+# uvc_error_t uvc_get_stream_ctrl_format_size(uvc_device_handle_t *, uvc_stream_ctrl_t *, enum uvc_frame_format, int, int, int)
+--- !function
+name: uvc_get_stream_ctrl_format_size
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  ctrl: struct uvc_stream_ctrl *
+  format: enum uvc_frame_format
+  width: int
+  height: int
+  fps: int
+definition:
+  file: libuvc/libuvc.h
+  line: 536
+
+# uvc_error_t uvc_get_white_balance_component(uvc_device_handle_t *, uint16_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_white_balance_component
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  blue: uint16_t *
+  red: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 689
+
+# uvc_error_t uvc_get_white_balance_component_auto(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_white_balance_component_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  white_balance_component_auto: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 692
+
+# uvc_error_t uvc_get_white_balance_temperature(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_white_balance_temperature
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  temperature: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 683
+
+# uvc_error_t uvc_get_white_balance_temperature_auto(uvc_device_handle_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_white_balance_temperature_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  temperature_auto: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 686
+
+# uvc_error_t uvc_get_zoom_abs(uvc_device_handle_t *, uint16_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_zoom_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focal_length: uint16_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 623
+
+# uvc_error_t uvc_get_zoom_rel(uvc_device_handle_t *, int8_t *, uint8_t *, uint8_t *, enum uvc_req_code)
+--- !function
+name: uvc_get_zoom_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  zoom_rel: int8_t *
+  digital_zoom: uint8_t *
+  speed: uint8_t *
+  req_code: enum uvc_req_code
+definition:
+  file: libuvc/libuvc.h
+  line: 626
+
+# uvc_error_t uvc_init(uvc_context_t **, struct libusb_context *)
+--- !function
+name: uvc_init
+type: enum uvc_error
+parameters:
+  ctx: struct uvc_context **
+  usb_ctx: struct libusb_context *
+definition:
+  file: libuvc/libuvc.h
+  line: 483
+
+# uvc_error_t uvc_mjpeg2rgb(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_mjpeg2rgb
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 733
+
+# uvc_error_t uvc_open(uvc_device_t *, uvc_device_handle_t **)
+--- !function
+name: uvc_open
+type: enum uvc_error
+parameters:
+  dev: struct uvc_device *
+  devh: struct uvc_device_handle **
+definition:
+  file: libuvc/libuvc.h
+  line: 510
+
+# void uvc_perror(uvc_error_t, const char *)
+--- !function
+name: uvc_perror
+type: void
+parameters:
+  err: enum uvc_error
+  msg: const char *
+definition:
+  file: libuvc/libuvc.h
+  line: 711
+
+# void uvc_print_diag(uvc_device_handle_t *, FILE *)
+--- !function
+name: uvc_print_diag
+type: void
+parameters:
+  devh: struct uvc_device_handle *
+  stream: FILE *
+definition:
+  file: libuvc/libuvc.h
+  line: 713
+
+# void uvc_print_stream_ctrl(uvc_stream_ctrl_t *, FILE *)
+--- !function
+name: uvc_print_stream_ctrl
+type: void
+parameters:
+  ctrl: struct uvc_stream_ctrl *
+  stream: FILE *
+definition:
+  file: libuvc/libuvc.h
+  line: 714
+
+# uvc_error_t uvc_probe_stream_ctrl(uvc_device_handle_t *, uvc_stream_ctrl_t *)
+--- !function
+name: uvc_probe_stream_ctrl
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  ctrl: struct uvc_stream_ctrl *
+definition:
+  file: libuvc/libuvc.h
+  line: 546
+
+# void uvc_ref_device(uvc_device_t *)
+--- !function
+name: uvc_ref_device
+type: void
+parameters:
+  dev: struct uvc_device *
+definition:
+  file: libuvc/libuvc.h
+  line: 518
+
+# uvc_error_t uvc_set_ae_mode(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_ae_mode
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  mode: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 594
+
+# uvc_error_t uvc_set_ae_priority(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_ae_priority
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  priority: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 597
+
+# uvc_error_t uvc_set_analog_video_lock_status(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_analog_video_lock_status
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  status: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 705
+
+# uvc_error_t uvc_set_analog_video_standard(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_analog_video_standard
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  video_standard: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 702
+
+# uvc_error_t uvc_set_backlight_compensation(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_backlight_compensation
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  backlight_compensation: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 651
+
+# uvc_error_t uvc_set_brightness(uvc_device_handle_t *, int16_t)
+--- !function
+name: uvc_set_brightness
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  brightness: int16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 654
+
+# void uvc_set_button_callback(uvc_device_handle_t *, uvc_button_callback_t *, void *)
+--- !function
+name: uvc_set_button_callback
+type: void
+parameters:
+  devh: struct uvc_device_handle *
+  cb: void (int, int, void *)
+  user_ptr: void *
+definition:
+  file: libuvc/libuvc.h
+  line: 525
+
+# uvc_error_t uvc_set_contrast(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_contrast
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  contrast: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 657
+
+# uvc_error_t uvc_set_contrast_auto(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_contrast_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  contrast_auto: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 660
+
+# int uvc_set_ctrl(uvc_device_handle_t *, uint8_t, uint8_t, void *, int)
+--- !function
+name: uvc_set_ctrl
+type: int
+parameters:
+  devh: struct uvc_device_handle *
+  unit: uint8_t
+  ctrl: uint8_t
+  data: void *
+  len: int
+definition:
+  file: libuvc/libuvc.h
+  line: 584
+
+# uvc_error_t uvc_set_digital_multiplier(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_digital_multiplier
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  multiplier_step: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 696
+
+# uvc_error_t uvc_set_digital_multiplier_limit(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_digital_multiplier_limit
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  multiplier_step: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 699
+
+# uvc_error_t uvc_set_digital_roi(uvc_device_handle_t *, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t)
+--- !function
+name: uvc_set_digital_roi
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  roi_top: uint16_t
+  roi_left: uint16_t
+  roi_bottom: uint16_t
+  roi_right: uint16_t
+  auto_controls: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 648
+
+# uvc_error_t uvc_set_digital_window(uvc_device_handle_t *, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t, uint16_t)
+--- !function
+name: uvc_set_digital_window
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  window_top: uint16_t
+  window_left: uint16_t
+  window_bottom: uint16_t
+  window_right: uint16_t
+  num_steps: uint16_t
+  num_steps_units: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 645
+
+# uvc_error_t uvc_set_exposure_abs(uvc_device_handle_t *, uint32_t)
+--- !function
+name: uvc_set_exposure_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  time: uint32_t
+definition:
+  file: libuvc/libuvc.h
+  line: 600
+
+# uvc_error_t uvc_set_exposure_rel(uvc_device_handle_t *, int8_t)
+--- !function
+name: uvc_set_exposure_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  step: int8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 603
+
+# uvc_error_t uvc_set_focus_abs(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_focus_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focus: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 606
+
+# uvc_error_t uvc_set_focus_auto(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_focus_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  state: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 615
+
+# uvc_error_t uvc_set_focus_rel(uvc_device_handle_t *, int8_t, uint8_t)
+--- !function
+name: uvc_set_focus_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focus_rel: int8_t
+  speed: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 609
+
+# uvc_error_t uvc_set_focus_simple_range(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_focus_simple_range
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focus: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 612
+
+# uvc_error_t uvc_set_gain(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_gain
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  gain: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 663
+
+# uvc_error_t uvc_set_gamma(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_gamma
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  gamma: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 681
+
+# uvc_error_t uvc_set_hue(uvc_device_handle_t *, int16_t)
+--- !function
+name: uvc_set_hue
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  hue: int16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 669
+
+# uvc_error_t uvc_set_hue_auto(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_hue_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  hue_auto: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 672
+
+# uvc_error_t uvc_set_input_select(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_input_select
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  selector: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 708
+
+# uvc_error_t uvc_set_iris_abs(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_iris_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  iris: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 618
+
+# uvc_error_t uvc_set_iris_rel(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_iris_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  iris_rel: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 621
+
+# uvc_error_t uvc_set_pantilt_abs(uvc_device_handle_t *, int32_t, int32_t)
+--- !function
+name: uvc_set_pantilt_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  pan: int32_t
+  tilt: int32_t
+definition:
+  file: libuvc/libuvc.h
+  line: 630
+
+# uvc_error_t uvc_set_pantilt_rel(uvc_device_handle_t *, int8_t, uint8_t, int8_t, uint8_t)
+--- !function
+name: uvc_set_pantilt_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  pan_rel: int8_t
+  pan_speed: uint8_t
+  tilt_rel: int8_t
+  tilt_speed: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 633
+
+# uvc_error_t uvc_set_power_line_frequency(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_power_line_frequency
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  power_line_frequency: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 666
+
+# uvc_error_t uvc_set_power_mode(uvc_device_handle_t *, enum uvc_device_power_mode)
+--- !function
+name: uvc_set_power_mode
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  mode: enum uvc_device_power_mode
+definition:
+  file: libuvc/libuvc.h
+  line: 587
+
+# uvc_error_t uvc_set_privacy(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_privacy
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  privacy: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 642
+
+# uvc_error_t uvc_set_roll_abs(uvc_device_handle_t *, int16_t)
+--- !function
+name: uvc_set_roll_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  roll: int16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 636
+
+# uvc_error_t uvc_set_roll_rel(uvc_device_handle_t *, int8_t, uint8_t)
+--- !function
+name: uvc_set_roll_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  roll_rel: int8_t
+  speed: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 639
+
+# uvc_error_t uvc_set_saturation(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_saturation
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  saturation: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 675
+
+# uvc_error_t uvc_set_scanning_mode(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_scanning_mode
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  mode: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 591
+
+# uvc_error_t uvc_set_sharpness(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_sharpness
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  sharpness: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 678
+
+# void uvc_set_status_callback(uvc_device_handle_t *, uvc_status_callback_t *, void *)
+--- !function
+name: uvc_set_status_callback
+type: void
+parameters:
+  devh: struct uvc_device_handle *
+  cb: void (enum uvc_status_class, int, int, enum uvc_status_attribute, void *, unsigned
+    long, void *)
+  user_ptr: void *
+definition:
+  file: libuvc/libuvc.h
+  line: 521
+
+# uvc_error_t uvc_set_white_balance_component(uvc_device_handle_t *, uint16_t, uint16_t)
+--- !function
+name: uvc_set_white_balance_component
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  blue: uint16_t
+  red: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 690
+
+# uvc_error_t uvc_set_white_balance_component_auto(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_white_balance_component_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  white_balance_component_auto: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 693
+
+# uvc_error_t uvc_set_white_balance_temperature(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_white_balance_temperature
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  temperature: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 684
+
+# uvc_error_t uvc_set_white_balance_temperature_auto(uvc_device_handle_t *, uint8_t)
+--- !function
+name: uvc_set_white_balance_temperature_auto
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  temperature_auto: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 687
+
+# uvc_error_t uvc_set_zoom_abs(uvc_device_handle_t *, uint16_t)
+--- !function
+name: uvc_set_zoom_abs
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  focal_length: uint16_t
+definition:
+  file: libuvc/libuvc.h
+  line: 624
+
+# uvc_error_t uvc_set_zoom_rel(uvc_device_handle_t *, int8_t, uint8_t, uint8_t)
+--- !function
+name: uvc_set_zoom_rel
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  zoom_rel: int8_t
+  digital_zoom: uint8_t
+  speed: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 627
+
+# uvc_error_t uvc_start_iso_streaming(uvc_device_handle_t *, uvc_stream_ctrl_t *, uvc_frame_callback_t *, void *)
+--- !function
+name: uvc_start_iso_streaming
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  ctrl: struct uvc_stream_ctrl *
+  cb: void (*)(struct uvc_frame *, void *)
+  user_ptr: void *
+definition:
+  file: libuvc/libuvc.h
+  line: 557
+
+# uvc_error_t uvc_start_streaming(uvc_device_handle_t *, uvc_stream_ctrl_t *, uvc_frame_callback_t *, void *, uint8_t)
+--- !function
+name: uvc_start_streaming
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  ctrl: struct uvc_stream_ctrl *
+  cb: void (*)(struct uvc_frame *, void *)
+  user_ptr: void *
+  flags: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 550
+
+# void uvc_stop_streaming(uvc_device_handle_t *)
+--- !function
+name: uvc_stop_streaming
+type: void
+parameters:
+  devh: struct uvc_device_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 563
+
+# void uvc_stream_close(uvc_stream_handle_t *)
+--- !function
+name: uvc_stream_close
+type: void
+parameters:
+  strmh: struct uvc_stream_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 580
+
+# uvc_error_t uvc_stream_ctrl(uvc_stream_handle_t *, uvc_stream_ctrl_t *)
+--- !function
+name: uvc_stream_ctrl
+type: enum uvc_error
+parameters:
+  strmh: struct uvc_stream_handle *
+  ctrl: struct uvc_stream_ctrl *
+definition:
+  file: libuvc/libuvc.h
+  line: 566
+
+# uvc_error_t uvc_stream_get_frame(uvc_stream_handle_t *, uvc_frame_t **, int32_t)
+--- !function
+name: uvc_stream_get_frame
+type: enum uvc_error
+parameters:
+  strmh: struct uvc_stream_handle *
+  frame: struct uvc_frame **
+  timeout_us: int32_t
+definition:
+  file: libuvc/libuvc.h
+  line: 574
+
+# uvc_error_t uvc_stream_open_ctrl(uvc_device_handle_t *, uvc_stream_handle_t **, uvc_stream_ctrl_t *)
+--- !function
+name: uvc_stream_open_ctrl
+type: enum uvc_error
+parameters:
+  devh: struct uvc_device_handle *
+  strmh: struct uvc_stream_handle **
+  ctrl: struct uvc_stream_ctrl *
+definition:
+  file: libuvc/libuvc.h
+  line: 565
+
+# uvc_error_t uvc_stream_start(uvc_stream_handle_t *, uvc_frame_callback_t *, void *, uint8_t)
+--- !function
+name: uvc_stream_start
+type: enum uvc_error
+parameters:
+  strmh: struct uvc_stream_handle *
+  cb: void (*)(struct uvc_frame *, void *)
+  user_ptr: void *
+  flags: uint8_t
+definition:
+  file: libuvc/libuvc.h
+  line: 567
+
+# uvc_error_t uvc_stream_start_iso(uvc_stream_handle_t *, uvc_frame_callback_t *, void *)
+--- !function
+name: uvc_stream_start_iso
+type: enum uvc_error
+parameters:
+  strmh: struct uvc_stream_handle *
+  cb: void (*)(struct uvc_frame *, void *)
+  user_ptr: void *
+definition:
+  file: libuvc/libuvc.h
+  line: 571
+
+# uvc_error_t uvc_stream_stop(uvc_stream_handle_t *)
+--- !function
+name: uvc_stream_stop
+type: enum uvc_error
+parameters:
+  strmh: struct uvc_stream_handle *
+definition:
+  file: libuvc/libuvc.h
+  line: 579
+
+# const char * uvc_strerror(uvc_error_t)
+--- !function
+name: uvc_strerror
+type: const char *
+parameters:
+  err: enum uvc_error
+definition:
+  file: libuvc/libuvc.h
+  line: 712
+
+# void uvc_unref_device(uvc_device_t *)
+--- !function
+name: uvc_unref_device
+type: void
+parameters:
+  dev: struct uvc_device *
+definition:
+  file: libuvc/libuvc.h
+  line: 519
+
+# uvc_error_t uvc_uyvy2bgr(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_uyvy2bgr
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 726
+
+# uvc_error_t uvc_uyvy2rgb(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_uyvy2rgb
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 722
+
+# uvc_error_t uvc_yuyv2bgr(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_yuyv2bgr
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 725
+
+# uvc_error_t uvc_yuyv2rgb(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_yuyv2rgb
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 721
+
+# uvc_error_t uvc_yuyv2uv(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_yuyv2uv
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 730
+
+# uvc_error_t uvc_yuyv2y(uvc_frame_t *, uvc_frame_t *)
+--- !function
+name: uvc_yuyv2y
+type: enum uvc_error
+parameters:
+  in: struct uvc_frame *
+  out: struct uvc_frame *
+definition:
+  file: libuvc/libuvc.h
+  line: 729

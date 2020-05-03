@@ -13,4 +13,4 @@ objects:
   - libuvc.so.0   # Debian, Ubuntu
   - libuvc.dylib  # Homebrew
 headers:
-  - libuvc.h
+  - libuvc/libuvc.h

@@ -8,6 +8,7 @@ Libraries
 | :------------ | ------: | :-------------- | :------------------------------- |
 | hidapi        |   0.9.0 | `hidapi`        | `hidapi.h`                       |
 | libffi        |   3.3.0 | `ffi`           | `ffi.h`                          |
+| libuvc        |   0.0.6 | `uvc`           | `libuvc/libuvc.h`                |
 | lua           |   5.3.5 | `lua`           | `lua.h`, `lualib.h`, `lauxlib.h` |
 | openhmd       |   0.3.0 | `openhmd`       | `openhmd.h`                      |
 | openxr        |   1.0.8 | `openxr_loader` | `openxr.h`                       |
