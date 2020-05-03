@@ -1,0 +1,2961 @@
+# void * sqlite3_aggregate_context(sqlite3_context *, int)
+--- !function
+name: sqlite3_aggregate_context
+type: void *
+parameters:
+  _1: struct sqlite3_context *
+  nBytes: int
+definition:
+  file: sqlite3.h
+  line: 5247
+
+# int sqlite3_aggregate_count(sqlite3_context *)
+--- !function
+name: sqlite3_aggregate_count
+type: int
+parameters:
+  _1: struct sqlite3_context *
+definition:
+  file: sqlite3.h
+  line: 5022
+
+# int sqlite3_auto_extension(void (*)(void))
+--- !function
+name: sqlite3_auto_extension
+type: int
+parameters:
+  xEntryPoint: void (*)(void)
+definition:
+  file: sqlite3.h
+  line: 6392
+
+# int sqlite3_backup_finish(sqlite3_backup *)
+--- !function
+name: sqlite3_backup_finish
+type: int
+parameters:
+  p: struct sqlite3_backup *
+definition:
+  file: sqlite3.h
+  line: 8413
+
+# sqlite3_backup * sqlite3_backup_init(sqlite3 *, const char *, sqlite3 *, const char *)
+--- !function
+name: sqlite3_backup_init
+type: struct sqlite3_backup *
+parameters:
+  pDest: struct sqlite3 *
+  zDestName: const char *
+  pSource: struct sqlite3 *
+  zSourceName: const char *
+definition:
+  file: sqlite3.h
+  line: 8406
+
+# int sqlite3_backup_pagecount(sqlite3_backup *)
+--- !function
+name: sqlite3_backup_pagecount
+type: int
+parameters:
+  p: struct sqlite3_backup *
+definition:
+  file: sqlite3.h
+  line: 8415
+
+# int sqlite3_backup_remaining(sqlite3_backup *)
+--- !function
+name: sqlite3_backup_remaining
+type: int
+parameters:
+  p: struct sqlite3_backup *
+definition:
+  file: sqlite3.h
+  line: 8414
+
+# int sqlite3_backup_step(sqlite3_backup *, int)
+--- !function
+name: sqlite3_backup_step
+type: int
+parameters:
+  p: struct sqlite3_backup *
+  nPage: int
+definition:
+  file: sqlite3.h
+  line: 8412
+
+# int sqlite3_bind_blob(sqlite3_stmt *, int, const void *, int, void (*)(void *))
+--- !function
+name: sqlite3_bind_blob
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: const void *
+  n: int
+  _5: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 4169
+
+# int sqlite3_bind_blob64(sqlite3_stmt *, int, const void *, sqlite3_uint64, void (*)(void *))
+--- !function
+name: sqlite3_bind_blob64
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: const void *
+  _4: unsigned long long
+  _5: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 4170
+
+# int sqlite3_bind_double(sqlite3_stmt *, int, double)
+--- !function
+name: sqlite3_bind_double
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: double
+definition:
+  file: sqlite3.h
+  line: 4172
+
+# int sqlite3_bind_int(sqlite3_stmt *, int, int)
+--- !function
+name: sqlite3_bind_int
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: int
+definition:
+  file: sqlite3.h
+  line: 4173
+
+# int sqlite3_bind_int64(sqlite3_stmt *, int, sqlite3_int64)
+--- !function
+name: sqlite3_bind_int64
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: long long
+definition:
+  file: sqlite3.h
+  line: 4174
+
+# int sqlite3_bind_null(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_bind_null
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4175
+
+# int sqlite3_bind_parameter_count(sqlite3_stmt *)
+--- !function
+name: sqlite3_bind_parameter_count
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 4204
+
+# int sqlite3_bind_parameter_index(sqlite3_stmt *, const char *)
+--- !function
+name: sqlite3_bind_parameter_index
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  zName: const char *
+definition:
+  file: sqlite3.h
+  line: 4250
+
+# const char * sqlite3_bind_parameter_name(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_bind_parameter_name
+type: const char *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4232
+
+# int sqlite3_bind_pointer(sqlite3_stmt *, int, void *, const char *, void (*)(void *))
+--- !function
+name: sqlite3_bind_pointer
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: void *
+  _4: const char *
+  _5: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 4181
+
+# int sqlite3_bind_text(sqlite3_stmt *, int, const char *, int, void (*)(void *))
+--- !function
+name: sqlite3_bind_text
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: const char *
+  _4: int
+  _5: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 4176
+
+# int sqlite3_bind_text16(sqlite3_stmt *, int, const void *, int, void (*)(void *))
+--- !function
+name: sqlite3_bind_text16
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: const void *
+  _4: int
+  _5: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 4177
+
+# int sqlite3_bind_text64(sqlite3_stmt *, int, const char *, sqlite3_uint64, void (*)(void *), unsigned char)
+--- !function
+name: sqlite3_bind_text64
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: const char *
+  _4: unsigned long long
+  _5: void (*)(void *)
+  encoding: unsigned char
+definition:
+  file: sqlite3.h
+  line: 4178
+
+# int sqlite3_bind_value(sqlite3_stmt *, int, const sqlite3_value *)
+--- !function
+name: sqlite3_bind_value
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: const struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 4180
+
+# int sqlite3_bind_zeroblob(sqlite3_stmt *, int, int)
+--- !function
+name: sqlite3_bind_zeroblob
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  n: int
+definition:
+  file: sqlite3.h
+  line: 4182
+
+# int sqlite3_bind_zeroblob64(sqlite3_stmt *, int, sqlite3_uint64)
+--- !function
+name: sqlite3_bind_zeroblob64
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+  _3: unsigned long long
+definition:
+  file: sqlite3.h
+  line: 4183
+
+# int sqlite3_blob_bytes(sqlite3_blob *)
+--- !function
+name: sqlite3_blob_bytes
+type: int
+parameters:
+  _1: struct sqlite3_blob *
+definition:
+  file: sqlite3.h
+  line: 6964
+
+# int sqlite3_blob_close(sqlite3_blob *)
+--- !function
+name: sqlite3_blob_close
+type: int
+parameters:
+  _1: struct sqlite3_blob *
+definition:
+  file: sqlite3.h
+  line: 6948
+
+# int sqlite3_blob_open(sqlite3 *, const char *, const char *, const char *, sqlite3_int64, int, sqlite3_blob **)
+--- !function
+name: sqlite3_blob_open
+type: int
+parameters:
+  _1: struct sqlite3 *
+  zDb: const char *
+  zTable: const char *
+  zColumn: const char *
+  iRow: long long
+  flags: int
+  ppBlob: struct sqlite3_blob **
+definition:
+  file: sqlite3.h
+  line: 6892
+
+# int sqlite3_blob_read(sqlite3_blob *, void *, int, int)
+--- !function
+name: sqlite3_blob_read
+type: int
+parameters:
+  _1: struct sqlite3_blob *
+  Z: void *
+  N: int
+  iOffset: int
+definition:
+  file: sqlite3.h
+  line: 6993
+
+# int sqlite3_blob_reopen(sqlite3_blob *, sqlite3_int64)
+--- !function
+name: sqlite3_blob_reopen
+type: int
+parameters:
+  _1: struct sqlite3_blob *
+  _2: long long
+definition:
+  file: sqlite3.h
+  line: 6925
+
+# int sqlite3_blob_write(sqlite3_blob *, const void *, int, int)
+--- !function
+name: sqlite3_blob_write
+type: int
+parameters:
+  _1: struct sqlite3_blob *
+  z: const void *
+  n: int
+  iOffset: int
+definition:
+  file: sqlite3.h
+  line: 7035
+
+# int sqlite3_busy_handler(sqlite3 *, int (*)(void *, int), void *)
+--- !function
+name: sqlite3_busy_handler
+type: int
+parameters:
+  _1: struct sqlite3 *
+  _2: int (*)(void *, int)
+  _3: void *
+definition:
+  file: sqlite3.h
+  line: 2591
+
+# int sqlite3_busy_timeout(sqlite3 *, int)
+--- !function
+name: sqlite3_busy_timeout
+type: int
+parameters:
+  _1: struct sqlite3 *
+  ms: int
+definition:
+  file: sqlite3.h
+  line: 2614
+
+# int sqlite3_cancel_auto_extension(void (*)(void))
+--- !function
+name: sqlite3_cancel_auto_extension
+type: int
+parameters:
+  xEntryPoint: void (*)(void)
+definition:
+  file: sqlite3.h
+  line: 6404
+
+# int sqlite3_changes(sqlite3 *)
+--- !function
+name: sqlite3_changes
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 2420
+
+# int sqlite3_clear_bindings(sqlite3_stmt *)
+--- !function
+name: sqlite3_clear_bindings
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 4260
+
+# int sqlite3_close(sqlite3 *)
+--- !function
+name: sqlite3_close
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 334
+
+# int sqlite3_close_v2(sqlite3 *)
+--- !function
+name: sqlite3_close_v2
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 335
+
+# int sqlite3_collation_needed(sqlite3 *, void *, void (*)(void *, sqlite3 *, int, const char *))
+--- !function
+name: sqlite3_collation_needed
+type: int
+parameters:
+  _1: struct sqlite3 *
+  _2: void *
+  _3: void (*)(void *, struct sqlite3 *, int, const char *)
+definition:
+  file: sqlite3.h
+  line: 5649
+
+# int sqlite3_collation_needed16(sqlite3 *, void *, void (*)(void *, sqlite3 *, int, const void *))
+--- !function
+name: sqlite3_collation_needed16
+type: int
+parameters:
+  _1: struct sqlite3 *
+  _2: void *
+  _3: void (*)(void *, struct sqlite3 *, int, const void *)
+definition:
+  file: sqlite3.h
+  line: 5654
+
+# const void * sqlite3_column_blob(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_blob
+type: const void *
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4740
+
+# int sqlite3_column_bytes(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_bytes
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4747
+
+# int sqlite3_column_bytes16(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_bytes16
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4748
+
+# int sqlite3_column_count(sqlite3_stmt *)
+--- !function
+name: sqlite3_column_count
+type: int
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 4276
+
+# const char * sqlite3_column_database_name(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_database_name
+type: const char *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4354
+
+# const void * sqlite3_column_database_name16(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_database_name16
+type: const void *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4355
+
+# const char * sqlite3_column_decltype(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_decltype
+type: const char *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4391
+
+# const void * sqlite3_column_decltype16(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_decltype16
+type: const void *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4392
+
+# double sqlite3_column_double(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_double
+type: double
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4741
+
+# int sqlite3_column_int(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_int
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4742
+
+# sqlite3_int64 sqlite3_column_int64(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_int64
+type: long long
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4743
+
+# const char * sqlite3_column_name(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_name
+type: const char *
+parameters:
+  _1: struct sqlite3_stmt *
+  N: int
+definition:
+  file: sqlite3.h
+  line: 4305
+
+# const void * sqlite3_column_name16(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_name16
+type: const void *
+parameters:
+  _1: struct sqlite3_stmt *
+  N: int
+definition:
+  file: sqlite3.h
+  line: 4306
+
+# const char * sqlite3_column_origin_name(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_origin_name
+type: const char *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4358
+
+# const void * sqlite3_column_origin_name16(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_origin_name16
+type: const void *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4359
+
+# const char * sqlite3_column_table_name(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_table_name
+type: const char *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4356
+
+# const void * sqlite3_column_table_name16(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_table_name16
+type: const void *
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 4357
+
+# const unsigned char * sqlite3_column_text(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_text
+type: const unsigned char *
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4744
+
+# const void * sqlite3_column_text16(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_text16
+type: const void *
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4745
+
+# int sqlite3_column_type(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_type
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4749
+
+# sqlite3_value * sqlite3_column_value(sqlite3_stmt *, int)
+--- !function
+name: sqlite3_column_value
+type: struct sqlite3_value *
+parameters:
+  _1: struct sqlite3_stmt *
+  iCol: int
+definition:
+  file: sqlite3.h
+  line: 4746
+
+# void * sqlite3_commit_hook(sqlite3 *, int (*)(void *), void *)
+--- !function
+name: sqlite3_commit_hook
+type: void *
+parameters:
+  _1: struct sqlite3 *
+  _2: int (*)(void *)
+  _3: void *
+definition:
+  file: sqlite3.h
+  line: 6007
+
+# const char * sqlite3_compileoption_get(int)
+--- !function
+name: sqlite3_compileoption_get
+type: const char *
+parameters:
+  N: int
+definition:
+  file: sqlite3.h
+  line: 191
+
+# int sqlite3_compileoption_used(const char *)
+--- !function
+name: sqlite3_compileoption_used
+type: int
+parameters:
+  zOptName: const char *
+definition:
+  file: sqlite3.h
+  line: 190
+
+# int sqlite3_complete(const char *)
+--- !function
+name: sqlite3_complete
+type: int
+parameters:
+  sql: const char *
+definition:
+  file: sqlite3.h
+  line: 2529
+
+# int sqlite3_complete16(const void *)
+--- !function
+name: sqlite3_complete16
+type: int
+parameters:
+  sql: const void *
+definition:
+  file: sqlite3.h
+  line: 2530
+
+# int sqlite3_config(int, ...)
+--- !function
+name: sqlite3_config
+type: int
+parameters:
+  _1: int
+definition:
+  file: sqlite3.h
+  line: 1559
+
+# sqlite3 * sqlite3_context_db_handle(sqlite3_context *)
+--- !function
+name: sqlite3_context_db_handle
+type: struct sqlite3 *
+parameters:
+  _1: struct sqlite3_context *
+definition:
+  file: sqlite3.h
+  line: 5274
+
+# int sqlite3_create_collation(sqlite3 *, const char *, int, void *, int (*)(void *, int, const void *, int, const void *))
+--- !function
+name: sqlite3_create_collation
+type: int
+parameters:
+  _1: struct sqlite3 *
+  zName: const char *
+  eTextRep: int
+  pArg: void *
+  xCompare: int (*)(void *, int, const void *, int, const void *)
+definition:
+  file: sqlite3.h
+  line: 5599
+
+# int sqlite3_create_collation16(sqlite3 *, const void *, int, void *, int (*)(void *, int, const void *, int, const void *))
+--- !function
+name: sqlite3_create_collation16
+type: int
+parameters:
+  _1: struct sqlite3 *
+  zName: const void *
+  eTextRep: int
+  pArg: void *
+  xCompare: int (*)(void *, int, const void *, int, const void *)
+definition:
+  file: sqlite3.h
+  line: 5614
+
+# int sqlite3_create_collation_v2(sqlite3 *, const char *, int, void *, int (*)(void *, int, const void *, int, const void *), void (*)(void *))
+--- !function
+name: sqlite3_create_collation_v2
+type: int
+parameters:
+  _1: struct sqlite3 *
+  zName: const char *
+  eTextRep: int
+  pArg: void *
+  xCompare: int (*)(void *, int, const void *, int, const void *)
+  xDestroy: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5606
+
+# int sqlite3_create_function(sqlite3 *, const char *, int, int, void *, void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *))
+--- !function
+name: sqlite3_create_function
+type: int
+parameters:
+  db: struct sqlite3 *
+  zFunctionName: const char *
+  nArg: int
+  eTextRep: int
+  pApp: void *
+  xFunc: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xStep: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xFinal: void (*)(struct sqlite3_context *)
+definition:
+  file: sqlite3.h
+  line: 4922
+
+# int sqlite3_create_function16(sqlite3 *, const void *, int, int, void *, void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *))
+--- !function
+name: sqlite3_create_function16
+type: int
+parameters:
+  db: struct sqlite3 *
+  zFunctionName: const void *
+  nArg: int
+  eTextRep: int
+  pApp: void *
+  xFunc: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xStep: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xFinal: void (*)(struct sqlite3_context *)
+definition:
+  file: sqlite3.h
+  line: 4932
+
+# int sqlite3_create_function_v2(sqlite3 *, const char *, int, int, void *, void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *), void (*)(void *))
+--- !function
+name: sqlite3_create_function_v2
+type: int
+parameters:
+  db: struct sqlite3 *
+  zFunctionName: const char *
+  nArg: int
+  eTextRep: int
+  pApp: void *
+  xFunc: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xStep: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xFinal: void (*)(struct sqlite3_context *)
+  xDestroy: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 4942
+
+# int sqlite3_create_module(sqlite3 *, const char *, const sqlite3_module *, void *)
+--- !function
+name: sqlite3_create_module
+type: int
+parameters:
+  db: struct sqlite3 *
+  zName: const char *
+  p: const struct sqlite3_module *
+  pClientData: void *
+definition:
+  file: sqlite3.h
+  line: 6678
+
+# int sqlite3_create_module_v2(sqlite3 *, const char *, const sqlite3_module *, void *, void (*)(void *))
+--- !function
+name: sqlite3_create_module_v2
+type: int
+parameters:
+  db: struct sqlite3 *
+  zName: const char *
+  p: const struct sqlite3_module *
+  pClientData: void *
+  xDestroy: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 6684
+
+# int sqlite3_create_window_function(sqlite3 *, const char *, int, int, void *, void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(sqlite3_context *), void (*)(sqlite3_context *), void (*)(sqlite3_context *, int, sqlite3_value **), void (*)(void *))
+--- !function
+name: sqlite3_create_window_function
+type: int
+parameters:
+  db: struct sqlite3 *
+  zFunctionName: const char *
+  nArg: int
+  eTextRep: int
+  pApp: void *
+  xStep: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xFinal: void (*)(struct sqlite3_context *)
+  xValue: void (*)(struct sqlite3_context *)
+  xInverse: void (*)(struct sqlite3_context *, int, struct sqlite3_value **)
+  xDestroy: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 4953
+
+# int sqlite3_data_count(sqlite3_stmt *)
+--- !function
+name: sqlite3_data_count
+type: int
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 4497
+
+# int sqlite3_db_cacheflush(sqlite3 *)
+--- !function
+name: sqlite3_db_cacheflush
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 9075
+
+# int sqlite3_db_config(sqlite3 *, int, ...)
+--- !function
+name: sqlite3_db_config
+type: int
+parameters:
+  _1: struct sqlite3 *
+  op: int
+definition:
+  file: sqlite3.h
+  line: 1578
+
+# const char * sqlite3_db_filename(sqlite3 *, const char *)
+--- !function
+name: sqlite3_db_filename
+type: const char *
+parameters:
+  db: struct sqlite3 *
+  zDbName: const char *
+definition:
+  file: sqlite3.h
+  line: 5932
+
+# sqlite3 * sqlite3_db_handle(sqlite3_stmt *)
+--- !function
+name: sqlite3_db_handle
+type: struct sqlite3 *
+parameters:
+  _1: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 5915
+
+# sqlite3_mutex * sqlite3_db_mutex(sqlite3 *)
+--- !function
+name: sqlite3_db_mutex
+type: struct sqlite3_mutex *
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 7339
+
+# int sqlite3_db_readonly(sqlite3 *, const char *)
+--- !function
+name: sqlite3_db_readonly
+type: int
+parameters:
+  db: struct sqlite3 *
+  zDbName: const char *
+definition:
+  file: sqlite3.h
+  line: 5942
+
+# int sqlite3_db_release_memory(sqlite3 *)
+--- !function
+name: sqlite3_db_release_memory
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 6130
+
+# int sqlite3_db_status(sqlite3 *, int, int *, int *, int)
+--- !function
+name: sqlite3_db_status
+type: int
+parameters:
+  _1: struct sqlite3 *
+  op: int
+  pCur: int *
+  pHiwtr: int *
+  resetFlg: int
+definition:
+  file: sqlite3.h
+  line: 7763
+
+# int sqlite3_declare_vtab(sqlite3 *, const char *)
+--- !function
+name: sqlite3_declare_vtab
+type: int
+parameters:
+  _1: struct sqlite3 *
+  zSQL: const char *
+definition:
+  file: sqlite3.h
+  line: 6764
+
+# int sqlite3_deserialize(sqlite3 *, const char *, unsigned char *, sqlite3_int64, sqlite3_int64, unsigned int)
+--- !function
+name: sqlite3_deserialize
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSchema: const char *
+  pData: unsigned char *
+  szDb: long long
+  szBuf: long long
+  mFlags: unsigned int
+definition:
+  file: sqlite3.h
+  line: 9469
+
+# int sqlite3_drop_modules(sqlite3 *, const char **)
+--- !function
+name: sqlite3_drop_modules
+type: int
+parameters:
+  db: struct sqlite3 *
+  azKeep: const char **
+definition:
+  file: sqlite3.h
+  line: 6704
+
+# int sqlite3_enable_load_extension(sqlite3 *, int)
+--- !function
+name: sqlite3_enable_load_extension
+type: int
+parameters:
+  db: struct sqlite3 *
+  onoff: int
+definition:
+  file: sqlite3.h
+  line: 6354
+
+# int sqlite3_enable_shared_cache(int)
+--- !function
+name: sqlite3_enable_shared_cache
+type: int
+parameters:
+  _1: int
+definition:
+  file: sqlite3.h
+  line: 6100
+
+# int sqlite3_errcode(sqlite3 *)
+--- !function
+name: sqlite3_errcode
+type: int
+parameters:
+  db: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 3557
+
+# const char * sqlite3_errmsg(sqlite3 *)
+--- !function
+name: sqlite3_errmsg
+type: const char *
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 3559
+
+# const void * sqlite3_errmsg16(sqlite3 *)
+--- !function
+name: sqlite3_errmsg16
+type: const void *
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 3560
+
+# const char * sqlite3_errstr(int)
+--- !function
+name: sqlite3_errstr
+type: const char *
+parameters:
+  _1: int
+definition:
+  file: sqlite3.h
+  line: 3561
+
+# int sqlite3_exec(sqlite3 *, const char *, int (*)(void *, int, char **, char **), void *, char **)
+--- !function
+name: sqlite3_exec
+type: int
+parameters:
+  _1: struct sqlite3 *
+  sql: const char *
+  callback: int (*)(void *, int, char **, char **)
+  _4: void *
+  errmsg: char **
+definition:
+  file: sqlite3.h
+  line: 406
+
+# char * sqlite3_expanded_sql(sqlite3_stmt *)
+--- !function
+name: sqlite3_expanded_sql
+type: char *
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 3923
+
+# int sqlite3_expired(sqlite3_stmt *)
+--- !function
+name: sqlite3_expired
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 5023
+
+# int sqlite3_extended_errcode(sqlite3 *)
+--- !function
+name: sqlite3_extended_errcode
+type: int
+parameters:
+  db: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 3558
+
+# int sqlite3_extended_result_codes(sqlite3 *, int)
+--- !function
+name: sqlite3_extended_result_codes
+type: int
+parameters:
+  _1: struct sqlite3 *
+  onoff: int
+definition:
+  file: sqlite3.h
+  line: 2290
+
+# int sqlite3_file_control(sqlite3 *, const char *, int, void *)
+--- !function
+name: sqlite3_file_control
+type: int
+parameters:
+  _1: struct sqlite3 *
+  zDbName: const char *
+  op: int
+  _4: void *
+definition:
+  file: sqlite3.h
+  line: 7382
+
+# int sqlite3_finalize(sqlite3_stmt *)
+--- !function
+name: sqlite3_finalize
+type: int
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 4777
+
+# void sqlite3_free(void *)
+--- !function
+name: sqlite3_free
+type: void
+parameters:
+  _1: void *
+definition:
+  file: sqlite3.h
+  line: 2836
+
+# void sqlite3_free_table(char **)
+--- !function
+name: sqlite3_free_table
+type: void
+parameters:
+  result: char **
+definition:
+  file: sqlite3.h
+  line: 2697
+
+# int sqlite3_get_autocommit(sqlite3 *)
+--- !function
+name: sqlite3_get_autocommit
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 5902
+
+# void * sqlite3_get_auxdata(sqlite3_context *, int)
+--- !function
+name: sqlite3_get_auxdata
+type: void *
+parameters:
+  _1: struct sqlite3_context *
+  N: int
+definition:
+  file: sqlite3.h
+  line: 5333
+
+# int sqlite3_get_table(sqlite3 *, const char *, char ***, int *, int *, char **)
+--- !function
+name: sqlite3_get_table
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSql: const char *
+  pazResult: char ***
+  pnRow: int *
+  pnColumn: int *
+  pzErrmsg: char **
+definition:
+  file: sqlite3.h
+  line: 2689
+
+# int sqlite3_global_recover(void)
+--- !function
+name: sqlite3_global_recover
+type: int
+definition:
+  file: sqlite3.h
+  line: 5025
+
+# int sqlite3_initialize(void)
+--- !function
+name: sqlite3_initialize
+type: int
+definition:
+  file: sqlite3.h
+  line: 1523
+
+# void sqlite3_interrupt(sqlite3 *)
+--- !function
+name: sqlite3_interrupt
+type: void
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 2494
+
+# int sqlite3_keyword_check(const char *, int)
+--- !function
+name: sqlite3_keyword_check
+type: int
+parameters:
+  _1: const char *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 7493
+
+# int sqlite3_keyword_count(void)
+--- !function
+name: sqlite3_keyword_count
+type: int
+definition:
+  file: sqlite3.h
+  line: 7491
+
+# int sqlite3_keyword_name(int, const char **, int *)
+--- !function
+name: sqlite3_keyword_name
+type: int
+parameters:
+  _1: int
+  _2: const char **
+  _3: int *
+definition:
+  file: sqlite3.h
+  line: 7492
+
+# sqlite3_int64 sqlite3_last_insert_rowid(sqlite3 *)
+--- !function
+name: sqlite3_last_insert_rowid
+type: long long
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 2352
+
+# const char * sqlite3_libversion(void)
+--- !function
+name: sqlite3_libversion
+type: const char *
+definition:
+  file: sqlite3.h
+  line: 163
+
+# int sqlite3_libversion_number(void)
+--- !function
+name: sqlite3_libversion_number
+type: int
+definition:
+  file: sqlite3.h
+  line: 165
+
+# int sqlite3_limit(sqlite3 *, int, int)
+--- !function
+name: sqlite3_limit
+type: int
+parameters:
+  _1: struct sqlite3 *
+  id: int
+  newVal: int
+definition:
+  file: sqlite3.h
+  line: 3629
+
+# int sqlite3_load_extension(sqlite3 *, const char *, const char *, char **)
+--- !function
+name: sqlite3_load_extension
+type: int
+parameters:
+  db: struct sqlite3 *
+  zFile: const char *
+  zProc: const char *
+  pzErrMsg: char **
+definition:
+  file: sqlite3.h
+  line: 6322
+
+# void sqlite3_log(int, const char *, ...)
+--- !function
+name: sqlite3_log
+type: void
+parameters:
+  iErrCode: int
+  zFormat: const char *
+definition:
+  file: sqlite3.h
+  line: 8611
+
+# void * sqlite3_malloc(int)
+--- !function
+name: sqlite3_malloc
+type: void *
+parameters:
+  _1: int
+definition:
+  file: sqlite3.h
+  line: 2832
+
+# void * sqlite3_malloc64(sqlite3_uint64)
+--- !function
+name: sqlite3_malloc64
+type: void *
+parameters:
+  _1: unsigned long long
+definition:
+  file: sqlite3.h
+  line: 2833
+
+# int sqlite3_memory_alarm(void (*)(void *, sqlite3_int64, int), void *, sqlite3_int64)
+--- !function
+name: sqlite3_memory_alarm
+type: int
+parameters:
+  _1: void (*)(void *, long long, int)
+  _2: void *
+  _3: long long
+definition:
+  file: sqlite3.h
+  line: 5027
+
+# sqlite3_int64 sqlite3_memory_highwater(int)
+--- !function
+name: sqlite3_memory_highwater
+type: long long
+parameters:
+  resetFlag: int
+definition:
+  file: sqlite3.h
+  line: 2863
+
+# sqlite3_int64 sqlite3_memory_used(void)
+--- !function
+name: sqlite3_memory_used
+type: long long
+definition:
+  file: sqlite3.h
+  line: 2862
+
+# char * sqlite3_mprintf(const char *, ...)
+--- !function
+name: sqlite3_mprintf
+type: char *
+parameters:
+  _1: const char *
+definition:
+  file: sqlite3.h
+  line: 2739
+
+# sqlite3_uint64 sqlite3_msize(void *)
+--- !function
+name: sqlite3_msize
+type: unsigned long long
+parameters:
+  _1: void *
+definition:
+  file: sqlite3.h
+  line: 2837
+
+# sqlite3_mutex * sqlite3_mutex_alloc(int)
+--- !function
+name: sqlite3_mutex_alloc
+type: struct sqlite3_mutex *
+parameters:
+  _1: int
+definition:
+  file: sqlite3.h
+  line: 7184
+
+# void sqlite3_mutex_enter(sqlite3_mutex *)
+--- !function
+name: sqlite3_mutex_enter
+type: void
+parameters:
+  _1: struct sqlite3_mutex *
+definition:
+  file: sqlite3.h
+  line: 7186
+
+# void sqlite3_mutex_free(sqlite3_mutex *)
+--- !function
+name: sqlite3_mutex_free
+type: void
+parameters:
+  _1: struct sqlite3_mutex *
+definition:
+  file: sqlite3.h
+  line: 7185
+
+# int sqlite3_mutex_held(sqlite3_mutex *)
+--- !function
+name: sqlite3_mutex_held
+type: int
+parameters:
+  _1: struct sqlite3_mutex *
+definition:
+  file: sqlite3.h
+  line: 7298
+
+# void sqlite3_mutex_leave(sqlite3_mutex *)
+--- !function
+name: sqlite3_mutex_leave
+type: void
+parameters:
+  _1: struct sqlite3_mutex *
+definition:
+  file: sqlite3.h
+  line: 7188
+
+# int sqlite3_mutex_notheld(sqlite3_mutex *)
+--- !function
+name: sqlite3_mutex_notheld
+type: int
+parameters:
+  _1: struct sqlite3_mutex *
+definition:
+  file: sqlite3.h
+  line: 7299
+
+# int sqlite3_mutex_try(sqlite3_mutex *)
+--- !function
+name: sqlite3_mutex_try
+type: int
+parameters:
+  _1: struct sqlite3_mutex *
+definition:
+  file: sqlite3.h
+  line: 7187
+
+# sqlite3_stmt * sqlite3_next_stmt(sqlite3 *, sqlite3_stmt *)
+--- !function
+name: sqlite3_next_stmt
+type: struct sqlite3_stmt *
+parameters:
+  pDb: struct sqlite3 *
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 5958
+
+# const char * sqlite3_normalized_sql(sqlite3_stmt *)
+--- !function
+name: sqlite3_normalized_sql
+type: const char *
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 3924
+
+# int sqlite3_open(const char *, sqlite3 **)
+--- !function
+name: sqlite3_open
+type: int
+parameters:
+  filename: const char *
+  ppDb: struct sqlite3 **
+definition:
+  file: sqlite3.h
+  line: 3444
+
+# int sqlite3_open16(const void *, sqlite3 **)
+--- !function
+name: sqlite3_open16
+type: int
+parameters:
+  filename: const void *
+  ppDb: struct sqlite3 **
+definition:
+  file: sqlite3.h
+  line: 3448
+
+# int sqlite3_open_v2(const char *, sqlite3 **, int, const char *)
+--- !function
+name: sqlite3_open_v2
+type: int
+parameters:
+  filename: const char *
+  ppDb: struct sqlite3 **
+  flags: int
+  zVfs: const char *
+definition:
+  file: sqlite3.h
+  line: 3452
+
+# int sqlite3_os_end(void)
+--- !function
+name: sqlite3_os_end
+type: int
+definition:
+  file: sqlite3.h
+  line: 1526
+
+# int sqlite3_os_init(void)
+--- !function
+name: sqlite3_os_init
+type: int
+definition:
+  file: sqlite3.h
+  line: 1525
+
+# int sqlite3_overload_function(sqlite3 *, const char *, int)
+--- !function
+name: sqlite3_overload_function
+type: int
+parameters:
+  _1: struct sqlite3 *
+  zFuncName: const char *
+  nArg: int
+definition:
+  file: sqlite3.h
+  line: 6783
+
+# int sqlite3_prepare(sqlite3 *, const char *, int, sqlite3_stmt **, const char **)
+--- !function
+name: sqlite3_prepare
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSql: const char *
+  nByte: int
+  ppStmt: struct sqlite3_stmt **
+  pzTail: const char **
+definition:
+  file: sqlite3.h
+  line: 3839
+
+# int sqlite3_prepare16(sqlite3 *, const void *, int, sqlite3_stmt **, const void **)
+--- !function
+name: sqlite3_prepare16
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSql: const void *
+  nByte: int
+  ppStmt: struct sqlite3_stmt **
+  pzTail: const void **
+definition:
+  file: sqlite3.h
+  line: 3861
+
+# int sqlite3_prepare16_v2(sqlite3 *, const void *, int, sqlite3_stmt **, const void **)
+--- !function
+name: sqlite3_prepare16_v2
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSql: const void *
+  nByte: int
+  ppStmt: struct sqlite3_stmt **
+  pzTail: const void **
+definition:
+  file: sqlite3.h
+  line: 3868
+
+# int sqlite3_prepare16_v3(sqlite3 *, const void *, int, unsigned int, sqlite3_stmt **, const void **)
+--- !function
+name: sqlite3_prepare16_v3
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSql: const void *
+  nByte: int
+  prepFlags: unsigned int
+  ppStmt: struct sqlite3_stmt **
+  pzTail: const void **
+definition:
+  file: sqlite3.h
+  line: 3875
+
+# int sqlite3_prepare_v2(sqlite3 *, const char *, int, sqlite3_stmt **, const char **)
+--- !function
+name: sqlite3_prepare_v2
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSql: const char *
+  nByte: int
+  ppStmt: struct sqlite3_stmt **
+  pzTail: const char **
+definition:
+  file: sqlite3.h
+  line: 3846
+
+# int sqlite3_prepare_v3(sqlite3 *, const char *, int, unsigned int, sqlite3_stmt **, const char **)
+--- !function
+name: sqlite3_prepare_v3
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSql: const char *
+  nByte: int
+  prepFlags: unsigned int
+  ppStmt: struct sqlite3_stmt **
+  pzTail: const char **
+definition:
+  file: sqlite3.h
+  line: 3853
+
+# void * sqlite3_profile(sqlite3 *, void (*)(void *, const char *, sqlite3_uint64), void *)
+--- !function
+name: sqlite3_profile
+type: void *
+parameters:
+  _1: struct sqlite3 *
+  xProfile: void (*)(void *, const char *, unsigned long long)
+  _3: void *
+definition:
+  file: sqlite3.h
+  line: 3087
+
+# void sqlite3_progress_handler(sqlite3 *, int, int (*)(void *), void *)
+--- !function
+name: sqlite3_progress_handler
+type: void
+parameters:
+  _1: struct sqlite3 *
+  _2: int
+  _3: int (*)(void *)
+  _4: void *
+definition:
+  file: sqlite3.h
+  line: 3215
+
+# void sqlite3_randomness(int, void *)
+--- !function
+name: sqlite3_randomness
+type: void
+parameters:
+  N: int
+  P: void *
+definition:
+  file: sqlite3.h
+  line: 2886
+
+# void * sqlite3_realloc(void *, int)
+--- !function
+name: sqlite3_realloc
+type: void *
+parameters:
+  _1: void *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 2834
+
+# void * sqlite3_realloc64(void *, sqlite3_uint64)
+--- !function
+name: sqlite3_realloc64
+type: void *
+parameters:
+  _1: void *
+  _2: unsigned long long
+definition:
+  file: sqlite3.h
+  line: 2835
+
+# int sqlite3_release_memory(int)
+--- !function
+name: sqlite3_release_memory
+type: int
+parameters:
+  _1: int
+definition:
+  file: sqlite3.h
+  line: 6116
+
+# int sqlite3_reset(sqlite3_stmt *)
+--- !function
+name: sqlite3_reset
+type: int
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 4804
+
+# void sqlite3_reset_auto_extension(void)
+--- !function
+name: sqlite3_reset_auto_extension
+type: void
+definition:
+  file: sqlite3.h
+  line: 6412
+
+# void sqlite3_result_blob(sqlite3_context *, const void *, int, void (*)(void *))
+--- !function
+name: sqlite3_result_blob
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const void *
+  _3: int
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5481
+
+# void sqlite3_result_blob64(sqlite3_context *, const void *, sqlite3_uint64, void (*)(void *))
+--- !function
+name: sqlite3_result_blob64
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const void *
+  _3: unsigned long long
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5482
+
+# void sqlite3_result_double(sqlite3_context *, double)
+--- !function
+name: sqlite3_result_double
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: double
+definition:
+  file: sqlite3.h
+  line: 5484
+
+# void sqlite3_result_error(sqlite3_context *, const char *, int)
+--- !function
+name: sqlite3_result_error
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const char *
+  _3: int
+definition:
+  file: sqlite3.h
+  line: 5485
+
+# void sqlite3_result_error16(sqlite3_context *, const void *, int)
+--- !function
+name: sqlite3_result_error16
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const void *
+  _3: int
+definition:
+  file: sqlite3.h
+  line: 5486
+
+# void sqlite3_result_error_code(sqlite3_context *, int)
+--- !function
+name: sqlite3_result_error_code
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 5489
+
+# void sqlite3_result_error_nomem(sqlite3_context *)
+--- !function
+name: sqlite3_result_error_nomem
+type: void
+parameters:
+  _1: struct sqlite3_context *
+definition:
+  file: sqlite3.h
+  line: 5488
+
+# void sqlite3_result_error_toobig(sqlite3_context *)
+--- !function
+name: sqlite3_result_error_toobig
+type: void
+parameters:
+  _1: struct sqlite3_context *
+definition:
+  file: sqlite3.h
+  line: 5487
+
+# void sqlite3_result_int(sqlite3_context *, int)
+--- !function
+name: sqlite3_result_int
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 5490
+
+# void sqlite3_result_int64(sqlite3_context *, sqlite3_int64)
+--- !function
+name: sqlite3_result_int64
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: long long
+definition:
+  file: sqlite3.h
+  line: 5491
+
+# void sqlite3_result_null(sqlite3_context *)
+--- !function
+name: sqlite3_result_null
+type: void
+parameters:
+  _1: struct sqlite3_context *
+definition:
+  file: sqlite3.h
+  line: 5492
+
+# void sqlite3_result_pointer(sqlite3_context *, void *, const char *, void (*)(void *))
+--- !function
+name: sqlite3_result_pointer
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: void *
+  _3: const char *
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5500
+
+# void sqlite3_result_subtype(sqlite3_context *, unsigned int)
+--- !function
+name: sqlite3_result_subtype
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: unsigned int
+definition:
+  file: sqlite3.h
+  line: 5517
+
+# void sqlite3_result_text(sqlite3_context *, const char *, int, void (*)(void *))
+--- !function
+name: sqlite3_result_text
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const char *
+  _3: int
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5493
+
+# void sqlite3_result_text16(sqlite3_context *, const void *, int, void (*)(void *))
+--- !function
+name: sqlite3_result_text16
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const void *
+  _3: int
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5496
+
+# void sqlite3_result_text16be(sqlite3_context *, const void *, int, void (*)(void *))
+--- !function
+name: sqlite3_result_text16be
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const void *
+  _3: int
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5498
+
+# void sqlite3_result_text16le(sqlite3_context *, const void *, int, void (*)(void *))
+--- !function
+name: sqlite3_result_text16le
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const void *
+  _3: int
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5497
+
+# void sqlite3_result_text64(sqlite3_context *, const char *, sqlite3_uint64, void (*)(void *), unsigned char)
+--- !function
+name: sqlite3_result_text64
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: const char *
+  _3: unsigned long long
+  _4: void (*)(void *)
+  encoding: unsigned char
+definition:
+  file: sqlite3.h
+  line: 5494
+
+# void sqlite3_result_value(sqlite3_context *, sqlite3_value *)
+--- !function
+name: sqlite3_result_value
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  _2: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5499
+
+# void sqlite3_result_zeroblob(sqlite3_context *, int)
+--- !function
+name: sqlite3_result_zeroblob
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  n: int
+definition:
+  file: sqlite3.h
+  line: 5501
+
+# int sqlite3_result_zeroblob64(sqlite3_context *, sqlite3_uint64)
+--- !function
+name: sqlite3_result_zeroblob64
+type: int
+parameters:
+  _1: struct sqlite3_context *
+  n: unsigned long long
+definition:
+  file: sqlite3.h
+  line: 5502
+
+# void * sqlite3_rollback_hook(sqlite3 *, void (*)(void *), void *)
+--- !function
+name: sqlite3_rollback_hook
+type: void *
+parameters:
+  _1: struct sqlite3 *
+  _2: void (*)(void *)
+  _3: void *
+definition:
+  file: sqlite3.h
+  line: 6008
+
+# int sqlite3_rtree_geometry_callback(sqlite3 *, const char *, int (*)(sqlite3_rtree_geometry *, int, sqlite3_rtree_dbl *, int *), void *)
+--- !function
+name: sqlite3_rtree_geometry_callback
+type: int
+parameters:
+  db: struct sqlite3 *
+  zGeom: const char *
+  xGeom: int (*)(struct sqlite3_rtree_geometry *, int, double *, int *)
+  pContext: void *
+definition:
+  file: sqlite3.h
+  line: 9556
+
+# int sqlite3_rtree_query_callback(sqlite3 *, const char *, int (*)(sqlite3_rtree_query_info *), void *, void (*)(void *))
+--- !function
+name: sqlite3_rtree_query_callback
+type: int
+parameters:
+  db: struct sqlite3 *
+  zQueryFunc: const char *
+  xQueryFunc: int (*)(struct sqlite3_rtree_query_info *)
+  pContext: void *
+  xDestructor: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 9582
+
+# unsigned char * sqlite3_serialize(sqlite3 *, const char *, sqlite3_int64 *, unsigned int)
+--- !function
+name: sqlite3_serialize
+type: unsigned char *
+parameters:
+  db: struct sqlite3 *
+  zSchema: const char *
+  piSize: long long *
+  mFlags: unsigned int
+definition:
+  file: sqlite3.h
+  line: 9417
+
+# int sqlite3_set_authorizer(sqlite3 *, int (*)(void *, int, const char *, const char *, const char *, const char *), void *)
+--- !function
+name: sqlite3_set_authorizer
+type: int
+parameters:
+  _1: struct sqlite3 *
+  xAuth: int (*)(void *, int, const char *, const char *, const char *, const char
+    *)
+  pUserData: void *
+definition:
+  file: sqlite3.h
+  line: 2977
+
+# void sqlite3_set_auxdata(sqlite3_context *, int, void *, void (*)(void *))
+--- !function
+name: sqlite3_set_auxdata
+type: void
+parameters:
+  _1: struct sqlite3_context *
+  N: int
+  _3: void *
+  _4: void (*)(void *)
+definition:
+  file: sqlite3.h
+  line: 5334
+
+# void sqlite3_set_last_insert_rowid(sqlite3 *, sqlite3_int64)
+--- !function
+name: sqlite3_set_last_insert_rowid
+type: void
+parameters:
+  _1: struct sqlite3 *
+  _2: long long
+definition:
+  file: sqlite3.h
+  line: 2362
+
+# int sqlite3_shutdown(void)
+--- !function
+name: sqlite3_shutdown
+type: int
+definition:
+  file: sqlite3.h
+  line: 1524
+
+# int sqlite3_sleep(int)
+--- !function
+name: sqlite3_sleep
+type: int
+parameters:
+  _1: int
+definition:
+  file: sqlite3.h
+  line: 5748
+
+# int sqlite3_snapshot_cmp(sqlite3_snapshot *, sqlite3_snapshot *)
+--- !function
+name: sqlite3_snapshot_cmp
+type: int
+parameters:
+  p1: struct sqlite3_snapshot *
+  p2: struct sqlite3_snapshot *
+definition:
+  file: sqlite3.h
+  line: 9351
+
+# void sqlite3_snapshot_free(sqlite3_snapshot *)
+--- !function
+name: sqlite3_snapshot_free
+type: void
+parameters:
+  _1: struct sqlite3_snapshot *
+definition:
+  file: sqlite3.h
+  line: 9324
+
+# int sqlite3_snapshot_get(sqlite3 *, const char *, sqlite3_snapshot **)
+--- !function
+name: sqlite3_snapshot_get
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSchema: const char *
+  ppSnapshot: struct sqlite3_snapshot **
+definition:
+  file: sqlite3.h
+  line: 9258
+
+# int sqlite3_snapshot_open(sqlite3 *, const char *, sqlite3_snapshot *)
+--- !function
+name: sqlite3_snapshot_open
+type: int
+parameters:
+  db: struct sqlite3 *
+  zSchema: const char *
+  pSnapshot: struct sqlite3_snapshot *
+definition:
+  file: sqlite3.h
+  line: 9307
+
+# int sqlite3_snapshot_recover(sqlite3 *, const char *)
+--- !function
+name: sqlite3_snapshot_recover
+type: int
+parameters:
+  db: struct sqlite3 *
+  zDb: const char *
+definition:
+  file: sqlite3.h
+  line: 9379
+
+# char * sqlite3_snprintf(int, char *, const char *, ...)
+--- !function
+name: sqlite3_snprintf
+type: char *
+parameters:
+  _1: int
+  _2: char *
+  _3: const char *
+definition:
+  file: sqlite3.h
+  line: 2741
+
+# void sqlite3_soft_heap_limit(int)
+--- !function
+name: sqlite3_soft_heap_limit
+type: void
+parameters:
+  N: int
+definition:
+  file: sqlite3.h
+  line: 6194
+
+# sqlite3_int64 sqlite3_soft_heap_limit64(sqlite3_int64)
+--- !function
+name: sqlite3_soft_heap_limit64
+type: long long
+parameters:
+  N: long long
+definition:
+  file: sqlite3.h
+  line: 6183
+
+# const char * sqlite3_sourceid(void)
+--- !function
+name: sqlite3_sourceid
+type: const char *
+definition:
+  file: sqlite3.h
+  line: 164
+
+# const char * sqlite3_sql(sqlite3_stmt *)
+--- !function
+name: sqlite3_sql
+type: const char *
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 3922
+
+# int sqlite3_status(int, int *, int *, int)
+--- !function
+name: sqlite3_status
+type: int
+parameters:
+  op: int
+  pCurrent: int *
+  pHighwater: int *
+  resetFlag: int
+definition:
+  file: sqlite3.h
+  line: 7653
+
+# int sqlite3_status64(int, sqlite3_int64 *, sqlite3_int64 *, int)
+--- !function
+name: sqlite3_status64
+type: int
+parameters:
+  op: int
+  pCurrent: long long *
+  pHighwater: long long *
+  resetFlag: int
+definition:
+  file: sqlite3.h
+  line: 7654
+
+# int sqlite3_step(sqlite3_stmt *)
+--- !function
+name: sqlite3_step
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 4476
+
+# int sqlite3_stmt_busy(sqlite3_stmt *)
+--- !function
+name: sqlite3_stmt_busy
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 3993
+
+# int sqlite3_stmt_isexplain(sqlite3_stmt *)
+--- !function
+name: sqlite3_stmt_isexplain
+type: int
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 3972
+
+# int sqlite3_stmt_readonly(sqlite3_stmt *)
+--- !function
+name: sqlite3_stmt_readonly
+type: int
+parameters:
+  pStmt: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 3960
+
+# int sqlite3_stmt_scanstatus(sqlite3_stmt *, int, int, void *)
+--- !function
+name: sqlite3_stmt_scanstatus
+type: int
+parameters:
+  pStmt: struct sqlite3_stmt *
+  idx: int
+  iScanStatusOp: int
+  pOut: void *
+definition:
+  file: sqlite3.h
+  line: 9027
+
+# void sqlite3_stmt_scanstatus_reset(sqlite3_stmt *)
+--- !function
+name: sqlite3_stmt_scanstatus_reset
+type: void
+parameters:
+  _1: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 9043
+
+# int sqlite3_stmt_status(sqlite3_stmt *, int, int)
+--- !function
+name: sqlite3_stmt_status
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  op: int
+  resetFlg: int
+definition:
+  file: sqlite3.h
+  line: 7916
+
+# void sqlite3_str_append(sqlite3_str *, const char *, int)
+--- !function
+name: sqlite3_str_append
+type: void
+parameters:
+  _1: struct sqlite3_str *
+  zIn: const char *
+  N: int
+definition:
+  file: sqlite3.h
+  line: 7589
+
+# void sqlite3_str_appendall(sqlite3_str *, const char *)
+--- !function
+name: sqlite3_str_appendall
+type: void
+parameters:
+  _1: struct sqlite3_str *
+  zIn: const char *
+definition:
+  file: sqlite3.h
+  line: 7590
+
+# void sqlite3_str_appendchar(sqlite3_str *, int, char)
+--- !function
+name: sqlite3_str_appendchar
+type: void
+parameters:
+  _1: struct sqlite3_str *
+  N: int
+  C: char
+definition:
+  file: sqlite3.h
+  line: 7591
+
+# void sqlite3_str_appendf(sqlite3_str *, const char *, ...)
+--- !function
+name: sqlite3_str_appendf
+type: void
+parameters:
+  _1: struct sqlite3_str *
+  zFormat: const char *
+definition:
+  file: sqlite3.h
+  line: 7587
+
+# int sqlite3_str_errcode(sqlite3_str *)
+--- !function
+name: sqlite3_str_errcode
+type: int
+parameters:
+  _1: struct sqlite3_str *
+definition:
+  file: sqlite3.h
+  line: 7623
+
+# char * sqlite3_str_finish(sqlite3_str *)
+--- !function
+name: sqlite3_str_finish
+type: char *
+parameters:
+  _1: struct sqlite3_str *
+definition:
+  file: sqlite3.h
+  line: 7553
+
+# int sqlite3_str_length(sqlite3_str *)
+--- !function
+name: sqlite3_str_length
+type: int
+parameters:
+  _1: struct sqlite3_str *
+definition:
+  file: sqlite3.h
+  line: 7624
+
+# sqlite3_str * sqlite3_str_new(sqlite3 *)
+--- !function
+name: sqlite3_str_new
+type: struct sqlite3_str *
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 7538
+
+# void sqlite3_str_reset(sqlite3_str *)
+--- !function
+name: sqlite3_str_reset
+type: void
+parameters:
+  _1: struct sqlite3_str *
+definition:
+  file: sqlite3.h
+  line: 7592
+
+# char * sqlite3_str_value(sqlite3_str *)
+--- !function
+name: sqlite3_str_value
+type: char *
+parameters:
+  _1: struct sqlite3_str *
+definition:
+  file: sqlite3.h
+  line: 7625
+
+# void sqlite3_str_vappendf(sqlite3_str *, const char *, struct __va_list_tag *)
+--- !function
+name: sqlite3_str_vappendf
+type: void
+parameters:
+  _1: struct sqlite3_str *
+  zFormat: const char *
+  _3: va_list
+definition:
+  file: sqlite3.h
+  line: 7588
+
+# int sqlite3_strglob(const char *, const char *)
+--- !function
+name: sqlite3_strglob
+type: int
+parameters:
+  zGlob: const char *
+  zStr: const char *
+definition:
+  file: sqlite3.h
+  line: 8565
+
+# int sqlite3_stricmp(const char *, const char *)
+--- !function
+name: sqlite3_stricmp
+type: int
+parameters:
+  _1: const char *
+  _2: const char *
+definition:
+  file: sqlite3.h
+  line: 8547
+
+# int sqlite3_strlike(const char *, const char *, unsigned int)
+--- !function
+name: sqlite3_strlike
+type: int
+parameters:
+  zGlob: const char *
+  zStr: const char *
+  cEsc: unsigned int
+definition:
+  file: sqlite3.h
+  line: 8588
+
+# int sqlite3_strnicmp(const char *, const char *, int)
+--- !function
+name: sqlite3_strnicmp
+type: int
+parameters:
+  _1: const char *
+  _2: const char *
+  _3: int
+definition:
+  file: sqlite3.h
+  line: 8548
+
+# int sqlite3_system_errno(sqlite3 *)
+--- !function
+name: sqlite3_system_errno
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 9189
+
+# int sqlite3_table_column_metadata(sqlite3 *, const char *, const char *, const char *, const char **, const char **, int *, int *, int *)
+--- !function
+name: sqlite3_table_column_metadata
+type: int
+parameters:
+  db: struct sqlite3 *
+  zDbName: const char *
+  zTableName: const char *
+  zColumnName: const char *
+  pzDataType: const char **
+  pzCollSeq: const char **
+  pNotNull: int *
+  pPrimaryKey: int *
+  pAutoinc: int *
+definition:
+  file: sqlite3.h
+  line: 6266
+
+# int sqlite3_test_control(int, ...)
+--- !function
+name: sqlite3_test_control
+type: int
+parameters:
+  op: int
+definition:
+  file: sqlite3.h
+  line: 7401
+
+# void sqlite3_thread_cleanup(void)
+--- !function
+name: sqlite3_thread_cleanup
+type: void
+definition:
+  file: sqlite3.h
+  line: 5026
+
+# int sqlite3_threadsafe(void)
+--- !function
+name: sqlite3_threadsafe
+type: int
+definition:
+  file: sqlite3.h
+  line: 233
+
+# int sqlite3_total_changes(sqlite3 *)
+--- !function
+name: sqlite3_total_changes
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 2457
+
+# void * sqlite3_trace(sqlite3 *, void (*)(void *, const char *), void *)
+--- !function
+name: sqlite3_trace
+type: void *
+parameters:
+  _1: struct sqlite3 *
+  xTrace: void (*)(void *, const char *)
+  _3: void *
+definition:
+  file: sqlite3.h
+  line: 3085
+
+# int sqlite3_trace_v2(sqlite3 *, unsigned int, int (*)(unsigned int, void *, void *, void *), void *)
+--- !function
+name: sqlite3_trace_v2
+type: int
+parameters:
+  _1: struct sqlite3 *
+  uMask: unsigned int
+  xCallback: int (*)(unsigned int, void *, void *, void *)
+  pCtx: void *
+definition:
+  file: sqlite3.h
+  line: 3176
+
+# int sqlite3_transfer_bindings(sqlite3_stmt *, sqlite3_stmt *)
+--- !function
+name: sqlite3_transfer_bindings
+type: int
+parameters:
+  _1: struct sqlite3_stmt *
+  _2: struct sqlite3_stmt *
+definition:
+  file: sqlite3.h
+  line: 5024
+
+# int sqlite3_unlock_notify(sqlite3 *, void (*)(void **, int), void *)
+--- !function
+name: sqlite3_unlock_notify
+type: int
+parameters:
+  pBlocked: struct sqlite3 *
+  xNotify: void (*)(void **, int)
+  pNotifyArg: void *
+definition:
+  file: sqlite3.h
+  line: 8532
+
+# void * sqlite3_update_hook(sqlite3 *, void (*)(void *, int, const char *, const char *, sqlite3_int64), void *)
+--- !function
+name: sqlite3_update_hook
+type: void *
+parameters:
+  _1: struct sqlite3 *
+  _2: void (*)(void *, int, const char *, const char *, long long)
+  _3: void *
+definition:
+  file: sqlite3.h
+  line: 6059
+
+# int sqlite3_uri_boolean(const char *, const char *, int)
+--- !function
+name: sqlite3_uri_boolean
+type: int
+parameters:
+  zFile: const char *
+  zParam: const char *
+  bDefault: int
+definition:
+  file: sqlite3.h
+  line: 3501
+
+# sqlite3_int64 sqlite3_uri_int64(const char *, const char *, sqlite3_int64)
+--- !function
+name: sqlite3_uri_int64
+type: long long
+parameters:
+  _1: const char *
+  _2: const char *
+  _3: long long
+definition:
+  file: sqlite3.h
+  line: 3502
+
+# const char * sqlite3_uri_parameter(const char *, const char *)
+--- !function
+name: sqlite3_uri_parameter
+type: const char *
+parameters:
+  zFilename: const char *
+  zParam: const char *
+definition:
+  file: sqlite3.h
+  line: 3500
+
+# void * sqlite3_user_data(sqlite3_context *)
+--- !function
+name: sqlite3_user_data
+type: void *
+parameters:
+  _1: struct sqlite3_context *
+definition:
+  file: sqlite3.h
+  line: 5262
+
+# const void * sqlite3_value_blob(sqlite3_value *)
+--- !function
+name: sqlite3_value_blob
+type: const void *
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5159
+
+# int sqlite3_value_bytes(sqlite3_value *)
+--- !function
+name: sqlite3_value_bytes
+type: int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5168
+
+# int sqlite3_value_bytes16(sqlite3_value *)
+--- !function
+name: sqlite3_value_bytes16
+type: int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5169
+
+# double sqlite3_value_double(sqlite3_value *)
+--- !function
+name: sqlite3_value_double
+type: double
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5160
+
+# sqlite3_value * sqlite3_value_dup(const sqlite3_value *)
+--- !function
+name: sqlite3_value_dup
+type: struct sqlite3_value *
+parameters:
+  _1: const struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5201
+
+# void sqlite3_value_free(sqlite3_value *)
+--- !function
+name: sqlite3_value_free
+type: void
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5202
+
+# int sqlite3_value_frombind(sqlite3_value *)
+--- !function
+name: sqlite3_value_frombind
+type: int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5173
+
+# int sqlite3_value_int(sqlite3_value *)
+--- !function
+name: sqlite3_value_int
+type: int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5161
+
+# sqlite3_int64 sqlite3_value_int64(sqlite3_value *)
+--- !function
+name: sqlite3_value_int64
+type: long long
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5162
+
+# int sqlite3_value_nochange(sqlite3_value *)
+--- !function
+name: sqlite3_value_nochange
+type: int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5172
+
+# int sqlite3_value_numeric_type(sqlite3_value *)
+--- !function
+name: sqlite3_value_numeric_type
+type: int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5171
+
+# void * sqlite3_value_pointer(sqlite3_value *, const char *)
+--- !function
+name: sqlite3_value_pointer
+type: void *
+parameters:
+  _1: struct sqlite3_value *
+  _2: const char *
+definition:
+  file: sqlite3.h
+  line: 5163
+
+# unsigned int sqlite3_value_subtype(sqlite3_value *)
+--- !function
+name: sqlite3_value_subtype
+type: unsigned int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5185
+
+# const unsigned char * sqlite3_value_text(sqlite3_value *)
+--- !function
+name: sqlite3_value_text
+type: const unsigned char *
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5164
+
+# const void * sqlite3_value_text16(sqlite3_value *)
+--- !function
+name: sqlite3_value_text16
+type: const void *
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5165
+
+# const void * sqlite3_value_text16be(sqlite3_value *)
+--- !function
+name: sqlite3_value_text16be
+type: const void *
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5167
+
+# const void * sqlite3_value_text16le(sqlite3_value *)
+--- !function
+name: sqlite3_value_text16le
+type: const void *
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5166
+
+# int sqlite3_value_type(sqlite3_value *)
+--- !function
+name: sqlite3_value_type
+type: int
+parameters:
+  _1: struct sqlite3_value *
+definition:
+  file: sqlite3.h
+  line: 5170
+
+# sqlite3_vfs * sqlite3_vfs_find(const char *)
+--- !function
+name: sqlite3_vfs_find
+type: struct sqlite3_vfs *
+parameters:
+  zVfsName: const char *
+definition:
+  file: sqlite3.h
+  line: 7066
+
+# int sqlite3_vfs_register(sqlite3_vfs *, int)
+--- !function
+name: sqlite3_vfs_register
+type: int
+parameters:
+  _1: struct sqlite3_vfs *
+  makeDflt: int
+definition:
+  file: sqlite3.h
+  line: 7067
+
+# int sqlite3_vfs_unregister(sqlite3_vfs *)
+--- !function
+name: sqlite3_vfs_unregister
+type: int
+parameters:
+  _1: struct sqlite3_vfs *
+definition:
+  file: sqlite3.h
+  line: 7068
+
+# char * sqlite3_vmprintf(const char *, struct __va_list_tag *)
+--- !function
+name: sqlite3_vmprintf
+type: char *
+parameters:
+  _1: const char *
+  _2: va_list
+definition:
+  file: sqlite3.h
+  line: 2740
+
+# char * sqlite3_vsnprintf(int, char *, const char *, struct __va_list_tag *)
+--- !function
+name: sqlite3_vsnprintf
+type: char *
+parameters:
+  _1: int
+  _2: char *
+  _3: const char *
+  _4: va_list
+definition:
+  file: sqlite3.h
+  line: 2742
+
+# const char * sqlite3_vtab_collation(sqlite3_index_info *, int)
+--- !function
+name: sqlite3_vtab_collation
+type: const char *
+parameters:
+  _1: struct sqlite3_index_info *
+  _2: int
+definition:
+  file: sqlite3.h
+  line: 8922
+
+# int sqlite3_vtab_config(sqlite3 *, int, ...)
+--- !function
+name: sqlite3_vtab_config
+type: int
+parameters:
+  _1: struct sqlite3 *
+  op: int
+definition:
+  file: sqlite3.h
+  line: 8834
+
+# int sqlite3_vtab_nochange(sqlite3_context *)
+--- !function
+name: sqlite3_vtab_nochange
+type: int
+parameters:
+  _1: struct sqlite3_context *
+definition:
+  file: sqlite3.h
+  line: 8907
+
+# int sqlite3_vtab_on_conflict(sqlite3 *)
+--- !function
+name: sqlite3_vtab_on_conflict
+type: int
+parameters:
+  _1: struct sqlite3 *
+definition:
+  file: sqlite3.h
+  line: 8888
+
+# int sqlite3_wal_autocheckpoint(sqlite3 *, int)
+--- !function
+name: sqlite3_wal_autocheckpoint
+type: int
+parameters:
+  db: struct sqlite3 *
+  N: int
+definition:
+  file: sqlite3.h
+  line: 8682
+
+# int sqlite3_wal_checkpoint(sqlite3 *, const char *)
+--- !function
+name: sqlite3_wal_checkpoint
+type: int
+parameters:
+  db: struct sqlite3 *
+  zDb: const char *
+definition:
+  file: sqlite3.h
+  line: 8704
+
+# int sqlite3_wal_checkpoint_v2(sqlite3 *, const char *, int, int *, int *)
+--- !function
+name: sqlite3_wal_checkpoint_v2
+type: int
+parameters:
+  db: struct sqlite3 *
+  zDb: const char *
+  eMode: int
+  pnLog: int *
+  pnCkpt: int *
+definition:
+  file: sqlite3.h
+  line: 8798
+
+# void * sqlite3_wal_hook(sqlite3 *, int (*)(void *, sqlite3 *, const char *, int), void *)
+--- !function
+name: sqlite3_wal_hook
+type: void *
+parameters:
+  _1: struct sqlite3 *
+  _2: int (*)(void *, struct sqlite3 *, const char *, int)
+  _3: void *
+definition:
+  file: sqlite3.h
+  line: 8647
