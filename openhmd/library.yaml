@@ -1,0 +1,16 @@
+--- !library
+name: openhmd
+summary: An open-source API and driver collection for VR headsets
+website: http://openhmd.net
+source: https://github.com/OpenHMD/OpenHMD
+packages:
+  alpine:
+  debian: libopenhmd0
+  homebrew: openhmd
+  ubuntu: libopenhmd0
+dlopen: openhmd
+objects:
+  - libopenhmd.so.0     # Debian, Ubuntu
+  - libopenhmd.0.dylib  # Homebrew
+headers:
+  - openhmd.h
