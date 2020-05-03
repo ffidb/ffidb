@@ -1,0 +1,366 @@
+# int ohmd_close_device(ohmd_device *)
+--- !function
+name: ohmd_close_device
+type: int
+parameters:
+  device: struct ohmd_device *
+definition:
+  file: openhmd.h
+  line: 402
+comment: "Close a device.\nCloses a device opened by ohmd_list_open_device. Note that
+  ohmd_ctx_destroy automatically closes any open devices\n associated with the context
+  being destroyed.\n\nThe open device.\n0 on success, \n<\n0 on failure."
+
+# ohmd_context * ohmd_ctx_create(void)
+--- !function
+name: ohmd_ctx_create
+type: struct ohmd_context *
+definition:
+  file: openhmd.h
+  line: 245
+comment: |-
+  Create an OpenHMD context.
+
+  a pointer to an allocated ohmd_context on success or NULL if it fails.
+
+# void ohmd_ctx_destroy(ohmd_context *)
+--- !function
+name: ohmd_ctx_destroy
+type: void
+parameters:
+  ctx: struct ohmd_context *
+definition:
+  file: openhmd.h
+  line: 255
+comment: |-
+  Destroy an OpenHMD context.
+  ohmd_ctx_destroy de-initializes and de-allocates an OpenHMD context allocated with ohmd_ctx_create.
+   All devices associated with the context are automatically closed.
+
+  The context to destroy.
+
+# const char * ohmd_ctx_get_error(ohmd_context *)
+--- !function
+name: ohmd_ctx_get_error
+type: const char *
+parameters:
+  ctx: struct ohmd_context *
+definition:
+  file: openhmd.h
+  line: 266
+comment: |-
+  Get the last error as a human readable string.
+  If a function taking a context as an argument (ohmd_context "methods") returns non-successfully,
+   a human readable error message describing what went wrong can be retrieved with this function.
+
+  The context to retrieve the error message from.
+  a pointer to the error message.
+
+# int ohmd_ctx_probe(ohmd_context *)
+--- !function
+name: ohmd_ctx_probe
+type: int
+parameters:
+  ctx: struct ohmd_context *
+definition:
+  file: openhmd.h
+  line: 291
+comment: |-
+  Probe for devices.
+  Probes for and enumerates supported devices attached to the system.
+
+  A context with no currently open devices.
+  the number of devices found on the system.
+
+# void ohmd_ctx_update(ohmd_context *)
+--- !function
+name: ohmd_ctx_update
+type: void
+parameters:
+  ctx: struct ohmd_context *
+definition:
+  file: openhmd.h
+  line: 281
+comment: "Update a context.\nUpdate the values for the devices handled by a context.\nIf
+  background threads are disabled, this performs tasks like pumping events from the
+  device. The exact details \n are up to the driver but try to call it quite frequently.\n
+  Once per frame in a \"game loop\" should be sufficient.\n If OpenHMD is handled
+  in a background thread in your program, calling ohmd_ctx_update and then sleeping
+  for 10-20 ms\n is recommended.\n\nThe context that needs updating."
+
+# int ohmd_device_getf(ohmd_device *, ohmd_float_value, float *)
+--- !function
+name: ohmd_device_getf
+type: int
+parameters:
+  device: struct ohmd_device *
+  type: ohmd_float_value
+  out: float *
+definition:
+  file: openhmd.h
+  line: 413
+comment: "Get a floating point value from a device.\n\nAn open device to retrieve
+  the value from.\nWhat type of value to retrieve, see ohmd_float_value section for
+  more information.\nA pointer to a float, or float array where the retrieved value
+  should be written.\n0 on success, \n<\n0 on failure."
+
+# int ohmd_device_geti(ohmd_device *, ohmd_int_value, int *)
+--- !function
+name: ohmd_device_geti
+type: int
+parameters:
+  device: struct ohmd_device *
+  type: ohmd_int_value
+  out: int *
+definition:
+  file: openhmd.h
+  line: 433
+comment: "Get an integer value from a device.\n\nAn open device to retrieve the value
+  from.\nWhat type of value to retrieve, ohmd_int_value section for more information.\nA
+  pointer to an integer, or integer array where the retrieved value should be written.\n0
+  on success, \n<\n0 on failure."
+
+# int ohmd_device_set_data(ohmd_device *, ohmd_data_value, const void *)
+--- !function
+name: ohmd_device_set_data
+type: int
+parameters:
+  device: struct ohmd_device *
+  type: ohmd_data_value
+  in: const void *
+definition:
+  file: openhmd.h
+  line: 453
+comment: "Set an void* data value for a device.\n\nAn open device to set the value
+  in.\nWhat type of value to set, see ohmd_float_value section for more information.\nA
+  pointer to the void* casted object.\n0 on success, \n<\n0 on failure."
+
+# int ohmd_device_setf(ohmd_device *, ohmd_float_value, const float *)
+--- !function
+name: ohmd_device_setf
+type: int
+parameters:
+  device: struct ohmd_device *
+  type: ohmd_float_value
+  in: const float *
+definition:
+  file: openhmd.h
+  line: 423
+comment: "Set a floating point value for a device.\n\nAn open device to set the value
+  in.\nWhat type of value to set, see ohmd_float_value section for more information.\nA
+  pointer to a float, or float array where the new value is stored.\n0 on success,
+  \n<\n0 on failure."
+
+# int ohmd_device_seti(ohmd_device *, ohmd_int_value, const int *)
+--- !function
+name: ohmd_device_seti
+type: int
+parameters:
+  device: struct ohmd_device *
+  type: ohmd_int_value
+  in: const int *
+definition:
+  file: openhmd.h
+  line: 443
+comment: "Set an integer value for a device.\n\nAn open device to set the value in.\nWhat
+  type of value to set, see ohmd_float_value section for more information.\nA pointer
+  to a int, or int array where the new value is stored.\n0 on success, \n<\n0 on failure."
+
+# ohmd_device_settings * ohmd_device_settings_create(ohmd_context *)
+--- !function
+name: ohmd_device_settings_create
+type: struct ohmd_device_settings *
+parameters:
+  ctx: struct ohmd_context *
+definition:
+  file: openhmd.h
+  line: 384
+comment: |-
+  Create a device settings instance.
+
+  A pointer to a valid ohmd_context.
+  a pointer to an allocated ohmd_context on success or NULL if it fails.
+
+# void ohmd_device_settings_destroy(ohmd_device_settings *)
+--- !function
+name: ohmd_device_settings_destroy
+type: void
+parameters:
+  settings: struct ohmd_device_settings *
+definition:
+  file: openhmd.h
+  line: 391
+comment: |-
+  Destroy a device settings instance.
+
+  The device settings instance to destroy.
+
+# ohmd_status ohmd_device_settings_seti(ohmd_device_settings *, ohmd_int_settings, const int *)
+--- !function
+name: ohmd_device_settings_seti
+type: ohmd_status
+parameters:
+  settings: struct ohmd_device_settings *
+  key: ohmd_int_settings
+  val: const int *
+definition:
+  file: openhmd.h
+  line: 376
+comment: |-
+  Specify int settings in a device settings struct.
+
+  The device settings struct to set values to.
+  The specefic setting you wish to set.
+  A pointer to an int or int array (containing the expected number of elements) with the value(s) you wish to set.
+
+# void ohmd_get_version(int *, int *, int *)
+--- !function
+name: ohmd_get_version
+type: void
+parameters:
+  out_major: int *
+  out_minor: int *
+  out_patch: int *
+definition:
+  file: openhmd.h
+  line: 462
+comment: |-
+  Get the library version.
+
+  Major version.
+  Minor version.
+  Patch version.
+
+# int ohmd_gets(ohmd_string_description, const char **)
+--- !function
+name: ohmd_gets
+type: int
+parameters:
+  type: ohmd_string_description
+  out: const char **
+definition:
+  file: openhmd.h
+  line: 303
+comment: "Get string from openhmd.\nGets a string from OpenHMD. This is where non-device
+  specific strings reside.\n This is where the distortion shader sources can be retrieved.\n\nThe
+  name of the string to fetch. One of OHMD_GLSL_DISTORTION_FRAG_SRC, and OHMD_GLSL_DISTORTION_FRAG_SRC.\nThe
+  location to return a const char*\n0 on success, \n<\n0 on failure."
+
+# int ohmd_list_geti(ohmd_context *, int, ohmd_int_value, int *)
+--- !function
+name: ohmd_list_geti
+type: int
+parameters:
+  ctx: struct ohmd_context *
+  index: int
+  type: ohmd_int_value
+  out: int *
+definition:
+  file: openhmd.h
+  line: 336
+comment: "Get integer value from enumeration list index.\n\nohmd_ctx_probe must be
+  called before calling ohmd_list_gets.\n\nA (probed) context.\nAn index, between
+  0 and the value returned from ohmd_ctx_probe.\nWhat type of value to retrieve, ohmd_int_value
+  section for more information.\n0 on success, \n<\n0 on failure."
+
+# const char * ohmd_list_gets(ohmd_context *, int, ohmd_string_value)
+--- !function
+name: ohmd_list_gets
+type: const char *
+parameters:
+  ctx: struct ohmd_context *
+  index: int
+  type: ohmd_string_value
+definition:
+  file: openhmd.h
+  line: 321
+comment: |-
+  Get device description from enumeration list index.
+  Gets a human readable device description string from a zero indexed enumeration index
+   between 0 and (max - 1), where max is the number ohmd_ctx_probe returned
+   (i.e. if ohmd_ctx_probe returns 3, valid indices are 0, 1 and 2).
+   The function can return three types of data. The vendor name, the product name and
+   a driver specific path where the device is attached.
+  ohmd_ctx_probe must be called before calling ohmd_list_gets.
+
+  A (probed) context.
+  An index, between 0 and the value returned from ohmd_ctx_probe.
+  The type of data to fetch. One of OHMD_VENDOR, OHMD_PRODUCT and OHMD_PATH.
+  a string with a human readable device name.
+
+# ohmd_device * ohmd_list_open_device(ohmd_context *, int)
+--- !function
+name: ohmd_list_open_device
+type: struct ohmd_device *
+parameters:
+  ctx: struct ohmd_context *
+  index: int
+definition:
+  file: openhmd.h
+  line: 351
+comment: |-
+  Open a device.
+  Opens a device from a zero indexed enumeration index between 0 and (max - 1)
+   where max is the number ohmd_ctx_probe returned (i.e. if ohmd_ctx_probe returns 3,
+   valid indices are 0, 1 and 2).
+  ohmd_ctx_probe must be called before calling ohmd_list_open_device.
+
+  A (probed) context.
+  An index, between 0 and the value returned from ohmd_ctx_probe.
+  a pointer to an ohmd_device, which represents a hardware device, such as an HMD.
+
+# ohmd_device * ohmd_list_open_device_s(ohmd_context *, int, ohmd_device_settings *)
+--- !function
+name: ohmd_list_open_device_s
+type: struct ohmd_device *
+parameters:
+  ctx: struct ohmd_context *
+  index: int
+  settings: struct ohmd_device_settings *
+definition:
+  file: openhmd.h
+  line: 367
+comment: |-
+  Open a device with additional settings provided.
+  Opens a device from a zero indexed enumeration index between 0 and (max - 1)
+   where max is the number ohmd_ctx_probe returned (i.e. if ohmd_ctx_probe returns 3,
+   valid indices are 0, 1 and 2).
+  ohmd_ctx_probe must be called before calling ohmd_list_open_device.
+
+  A (probed) context.
+  An index, between 0 and the value returned from ohmd_ctx_probe.
+  A pointer to a device settings struct.
+  a pointer to an ohmd_device, which represents a hardware device, such as an HMD.
+
+# ohmd_status ohmd_require_version(int, int, int)
+--- !function
+name: ohmd_require_version
+type: ohmd_status
+parameters:
+  major: int
+  minor: int
+  patch: int
+definition:
+  file: openhmd.h
+  line: 472
+comment: |-
+  Check that the library is compatible with the required version.
+
+  Required major version.
+  Required minor version.
+  Required patch version.
+  OMHD_S_OK if the version is compatible or OHMD_S_UNSUPPORTED if it's not.
+
+# void ohmd_sleep(double)
+--- !function
+name: ohmd_sleep
+type: void
+parameters:
+  time: double
+definition:
+  file: openhmd.h
+  line: 479
+comment: |-
+  Sleep for the given amount of seconds.
+
+  Time to sleep in seconds.
