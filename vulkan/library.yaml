@@ -1,0 +1,16 @@
+--- !library
+name: vulkan
+summary: A low-overhead, cross-platform 3D graphics and computing API
+website: https://www.khronos.org/vulkan/
+source: https://github.com/KhronosGroup/Vulkan-Headers
+packages:
+  alpine:
+  debian: libvulkan1
+  homebrew: molten-vk
+  ubuntu: libvulkan1
+dlopen: vulkan
+objects:
+  - libvulkan.so.1     # Debian, Ubuntu
+  - libMoltenVK.dylib  # Homebrew
+headers:
+  - vulkan.h
