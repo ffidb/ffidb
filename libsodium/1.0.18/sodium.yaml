@@ -1,0 +1,6248 @@
+# size_t crypto_aead_aes256gcm_abytes(void)
+--- !function
+name: crypto_aead_aes256gcm_abytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 51
+
+# int crypto_aead_aes256gcm_beforenm(crypto_aead_aes256gcm_state *, const unsigned char *)
+--- !function
+name: crypto_aead_aes256gcm_beforenm
+type: int
+parameters:
+  ctx_: struct crypto_aead_aes256gcm_state_ *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 118
+
+# int crypto_aead_aes256gcm_decrypt(unsigned char *, unsigned long long *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_aes256gcm_decrypt
+type: int
+parameters:
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 79
+
+# int crypto_aead_aes256gcm_decrypt_afternm(unsigned char *, unsigned long long *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const crypto_aead_aes256gcm_state *)
+--- !function
+name: crypto_aead_aes256gcm_decrypt_afternm
+type: int
+parameters:
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  ctx_: const struct crypto_aead_aes256gcm_state_ *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 135
+
+# int crypto_aead_aes256gcm_decrypt_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_aes256gcm_decrypt_detached
+type: int
+parameters:
+  m: unsigned char *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  mac: const unsigned char *
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 104
+
+# int crypto_aead_aes256gcm_decrypt_detached_afternm(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const crypto_aead_aes256gcm_state *)
+--- !function
+name: crypto_aead_aes256gcm_decrypt_detached_afternm
+type: int
+parameters:
+  m: unsigned char *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  mac: const unsigned char *
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  ctx_: const struct crypto_aead_aes256gcm_state_ *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 160
+
+# int crypto_aead_aes256gcm_encrypt(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_aes256gcm_encrypt
+type: int
+parameters:
+  c: unsigned char *
+  clen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 67
+
+# int crypto_aead_aes256gcm_encrypt_afternm(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const crypto_aead_aes256gcm_state *)
+--- !function
+name: crypto_aead_aes256gcm_encrypt_afternm
+type: int
+parameters:
+  c: unsigned char *
+  clen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  ctx_: const struct crypto_aead_aes256gcm_state_ *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 123
+
+# int crypto_aead_aes256gcm_encrypt_detached(unsigned char *, unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_aes256gcm_encrypt_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  maclen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 91
+
+# int crypto_aead_aes256gcm_encrypt_detached_afternm(unsigned char *, unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const crypto_aead_aes256gcm_state *)
+--- !function
+name: crypto_aead_aes256gcm_encrypt_detached_afternm
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  maclen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  ctx_: const struct crypto_aead_aes256gcm_state_ *
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 147
+
+# int crypto_aead_aes256gcm_is_available(void)
+--- !function
+name: crypto_aead_aes256gcm_is_available
+type: int
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 35
+
+# size_t crypto_aead_aes256gcm_keybytes(void)
+--- !function
+name: crypto_aead_aes256gcm_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 39
+
+# void crypto_aead_aes256gcm_keygen(unsigned char *)
+--- !function
+name: crypto_aead_aes256gcm_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 172
+
+# size_t crypto_aead_aes256gcm_messagebytes_max(void)
+--- !function
+name: crypto_aead_aes256gcm_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 57
+
+# size_t crypto_aead_aes256gcm_npubbytes(void)
+--- !function
+name: crypto_aead_aes256gcm_npubbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 47
+
+# size_t crypto_aead_aes256gcm_nsecbytes(void)
+--- !function
+name: crypto_aead_aes256gcm_nsecbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 43
+
+# size_t crypto_aead_aes256gcm_statebytes(void)
+--- !function
+name: crypto_aead_aes256gcm_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_aes256gcm.h
+  line: 64
+
+# size_t crypto_aead_chacha20poly1305_abytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_abytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 108
+
+# int crypto_aead_chacha20poly1305_decrypt(unsigned char *, unsigned long long *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_decrypt
+type: int
+parameters:
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 128
+
+# int crypto_aead_chacha20poly1305_decrypt_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_decrypt_detached
+type: int
+parameters:
+  m: unsigned char *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  mac: const unsigned char *
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 153
+
+# int crypto_aead_chacha20poly1305_encrypt(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_encrypt
+type: int
+parameters:
+  c: unsigned char *
+  clen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 116
+
+# int crypto_aead_chacha20poly1305_encrypt_detached(unsigned char *, unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_encrypt_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  maclen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 140
+
+# size_t crypto_aead_chacha20poly1305_ietf_abytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_abytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 31
+
+# int crypto_aead_chacha20poly1305_ietf_decrypt(unsigned char *, unsigned long long *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_decrypt
+type: int
+parameters:
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 52
+
+# int crypto_aead_chacha20poly1305_ietf_decrypt_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_decrypt_detached
+type: int
+parameters:
+  m: unsigned char *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  mac: const unsigned char *
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 77
+
+# int crypto_aead_chacha20poly1305_ietf_encrypt(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_encrypt
+type: int
+parameters:
+  c: unsigned char *
+  clen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 40
+
+# int crypto_aead_chacha20poly1305_ietf_encrypt_detached(unsigned char *, unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_encrypt_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  maclen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 64
+
+# size_t crypto_aead_chacha20poly1305_ietf_keybytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 18
+
+# void crypto_aead_chacha20poly1305_ietf_keygen(unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 89
+
+# size_t crypto_aead_chacha20poly1305_ietf_messagebytes_max(void)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 37
+
+# size_t crypto_aead_chacha20poly1305_ietf_npubbytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_npubbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 27
+
+# size_t crypto_aead_chacha20poly1305_ietf_nsecbytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_ietf_nsecbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 22
+
+# size_t crypto_aead_chacha20poly1305_keybytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 96
+
+# void crypto_aead_chacha20poly1305_keygen(unsigned char *)
+--- !function
+name: crypto_aead_chacha20poly1305_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 165
+
+# size_t crypto_aead_chacha20poly1305_messagebytes_max(void)
+--- !function
+name: crypto_aead_chacha20poly1305_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 113
+
+# size_t crypto_aead_chacha20poly1305_npubbytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_npubbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 104
+
+# size_t crypto_aead_chacha20poly1305_nsecbytes(void)
+--- !function
+name: crypto_aead_chacha20poly1305_nsecbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_chacha20poly1305.h
+  line: 100
+
+# size_t crypto_aead_xchacha20poly1305_ietf_abytes(void)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_abytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 28
+
+# int crypto_aead_xchacha20poly1305_ietf_decrypt(unsigned char *, unsigned long long *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_decrypt
+type: int
+parameters:
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 48
+
+# int crypto_aead_xchacha20poly1305_ietf_decrypt_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_decrypt_detached
+type: int
+parameters:
+  m: unsigned char *
+  nsec: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  mac: const unsigned char *
+  ad: const unsigned char *
+  adlen: unsigned long long
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 73
+
+# int crypto_aead_xchacha20poly1305_ietf_encrypt(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_encrypt
+type: int
+parameters:
+  c: unsigned char *
+  clen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 36
+
+# int crypto_aead_xchacha20poly1305_ietf_encrypt_detached(unsigned char *, unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_encrypt_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  maclen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  nsec: const unsigned char *
+  npub: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 60
+
+# size_t crypto_aead_xchacha20poly1305_ietf_keybytes(void)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 16
+
+# void crypto_aead_xchacha20poly1305_ietf_keygen(unsigned char *)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 85
+
+# size_t crypto_aead_xchacha20poly1305_ietf_messagebytes_max(void)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 33
+
+# size_t crypto_aead_xchacha20poly1305_ietf_npubbytes(void)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_npubbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 24
+
+# size_t crypto_aead_xchacha20poly1305_ietf_nsecbytes(void)
+--- !function
+name: crypto_aead_xchacha20poly1305_ietf_nsecbytes
+type: size_t
+definition:
+  file: sodium/crypto_aead_xchacha20poly1305.h
+  line: 20
+
+# int crypto_auth(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth.h
+  line: 29
+
+# size_t crypto_auth_bytes(void)
+--- !function
+name: crypto_auth_bytes
+type: size_t
+definition:
+  file: sodium/crypto_auth.h
+  line: 18
+
+# int crypto_auth_hmacsha256(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth_hmacsha256
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 24
+
+# size_t crypto_auth_hmacsha256_bytes(void)
+--- !function
+name: crypto_auth_hmacsha256_bytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 17
+
+# int crypto_auth_hmacsha256_final(crypto_auth_hmacsha256_state *, unsigned char *)
+--- !function
+name: crypto_auth_hmacsha256_final
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha256_state *
+  out: unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 58
+
+# int crypto_auth_hmacsha256_init(crypto_auth_hmacsha256_state *, const unsigned char *, size_t)
+--- !function
+name: crypto_auth_hmacsha256_init
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha256_state *
+  key: const unsigned char *
+  keylen: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 47
+
+# size_t crypto_auth_hmacsha256_keybytes(void)
+--- !function
+name: crypto_auth_hmacsha256_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 21
+
+# void crypto_auth_hmacsha256_keygen(unsigned char *)
+--- !function
+name: crypto_auth_hmacsha256_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 63
+
+# size_t crypto_auth_hmacsha256_statebytes(void)
+--- !function
+name: crypto_auth_hmacsha256_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 44
+
+# int crypto_auth_hmacsha256_update(crypto_auth_hmacsha256_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_auth_hmacsha256_update
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha256_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 52
+
+# int crypto_auth_hmacsha256_verify(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth_hmacsha256_verify
+type: int
+parameters:
+  h: const unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha256.h
+  line: 30
+
+# int crypto_auth_hmacsha512(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 24
+
+# int crypto_auth_hmacsha512256(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512256
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 24
+
+# size_t crypto_auth_hmacsha512256_bytes(void)
+--- !function
+name: crypto_auth_hmacsha512256_bytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 17
+
+# int crypto_auth_hmacsha512256_final(crypto_auth_hmacsha512256_state *, unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512256_final
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha512_state *
+  out: unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 54
+
+# int crypto_auth_hmacsha512256_init(crypto_auth_hmacsha512256_state *, const unsigned char *, size_t)
+--- !function
+name: crypto_auth_hmacsha512256_init
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha512_state *
+  key: const unsigned char *
+  keylen: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 44
+
+# size_t crypto_auth_hmacsha512256_keybytes(void)
+--- !function
+name: crypto_auth_hmacsha512256_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 21
+
+# void crypto_auth_hmacsha512256_keygen(unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512256_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 58
+
+# size_t crypto_auth_hmacsha512256_statebytes(void)
+--- !function
+name: crypto_auth_hmacsha512256_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 41
+
+# int crypto_auth_hmacsha512256_update(crypto_auth_hmacsha512256_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_auth_hmacsha512256_update
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha512_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 49
+
+# int crypto_auth_hmacsha512256_verify(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512256_verify
+type: int
+parameters:
+  h: const unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha512256.h
+  line: 30
+
+# size_t crypto_auth_hmacsha512_bytes(void)
+--- !function
+name: crypto_auth_hmacsha512_bytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 17
+
+# int crypto_auth_hmacsha512_final(crypto_auth_hmacsha512_state *, unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512_final
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha512_state *
+  out: unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 57
+
+# int crypto_auth_hmacsha512_init(crypto_auth_hmacsha512_state *, const unsigned char *, size_t)
+--- !function
+name: crypto_auth_hmacsha512_init
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha512_state *
+  key: const unsigned char *
+  keylen: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 47
+
+# size_t crypto_auth_hmacsha512_keybytes(void)
+--- !function
+name: crypto_auth_hmacsha512_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 21
+
+# void crypto_auth_hmacsha512_keygen(unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 61
+
+# size_t crypto_auth_hmacsha512_statebytes(void)
+--- !function
+name: crypto_auth_hmacsha512_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 44
+
+# int crypto_auth_hmacsha512_update(crypto_auth_hmacsha512_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_auth_hmacsha512_update
+type: int
+parameters:
+  state: struct crypto_auth_hmacsha512_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 52
+
+# int crypto_auth_hmacsha512_verify(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth_hmacsha512_verify
+type: int
+parameters:
+  h: const unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth_hmacsha512.h
+  line: 30
+
+# size_t crypto_auth_keybytes(void)
+--- !function
+name: crypto_auth_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_auth.h
+  line: 22
+
+# void crypto_auth_keygen(unsigned char *)
+--- !function
+name: crypto_auth_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_auth.h
+  line: 39
+
+# const char * crypto_auth_primitive(void)
+--- !function
+name: crypto_auth_primitive
+type: const char *
+definition:
+  file: sodium/crypto_auth.h
+  line: 26
+
+# int crypto_auth_verify(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_auth_verify
+type: int
+parameters:
+  h: const unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_auth.h
+  line: 34
+
+# int crypto_box(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 151
+
+# int crypto_box_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_afternm
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 163
+
+# int crypto_box_beforenm(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_beforenm
+type: int
+parameters:
+  k: unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 95
+
+# size_t crypto_box_beforenmbytes(void)
+--- !function
+name: crypto_box_beforenmbytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 92
+
+# size_t crypto_box_boxzerobytes(void)
+--- !function
+name: crypto_box_boxzerobytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 148
+
+# int crypto_box_curve25519xchacha20poly1305_beforenm(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_beforenm
+type: int
+parameters:
+  k: unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 97
+
+# size_t crypto_box_curve25519xchacha20poly1305_beforenmbytes(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_beforenmbytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 30
+
+# int crypto_box_curve25519xchacha20poly1305_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 75
+
+# int crypto_box_curve25519xchacha20poly1305_detached_afternm(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_detached_afternm
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 119
+
+# int crypto_box_curve25519xchacha20poly1305_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_easy
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 57
+
+# int crypto_box_curve25519xchacha20poly1305_easy_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_easy_afternm
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 103
+
+# int crypto_box_curve25519xchacha20poly1305_keypair(unsigned char *, unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 52
+
+# size_t crypto_box_curve25519xchacha20poly1305_macbytes(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_macbytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 38
+
+# size_t crypto_box_curve25519xchacha20poly1305_messagebytes_max(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 43
+
+# size_t crypto_box_curve25519xchacha20poly1305_noncebytes(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 34
+
+# int crypto_box_curve25519xchacha20poly1305_open_detached(unsigned char *, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_open_detached
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  mac: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 85
+
+# int crypto_box_curve25519xchacha20poly1305_open_detached_afternm(unsigned char *, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_open_detached_afternm
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  mac: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 128
+
+# int crypto_box_curve25519xchacha20poly1305_open_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_open_easy
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 66
+
+# int crypto_box_curve25519xchacha20poly1305_open_easy_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_open_easy_afternm
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 111
+
+# size_t crypto_box_curve25519xchacha20poly1305_publickeybytes(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_publickeybytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 22
+
+# int crypto_box_curve25519xchacha20poly1305_seal(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_seal
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 146
+
+# int crypto_box_curve25519xchacha20poly1305_seal_open(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_seal_open
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 153
+
+# size_t crypto_box_curve25519xchacha20poly1305_sealbytes(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_sealbytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 143
+
+# size_t crypto_box_curve25519xchacha20poly1305_secretkeybytes(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_secretkeybytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 26
+
+# int crypto_box_curve25519xchacha20poly1305_seed_keypair(unsigned char *, unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_seed_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+  seed: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 46
+
+# size_t crypto_box_curve25519xchacha20poly1305_seedbytes(void)
+--- !function
+name: crypto_box_curve25519xchacha20poly1305_seedbytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xchacha20poly1305.h
+  line: 18
+
+# int crypto_box_curve25519xsalsa20poly1305(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 75
+
+# int crypto_box_curve25519xsalsa20poly1305_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_afternm
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 93
+
+# int crypto_box_curve25519xsalsa20poly1305_beforenm(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_beforenm
+type: int
+parameters:
+  k: unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 57
+
+# size_t crypto_box_curve25519xsalsa20poly1305_beforenmbytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_beforenmbytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 29
+
+# size_t crypto_box_curve25519xsalsa20poly1305_boxzerobytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_boxzerobytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 66
+
+# int crypto_box_curve25519xsalsa20poly1305_keypair(unsigned char *, unsigned char *)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 52
+
+# size_t crypto_box_curve25519xsalsa20poly1305_macbytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_macbytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 37
+
+# size_t crypto_box_curve25519xsalsa20poly1305_messagebytes_max(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 43
+
+# size_t crypto_box_curve25519xsalsa20poly1305_noncebytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 33
+
+# int crypto_box_curve25519xsalsa20poly1305_open(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_open
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 84
+
+# int crypto_box_curve25519xsalsa20poly1305_open_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_open_afternm
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 101
+
+# size_t crypto_box_curve25519xsalsa20poly1305_publickeybytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_publickeybytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 21
+
+# size_t crypto_box_curve25519xsalsa20poly1305_secretkeybytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_secretkeybytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 25
+
+# int crypto_box_curve25519xsalsa20poly1305_seed_keypair(unsigned char *, unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_seed_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+  seed: const unsigned char *
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 46
+
+# size_t crypto_box_curve25519xsalsa20poly1305_seedbytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_seedbytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 17
+
+# size_t crypto_box_curve25519xsalsa20poly1305_zerobytes(void)
+--- !function
+name: crypto_box_curve25519xsalsa20poly1305_zerobytes
+type: size_t
+definition:
+  file: sodium/crypto_box_curve25519xsalsa20poly1305.h
+  line: 72
+
+# int crypto_box_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 73
+
+# int crypto_box_detached_afternm(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_detached_afternm
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 111
+
+# int crypto_box_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_easy
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 61
+
+# int crypto_box_easy_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_easy_afternm
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 100
+
+# int crypto_box_keypair(unsigned char *, unsigned char *)
+--- !function
+name: crypto_box_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 57
+
+# size_t crypto_box_macbytes(void)
+--- !function
+name: crypto_box_macbytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 41
+
+# size_t crypto_box_messagebytes_max(void)
+--- !function
+name: crypto_box_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 45
+
+# size_t crypto_box_noncebytes(void)
+--- !function
+name: crypto_box_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 37
+
+# int crypto_box_open(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_open
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 157
+
+# int crypto_box_open_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_open_afternm
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 168
+
+# int crypto_box_open_detached(unsigned char *, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_open_detached
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  mac: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 80
+
+# int crypto_box_open_detached_afternm(unsigned char *, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_open_detached_afternm
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  mac: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 117
+
+# int crypto_box_open_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_open_easy
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 67
+
+# int crypto_box_open_easy_afternm(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_open_easy_afternm
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 105
+
+# const char * crypto_box_primitive(void)
+--- !function
+name: crypto_box_primitive
+type: const char *
+definition:
+  file: sodium/crypto_box.h
+  line: 49
+
+# size_t crypto_box_publickeybytes(void)
+--- !function
+name: crypto_box_publickeybytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 29
+
+# int crypto_box_seal(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_box_seal
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 130
+
+# int crypto_box_seal_open(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_seal_open
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  pk: const unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 135
+
+# size_t crypto_box_sealbytes(void)
+--- !function
+name: crypto_box_sealbytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 127
+
+# size_t crypto_box_secretkeybytes(void)
+--- !function
+name: crypto_box_secretkeybytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 33
+
+# int crypto_box_seed_keypair(unsigned char *, unsigned char *, const unsigned char *)
+--- !function
+name: crypto_box_seed_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+  seed: const unsigned char *
+definition:
+  file: sodium/crypto_box.h
+  line: 52
+
+# size_t crypto_box_seedbytes(void)
+--- !function
+name: crypto_box_seedbytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 25
+
+# size_t crypto_box_zerobytes(void)
+--- !function
+name: crypto_box_zerobytes
+type: size_t
+definition:
+  file: sodium/crypto_box.h
+  line: 144
+
+# int crypto_core_ed25519_add(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_add
+type: int
+parameters:
+  r: unsigned char *
+  p: const unsigned char *
+  q: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 36
+
+# size_t crypto_core_ed25519_bytes(void)
+--- !function
+name: crypto_core_ed25519_bytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 13
+
+# int crypto_core_ed25519_from_hash(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_from_hash
+type: int
+parameters:
+  p: unsigned char *
+  h: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 50
+
+# int crypto_core_ed25519_from_uniform(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_from_uniform
+type: int
+parameters:
+  p: unsigned char *
+  r: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 46
+
+# size_t crypto_core_ed25519_hashbytes(void)
+--- !function
+name: crypto_core_ed25519_hashbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 21
+
+# int crypto_core_ed25519_is_valid_point(const unsigned char *)
+--- !function
+name: crypto_core_ed25519_is_valid_point
+type: int
+parameters:
+  p: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 32
+
+# size_t crypto_core_ed25519_nonreducedscalarbytes(void)
+--- !function
+name: crypto_core_ed25519_nonreducedscalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 29
+
+# void crypto_core_ed25519_random(unsigned char *)
+--- !function
+name: crypto_core_ed25519_random
+type: void
+parameters:
+  p: unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 54
+
+# void crypto_core_ed25519_scalar_add(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_add
+type: void
+parameters:
+  z: unsigned char *
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 74
+
+# void crypto_core_ed25519_scalar_complement(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_complement
+type: void
+parameters:
+  comp: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 70
+
+# int crypto_core_ed25519_scalar_invert(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_invert
+type: int
+parameters:
+  recip: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 62
+
+# void crypto_core_ed25519_scalar_mul(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_mul
+type: void
+parameters:
+  z: unsigned char *
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 84
+
+# void crypto_core_ed25519_scalar_negate(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_negate
+type: void
+parameters:
+  neg: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 66
+
+# void crypto_core_ed25519_scalar_random(unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_random
+type: void
+parameters:
+  r: unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 58
+
+# void crypto_core_ed25519_scalar_reduce(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_reduce
+type: void
+parameters:
+  r: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 93
+
+# void crypto_core_ed25519_scalar_sub(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_scalar_sub
+type: void
+parameters:
+  z: unsigned char *
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 79
+
+# size_t crypto_core_ed25519_scalarbytes(void)
+--- !function
+name: crypto_core_ed25519_scalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 25
+
+# int crypto_core_ed25519_sub(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ed25519_sub
+type: int
+parameters:
+  r: unsigned char *
+  p: const unsigned char *
+  q: const unsigned char *
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 41
+
+# size_t crypto_core_ed25519_uniformbytes(void)
+--- !function
+name: crypto_core_ed25519_uniformbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ed25519.h
+  line: 17
+
+# int crypto_core_hchacha20(unsigned char *, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_hchacha20
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  k: const unsigned char *
+  c: const unsigned char *
+definition:
+  file: sodium/crypto_core_hchacha20.h
+  line: 28
+
+# size_t crypto_core_hchacha20_constbytes(void)
+--- !function
+name: crypto_core_hchacha20_constbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hchacha20.h
+  line: 25
+
+# size_t crypto_core_hchacha20_inputbytes(void)
+--- !function
+name: crypto_core_hchacha20_inputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hchacha20.h
+  line: 17
+
+# size_t crypto_core_hchacha20_keybytes(void)
+--- !function
+name: crypto_core_hchacha20_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hchacha20.h
+  line: 21
+
+# size_t crypto_core_hchacha20_outputbytes(void)
+--- !function
+name: crypto_core_hchacha20_outputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hchacha20.h
+  line: 13
+
+# int crypto_core_hsalsa20(unsigned char *, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_hsalsa20
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  k: const unsigned char *
+  c: const unsigned char *
+definition:
+  file: sodium/crypto_core_hsalsa20.h
+  line: 28
+
+# size_t crypto_core_hsalsa20_constbytes(void)
+--- !function
+name: crypto_core_hsalsa20_constbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hsalsa20.h
+  line: 25
+
+# size_t crypto_core_hsalsa20_inputbytes(void)
+--- !function
+name: crypto_core_hsalsa20_inputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hsalsa20.h
+  line: 17
+
+# size_t crypto_core_hsalsa20_keybytes(void)
+--- !function
+name: crypto_core_hsalsa20_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hsalsa20.h
+  line: 21
+
+# size_t crypto_core_hsalsa20_outputbytes(void)
+--- !function
+name: crypto_core_hsalsa20_outputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_hsalsa20.h
+  line: 13
+
+# int crypto_core_ristretto255_add(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_add
+type: int
+parameters:
+  r: unsigned char *
+  p: const unsigned char *
+  q: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 32
+
+# size_t crypto_core_ristretto255_bytes(void)
+--- !function
+name: crypto_core_ristretto255_bytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 13
+
+# int crypto_core_ristretto255_from_hash(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_from_hash
+type: int
+parameters:
+  p: unsigned char *
+  r: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 42
+
+# size_t crypto_core_ristretto255_hashbytes(void)
+--- !function
+name: crypto_core_ristretto255_hashbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 17
+
+# int crypto_core_ristretto255_is_valid_point(const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_is_valid_point
+type: int
+parameters:
+  p: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 28
+
+# size_t crypto_core_ristretto255_nonreducedscalarbytes(void)
+--- !function
+name: crypto_core_ristretto255_nonreducedscalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 25
+
+# void crypto_core_ristretto255_random(unsigned char *)
+--- !function
+name: crypto_core_ristretto255_random
+type: void
+parameters:
+  p: unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 47
+
+# void crypto_core_ristretto255_scalar_add(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_add
+type: void
+parameters:
+  z: unsigned char *
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 70
+
+# void crypto_core_ristretto255_scalar_complement(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_complement
+type: void
+parameters:
+  comp: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 65
+
+# int crypto_core_ristretto255_scalar_invert(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_invert
+type: int
+parameters:
+  recip: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 55
+
+# void crypto_core_ristretto255_scalar_mul(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_mul
+type: void
+parameters:
+  z: unsigned char *
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 82
+
+# void crypto_core_ristretto255_scalar_negate(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_negate
+type: void
+parameters:
+  neg: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 60
+
+# void crypto_core_ristretto255_scalar_random(unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_random
+type: void
+parameters:
+  r: unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 51
+
+# void crypto_core_ristretto255_scalar_reduce(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_reduce
+type: void
+parameters:
+  r: unsigned char *
+  s: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 92
+
+# void crypto_core_ristretto255_scalar_sub(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_scalar_sub
+type: void
+parameters:
+  z: unsigned char *
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 76
+
+# size_t crypto_core_ristretto255_scalarbytes(void)
+--- !function
+name: crypto_core_ristretto255_scalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 21
+
+# int crypto_core_ristretto255_sub(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_ristretto255_sub
+type: int
+parameters:
+  r: unsigned char *
+  p: const unsigned char *
+  q: const unsigned char *
+definition:
+  file: sodium/crypto_core_ristretto255.h
+  line: 37
+
+# int crypto_core_salsa20(unsigned char *, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_salsa20
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  k: const unsigned char *
+  c: const unsigned char *
+definition:
+  file: sodium/crypto_core_salsa20.h
+  line: 28
+
+# int crypto_core_salsa2012(unsigned char *, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_salsa2012
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  k: const unsigned char *
+  c: const unsigned char *
+definition:
+  file: sodium/crypto_core_salsa2012.h
+  line: 28
+
+# size_t crypto_core_salsa2012_constbytes(void)
+--- !function
+name: crypto_core_salsa2012_constbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa2012.h
+  line: 25
+
+# size_t crypto_core_salsa2012_inputbytes(void)
+--- !function
+name: crypto_core_salsa2012_inputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa2012.h
+  line: 17
+
+# size_t crypto_core_salsa2012_keybytes(void)
+--- !function
+name: crypto_core_salsa2012_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa2012.h
+  line: 21
+
+# size_t crypto_core_salsa2012_outputbytes(void)
+--- !function
+name: crypto_core_salsa2012_outputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa2012.h
+  line: 13
+
+# int crypto_core_salsa208(unsigned char *, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_core_salsa208
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  k: const unsigned char *
+  c: const unsigned char *
+definition:
+  file: sodium/crypto_core_salsa208.h
+  line: 32
+
+# size_t crypto_core_salsa208_constbytes(void)
+--- !function
+name: crypto_core_salsa208_constbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa208.h
+  line: 28
+
+# size_t crypto_core_salsa208_inputbytes(void)
+--- !function
+name: crypto_core_salsa208_inputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa208.h
+  line: 18
+
+# size_t crypto_core_salsa208_keybytes(void)
+--- !function
+name: crypto_core_salsa208_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa208.h
+  line: 23
+
+# size_t crypto_core_salsa208_outputbytes(void)
+--- !function
+name: crypto_core_salsa208_outputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa208.h
+  line: 13
+
+# size_t crypto_core_salsa20_constbytes(void)
+--- !function
+name: crypto_core_salsa20_constbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa20.h
+  line: 25
+
+# size_t crypto_core_salsa20_inputbytes(void)
+--- !function
+name: crypto_core_salsa20_inputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa20.h
+  line: 17
+
+# size_t crypto_core_salsa20_keybytes(void)
+--- !function
+name: crypto_core_salsa20_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa20.h
+  line: 21
+
+# size_t crypto_core_salsa20_outputbytes(void)
+--- !function
+name: crypto_core_salsa20_outputbytes
+type: size_t
+definition:
+  file: sodium/crypto_core_salsa20.h
+  line: 13
+
+# int crypto_generichash(unsigned char *, size_t, const unsigned char *, unsigned long long, const unsigned char *, size_t)
+--- !function
+name: crypto_generichash
+type: int
+parameters:
+  out: unsigned char *
+  outlen: size_t
+  in: const unsigned char *
+  inlen: unsigned long long
+  key: const unsigned char *
+  keylen: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 54
+
+# int crypto_generichash_blake2b(unsigned char *, size_t, const unsigned char *, unsigned long long, const unsigned char *, size_t)
+--- !function
+name: crypto_generichash_blake2b
+type: int
+parameters:
+  out: unsigned char *
+  outlen: size_t
+  in: const unsigned char *
+  inlen: unsigned long long
+  key: const unsigned char *
+  keylen: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 69
+
+# size_t crypto_generichash_blake2b_bytes(void)
+--- !function
+name: crypto_generichash_blake2b_bytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 43
+
+# size_t crypto_generichash_blake2b_bytes_max(void)
+--- !function
+name: crypto_generichash_blake2b_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 39
+
+# size_t crypto_generichash_blake2b_bytes_min(void)
+--- !function
+name: crypto_generichash_blake2b_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 35
+
+# int crypto_generichash_blake2b_final(crypto_generichash_blake2b_state *, unsigned char *, const size_t)
+--- !function
+name: crypto_generichash_blake2b_final
+type: int
+parameters:
+  state: struct crypto_generichash_blake2b_state *
+  out: unsigned char *
+  outlen: const size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 106
+
+# int crypto_generichash_blake2b_init(crypto_generichash_blake2b_state *, const unsigned char *, const size_t, const size_t)
+--- !function
+name: crypto_generichash_blake2b_init
+type: int
+parameters:
+  state: struct crypto_generichash_blake2b_state *
+  key: const unsigned char *
+  keylen: const size_t
+  outlen: const size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 86
+
+# int crypto_generichash_blake2b_init_salt_personal(crypto_generichash_blake2b_state *, const unsigned char *, const size_t, const size_t, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_generichash_blake2b_init_salt_personal
+type: int
+parameters:
+  state: struct crypto_generichash_blake2b_state *
+  key: const unsigned char *
+  keylen: const size_t
+  outlen: const size_t
+  salt: const unsigned char *
+  personal: const unsigned char *
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 92
+
+# size_t crypto_generichash_blake2b_keybytes(void)
+--- !function
+name: crypto_generichash_blake2b_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 55
+
+# size_t crypto_generichash_blake2b_keybytes_max(void)
+--- !function
+name: crypto_generichash_blake2b_keybytes_max
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 51
+
+# size_t crypto_generichash_blake2b_keybytes_min(void)
+--- !function
+name: crypto_generichash_blake2b_keybytes_min
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 47
+
+# void crypto_generichash_blake2b_keygen(unsigned char *)
+--- !function
+name: crypto_generichash_blake2b_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 111
+
+# size_t crypto_generichash_blake2b_personalbytes(void)
+--- !function
+name: crypto_generichash_blake2b_personalbytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 63
+
+# int crypto_generichash_blake2b_salt_personal(unsigned char *, size_t, const unsigned char *, unsigned long long, const unsigned char *, size_t, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_generichash_blake2b_salt_personal
+type: int
+parameters:
+  out: unsigned char *
+  outlen: size_t
+  in: const unsigned char *
+  inlen: unsigned long long
+  key: const unsigned char *
+  keylen: size_t
+  salt: const unsigned char *
+  personal: const unsigned char *
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 76
+
+# size_t crypto_generichash_blake2b_saltbytes(void)
+--- !function
+name: crypto_generichash_blake2b_saltbytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 59
+
+# size_t crypto_generichash_blake2b_statebytes(void)
+--- !function
+name: crypto_generichash_blake2b_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 66
+
+# int crypto_generichash_blake2b_update(crypto_generichash_blake2b_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_generichash_blake2b_update
+type: int
+parameters:
+  state: struct crypto_generichash_blake2b_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_generichash_blake2b.h
+  line: 100
+
+# size_t crypto_generichash_bytes(void)
+--- !function
+name: crypto_generichash_bytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 26
+
+# size_t crypto_generichash_bytes_max(void)
+--- !function
+name: crypto_generichash_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 22
+
+# size_t crypto_generichash_bytes_min(void)
+--- !function
+name: crypto_generichash_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 18
+
+# int crypto_generichash_final(crypto_generichash_state *, unsigned char *, const size_t)
+--- !function
+name: crypto_generichash_final
+type: int
+parameters:
+  state: struct crypto_generichash_blake2b_state *
+  out: unsigned char *
+  outlen: const size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 72
+
+# int crypto_generichash_init(crypto_generichash_state *, const unsigned char *, const size_t, const size_t)
+--- !function
+name: crypto_generichash_init
+type: int
+parameters:
+  state: struct crypto_generichash_blake2b_state *
+  key: const unsigned char *
+  keylen: const size_t
+  outlen: const size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 60
+
+# size_t crypto_generichash_keybytes(void)
+--- !function
+name: crypto_generichash_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 38
+
+# size_t crypto_generichash_keybytes_max(void)
+--- !function
+name: crypto_generichash_keybytes_max
+type: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 34
+
+# size_t crypto_generichash_keybytes_min(void)
+--- !function
+name: crypto_generichash_keybytes_min
+type: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 30
+
+# void crypto_generichash_keygen(unsigned char *)
+--- !function
+name: crypto_generichash_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_generichash.h
+  line: 77
+
+# const char * crypto_generichash_primitive(void)
+--- !function
+name: crypto_generichash_primitive
+type: const char *
+definition:
+  file: sodium/crypto_generichash.h
+  line: 42
+
+# size_t crypto_generichash_statebytes(void)
+--- !function
+name: crypto_generichash_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_generichash.h
+  line: 51
+
+# int crypto_generichash_update(crypto_generichash_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_generichash_update
+type: int
+parameters:
+  state: struct crypto_generichash_blake2b_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_generichash.h
+  line: 66
+
+# int crypto_hash(unsigned char *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_hash
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_hash.h
+  line: 28
+
+# size_t crypto_hash_bytes(void)
+--- !function
+name: crypto_hash_bytes
+type: size_t
+definition:
+  file: sodium/crypto_hash.h
+  line: 25
+
+# const char * crypto_hash_primitive(void)
+--- !function
+name: crypto_hash_primitive
+type: const char *
+definition:
+  file: sodium/crypto_hash.h
+  line: 33
+
+# int crypto_hash_sha256(unsigned char *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_hash_sha256
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_hash_sha256.h
+  line: 38
+
+# size_t crypto_hash_sha256_bytes(void)
+--- !function
+name: crypto_hash_sha256_bytes
+type: size_t
+definition:
+  file: sodium/crypto_hash_sha256.h
+  line: 35
+
+# int crypto_hash_sha256_final(crypto_hash_sha256_state *, unsigned char *)
+--- !function
+name: crypto_hash_sha256_final
+type: int
+parameters:
+  state: struct crypto_hash_sha256_state *
+  out: unsigned char *
+definition:
+  file: sodium/crypto_hash_sha256.h
+  line: 52
+
+# int crypto_hash_sha256_init(crypto_hash_sha256_state *)
+--- !function
+name: crypto_hash_sha256_init
+type: int
+parameters:
+  state: struct crypto_hash_sha256_state *
+definition:
+  file: sodium/crypto_hash_sha256.h
+  line: 42
+
+# size_t crypto_hash_sha256_statebytes(void)
+--- !function
+name: crypto_hash_sha256_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_hash_sha256.h
+  line: 31
+
+# int crypto_hash_sha256_update(crypto_hash_sha256_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_hash_sha256_update
+type: int
+parameters:
+  state: struct crypto_hash_sha256_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_hash_sha256.h
+  line: 46
+
+# int crypto_hash_sha512(unsigned char *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_hash_sha512
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_hash_sha512.h
+  line: 38
+
+# size_t crypto_hash_sha512_bytes(void)
+--- !function
+name: crypto_hash_sha512_bytes
+type: size_t
+definition:
+  file: sodium/crypto_hash_sha512.h
+  line: 35
+
+# int crypto_hash_sha512_final(crypto_hash_sha512_state *, unsigned char *)
+--- !function
+name: crypto_hash_sha512_final
+type: int
+parameters:
+  state: struct crypto_hash_sha512_state *
+  out: unsigned char *
+definition:
+  file: sodium/crypto_hash_sha512.h
+  line: 52
+
+# int crypto_hash_sha512_init(crypto_hash_sha512_state *)
+--- !function
+name: crypto_hash_sha512_init
+type: int
+parameters:
+  state: struct crypto_hash_sha512_state *
+definition:
+  file: sodium/crypto_hash_sha512.h
+  line: 42
+
+# size_t crypto_hash_sha512_statebytes(void)
+--- !function
+name: crypto_hash_sha512_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_hash_sha512.h
+  line: 31
+
+# int crypto_hash_sha512_update(crypto_hash_sha512_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_hash_sha512_update
+type: int
+parameters:
+  state: struct crypto_hash_sha512_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_hash_sha512.h
+  line: 46
+
+# size_t crypto_kdf_blake2b_bytes_max(void)
+--- !function
+name: crypto_kdf_blake2b_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_kdf_blake2b.h
+  line: 23
+
+# size_t crypto_kdf_blake2b_bytes_min(void)
+--- !function
+name: crypto_kdf_blake2b_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_kdf_blake2b.h
+  line: 19
+
+# size_t crypto_kdf_blake2b_contextbytes(void)
+--- !function
+name: crypto_kdf_blake2b_contextbytes
+type: size_t
+definition:
+  file: sodium/crypto_kdf_blake2b.h
+  line: 27
+
+# int crypto_kdf_blake2b_derive_from_key(unsigned char *, size_t, uint64_t, const char *, const unsigned char *)
+--- !function
+name: crypto_kdf_blake2b_derive_from_key
+type: int
+parameters:
+  subkey: unsigned char *
+  subkey_len: size_t
+  subkey_id: uint64_t
+  ctx: char const[8]
+  key: unsigned char const[32]
+definition:
+  file: sodium/crypto_kdf_blake2b.h
+  line: 34
+
+# size_t crypto_kdf_blake2b_keybytes(void)
+--- !function
+name: crypto_kdf_blake2b_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_kdf_blake2b.h
+  line: 31
+
+# size_t crypto_kdf_bytes_max(void)
+--- !function
+name: crypto_kdf_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_kdf.h
+  line: 23
+
+# size_t crypto_kdf_bytes_min(void)
+--- !function
+name: crypto_kdf_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_kdf.h
+  line: 19
+
+# size_t crypto_kdf_contextbytes(void)
+--- !function
+name: crypto_kdf_contextbytes
+type: size_t
+definition:
+  file: sodium/crypto_kdf.h
+  line: 27
+
+# int crypto_kdf_derive_from_key(unsigned char *, size_t, uint64_t, const char *, const unsigned char *)
+--- !function
+name: crypto_kdf_derive_from_key
+type: int
+parameters:
+  subkey: unsigned char *
+  subkey_len: size_t
+  subkey_id: uint64_t
+  ctx: char const[8]
+  key: unsigned char const[32]
+definition:
+  file: sodium/crypto_kdf.h
+  line: 39
+
+# size_t crypto_kdf_keybytes(void)
+--- !function
+name: crypto_kdf_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_kdf.h
+  line: 31
+
+# void crypto_kdf_keygen(unsigned char *)
+--- !function
+name: crypto_kdf_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_kdf.h
+  line: 46
+
+# const char * crypto_kdf_primitive(void)
+--- !function
+name: crypto_kdf_primitive
+type: const char *
+definition:
+  file: sodium/crypto_kdf.h
+  line: 35
+
+# int crypto_kx_client_session_keys(unsigned char *, unsigned char *, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_kx_client_session_keys
+type: int
+parameters:
+  rx: unsigned char [32]
+  tx: unsigned char [32]
+  client_pk: unsigned char const[32]
+  client_sk: unsigned char const[32]
+  server_pk: unsigned char const[32]
+definition:
+  file: sodium/crypto_kx.h
+  line: 47
+
+# int crypto_kx_keypair(unsigned char *, unsigned char *)
+--- !function
+name: crypto_kx_keypair
+type: int
+parameters:
+  pk: unsigned char [32]
+  sk: unsigned char [32]
+definition:
+  file: sodium/crypto_kx.h
+  line: 42
+
+# const char * crypto_kx_primitive(void)
+--- !function
+name: crypto_kx_primitive
+type: const char *
+definition:
+  file: sodium/crypto_kx.h
+  line: 33
+
+# size_t crypto_kx_publickeybytes(void)
+--- !function
+name: crypto_kx_publickeybytes
+type: size_t
+definition:
+  file: sodium/crypto_kx.h
+  line: 17
+
+# size_t crypto_kx_secretkeybytes(void)
+--- !function
+name: crypto_kx_secretkeybytes
+type: size_t
+definition:
+  file: sodium/crypto_kx.h
+  line: 21
+
+# int crypto_kx_seed_keypair(unsigned char *, unsigned char *, const unsigned char *)
+--- !function
+name: crypto_kx_seed_keypair
+type: int
+parameters:
+  pk: unsigned char [32]
+  sk: unsigned char [32]
+  seed: unsigned char const[32]
+definition:
+  file: sodium/crypto_kx.h
+  line: 36
+
+# size_t crypto_kx_seedbytes(void)
+--- !function
+name: crypto_kx_seedbytes
+type: size_t
+definition:
+  file: sodium/crypto_kx.h
+  line: 25
+
+# int crypto_kx_server_session_keys(unsigned char *, unsigned char *, const unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_kx_server_session_keys
+type: int
+parameters:
+  rx: unsigned char [32]
+  tx: unsigned char [32]
+  server_pk: unsigned char const[32]
+  server_sk: unsigned char const[32]
+  client_pk: unsigned char const[32]
+definition:
+  file: sodium/crypto_kx.h
+  line: 55
+
+# size_t crypto_kx_sessionkeybytes(void)
+--- !function
+name: crypto_kx_sessionkeybytes
+type: size_t
+definition:
+  file: sodium/crypto_kx.h
+  line: 29
+
+# int crypto_onetimeauth(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_onetimeauth
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 34
+
+# size_t crypto_onetimeauth_bytes(void)
+--- !function
+name: crypto_onetimeauth_bytes
+type: size_t
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 23
+
+# int crypto_onetimeauth_final(crypto_onetimeauth_state *, unsigned char *)
+--- !function
+name: crypto_onetimeauth_final
+type: int
+parameters:
+  state: struct crypto_onetimeauth_poly1305_state *
+  out: unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 54
+
+# int crypto_onetimeauth_init(crypto_onetimeauth_state *, const unsigned char *)
+--- !function
+name: crypto_onetimeauth_init
+type: int
+parameters:
+  state: struct crypto_onetimeauth_poly1305_state *
+  key: const unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 44
+
+# size_t crypto_onetimeauth_keybytes(void)
+--- !function
+name: crypto_onetimeauth_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 27
+
+# void crypto_onetimeauth_keygen(unsigned char *)
+--- !function
+name: crypto_onetimeauth_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 58
+
+# int crypto_onetimeauth_poly1305(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_onetimeauth_poly1305
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 35
+
+# size_t crypto_onetimeauth_poly1305_bytes(void)
+--- !function
+name: crypto_onetimeauth_poly1305_bytes
+type: size_t
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 28
+
+# int crypto_onetimeauth_poly1305_final(crypto_onetimeauth_poly1305_state *, unsigned char *)
+--- !function
+name: crypto_onetimeauth_poly1305_final
+type: int
+parameters:
+  state: struct crypto_onetimeauth_poly1305_state *
+  out: unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 60
+
+# int crypto_onetimeauth_poly1305_init(crypto_onetimeauth_poly1305_state *, const unsigned char *)
+--- !function
+name: crypto_onetimeauth_poly1305_init
+type: int
+parameters:
+  state: struct crypto_onetimeauth_poly1305_state *
+  key: const unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 49
+
+# size_t crypto_onetimeauth_poly1305_keybytes(void)
+--- !function
+name: crypto_onetimeauth_poly1305_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 32
+
+# void crypto_onetimeauth_poly1305_keygen(unsigned char *)
+--- !function
+name: crypto_onetimeauth_poly1305_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 65
+
+# size_t crypto_onetimeauth_poly1305_statebytes(void)
+--- !function
+name: crypto_onetimeauth_poly1305_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 24
+
+# int crypto_onetimeauth_poly1305_update(crypto_onetimeauth_poly1305_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_onetimeauth_poly1305_update
+type: int
+parameters:
+  state: struct crypto_onetimeauth_poly1305_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 54
+
+# int crypto_onetimeauth_poly1305_verify(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_onetimeauth_poly1305_verify
+type: int
+parameters:
+  h: const unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth_poly1305.h
+  line: 42
+
+# const char * crypto_onetimeauth_primitive(void)
+--- !function
+name: crypto_onetimeauth_primitive
+type: const char *
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 31
+
+# size_t crypto_onetimeauth_statebytes(void)
+--- !function
+name: crypto_onetimeauth_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 19
+
+# int crypto_onetimeauth_update(crypto_onetimeauth_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_onetimeauth_update
+type: int
+parameters:
+  state: struct crypto_onetimeauth_poly1305_state *
+  in: const unsigned char *
+  inlen: unsigned long long
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 48
+
+# int crypto_onetimeauth_verify(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_onetimeauth_verify
+type: int
+parameters:
+  h: const unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_onetimeauth.h
+  line: 39
+
+# int crypto_pwhash(unsigned char *const, unsigned long long, const char *const, unsigned long long, const unsigned char *const, unsigned long long, size_t, int)
+--- !function
+name: crypto_pwhash
+type: int
+parameters:
+  out: unsigned char *
+  outlen: unsigned long long
+  passwd: const char *
+  passwdlen: unsigned long long
+  salt: const unsigned char *
+  opslimit: unsigned long long
+  memlimit: size_t
+  alg: int
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 104
+
+# int crypto_pwhash_alg_argon2i13(void)
+--- !function
+name: crypto_pwhash_alg_argon2i13
+type: int
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 19
+
+# int crypto_pwhash_alg_argon2id13(void)
+--- !function
+name: crypto_pwhash_alg_argon2id13
+type: int
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 23
+
+# int crypto_pwhash_alg_default(void)
+--- !function
+name: crypto_pwhash_alg_default
+type: int
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 27
+
+# int crypto_pwhash_argon2i(unsigned char *const, unsigned long long, const char *const, unsigned long long, const unsigned char *const, unsigned long long, size_t, int)
+--- !function
+name: crypto_pwhash_argon2i
+type: int
+parameters:
+  out: unsigned char *
+  outlen: unsigned long long
+  passwd: const char *
+  passwdlen: unsigned long long
+  salt: const unsigned char *
+  opslimit: unsigned long long
+  memlimit: size_t
+  alg: int
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 91
+
+# int crypto_pwhash_argon2i_alg_argon2i13(void)
+--- !function
+name: crypto_pwhash_argon2i_alg_argon2i13
+type: int
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 19
+
+# size_t crypto_pwhash_argon2i_bytes_max(void)
+--- !function
+name: crypto_pwhash_argon2i_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 27
+
+# size_t crypto_pwhash_argon2i_bytes_min(void)
+--- !function
+name: crypto_pwhash_argon2i_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 23
+
+# size_t crypto_pwhash_argon2i_memlimit_interactive(void)
+--- !function
+name: crypto_pwhash_argon2i_memlimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 72
+
+# size_t crypto_pwhash_argon2i_memlimit_max(void)
+--- !function
+name: crypto_pwhash_argon2i_memlimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 64
+
+# size_t crypto_pwhash_argon2i_memlimit_min(void)
+--- !function
+name: crypto_pwhash_argon2i_memlimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 59
+
+# size_t crypto_pwhash_argon2i_memlimit_moderate(void)
+--- !function
+name: crypto_pwhash_argon2i_memlimit_moderate
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 80
+
+# size_t crypto_pwhash_argon2i_memlimit_sensitive(void)
+--- !function
+name: crypto_pwhash_argon2i_memlimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 88
+
+# size_t crypto_pwhash_argon2i_opslimit_interactive(void)
+--- !function
+name: crypto_pwhash_argon2i_opslimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 68
+
+# size_t crypto_pwhash_argon2i_opslimit_max(void)
+--- !function
+name: crypto_pwhash_argon2i_opslimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 55
+
+# size_t crypto_pwhash_argon2i_opslimit_min(void)
+--- !function
+name: crypto_pwhash_argon2i_opslimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 51
+
+# size_t crypto_pwhash_argon2i_opslimit_moderate(void)
+--- !function
+name: crypto_pwhash_argon2i_opslimit_moderate
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 76
+
+# size_t crypto_pwhash_argon2i_opslimit_sensitive(void)
+--- !function
+name: crypto_pwhash_argon2i_opslimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 84
+
+# size_t crypto_pwhash_argon2i_passwd_max(void)
+--- !function
+name: crypto_pwhash_argon2i_passwd_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 35
+
+# size_t crypto_pwhash_argon2i_passwd_min(void)
+--- !function
+name: crypto_pwhash_argon2i_passwd_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 31
+
+# size_t crypto_pwhash_argon2i_saltbytes(void)
+--- !function
+name: crypto_pwhash_argon2i_saltbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 39
+
+# int crypto_pwhash_argon2i_str(char *, const char *const, unsigned long long, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_argon2i_str
+type: int
+parameters:
+  out: char [128]
+  passwd: const char *
+  passwdlen: unsigned long long
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 101
+
+# int crypto_pwhash_argon2i_str_needs_rehash(const char *, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_argon2i_str_needs_rehash
+type: int
+parameters:
+  str: char const[128]
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 114
+
+# int crypto_pwhash_argon2i_str_verify(const char *, const char *const, unsigned long long)
+--- !function
+name: crypto_pwhash_argon2i_str_verify
+type: int
+parameters:
+  str: char const[128]
+  passwd: const char *
+  passwdlen: unsigned long long
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 108
+
+# size_t crypto_pwhash_argon2i_strbytes(void)
+--- !function
+name: crypto_pwhash_argon2i_strbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 43
+
+# const char * crypto_pwhash_argon2i_strprefix(void)
+--- !function
+name: crypto_pwhash_argon2i_strprefix
+type: const char *
+definition:
+  file: sodium/crypto_pwhash_argon2i.h
+  line: 47
+
+# int crypto_pwhash_argon2id(unsigned char *const, unsigned long long, const char *const, unsigned long long, const unsigned char *const, unsigned long long, size_t, int)
+--- !function
+name: crypto_pwhash_argon2id
+type: int
+parameters:
+  out: unsigned char *
+  outlen: unsigned long long
+  passwd: const char *
+  passwdlen: unsigned long long
+  salt: const unsigned char *
+  opslimit: unsigned long long
+  memlimit: size_t
+  alg: int
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 91
+
+# int crypto_pwhash_argon2id_alg_argon2id13(void)
+--- !function
+name: crypto_pwhash_argon2id_alg_argon2id13
+type: int
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 19
+
+# size_t crypto_pwhash_argon2id_bytes_max(void)
+--- !function
+name: crypto_pwhash_argon2id_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 27
+
+# size_t crypto_pwhash_argon2id_bytes_min(void)
+--- !function
+name: crypto_pwhash_argon2id_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 23
+
+# size_t crypto_pwhash_argon2id_memlimit_interactive(void)
+--- !function
+name: crypto_pwhash_argon2id_memlimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 72
+
+# size_t crypto_pwhash_argon2id_memlimit_max(void)
+--- !function
+name: crypto_pwhash_argon2id_memlimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 64
+
+# size_t crypto_pwhash_argon2id_memlimit_min(void)
+--- !function
+name: crypto_pwhash_argon2id_memlimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 59
+
+# size_t crypto_pwhash_argon2id_memlimit_moderate(void)
+--- !function
+name: crypto_pwhash_argon2id_memlimit_moderate
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 80
+
+# size_t crypto_pwhash_argon2id_memlimit_sensitive(void)
+--- !function
+name: crypto_pwhash_argon2id_memlimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 88
+
+# size_t crypto_pwhash_argon2id_opslimit_interactive(void)
+--- !function
+name: crypto_pwhash_argon2id_opslimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 68
+
+# size_t crypto_pwhash_argon2id_opslimit_max(void)
+--- !function
+name: crypto_pwhash_argon2id_opslimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 55
+
+# size_t crypto_pwhash_argon2id_opslimit_min(void)
+--- !function
+name: crypto_pwhash_argon2id_opslimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 51
+
+# size_t crypto_pwhash_argon2id_opslimit_moderate(void)
+--- !function
+name: crypto_pwhash_argon2id_opslimit_moderate
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 76
+
+# size_t crypto_pwhash_argon2id_opslimit_sensitive(void)
+--- !function
+name: crypto_pwhash_argon2id_opslimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 84
+
+# size_t crypto_pwhash_argon2id_passwd_max(void)
+--- !function
+name: crypto_pwhash_argon2id_passwd_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 35
+
+# size_t crypto_pwhash_argon2id_passwd_min(void)
+--- !function
+name: crypto_pwhash_argon2id_passwd_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 31
+
+# size_t crypto_pwhash_argon2id_saltbytes(void)
+--- !function
+name: crypto_pwhash_argon2id_saltbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 39
+
+# int crypto_pwhash_argon2id_str(char *, const char *const, unsigned long long, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_argon2id_str
+type: int
+parameters:
+  out: char [128]
+  passwd: const char *
+  passwdlen: unsigned long long
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 101
+
+# int crypto_pwhash_argon2id_str_needs_rehash(const char *, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_argon2id_str_needs_rehash
+type: int
+parameters:
+  str: char const[128]
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 114
+
+# int crypto_pwhash_argon2id_str_verify(const char *, const char *const, unsigned long long)
+--- !function
+name: crypto_pwhash_argon2id_str_verify
+type: int
+parameters:
+  str: char const[128]
+  passwd: const char *
+  passwdlen: unsigned long long
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 108
+
+# size_t crypto_pwhash_argon2id_strbytes(void)
+--- !function
+name: crypto_pwhash_argon2id_strbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 43
+
+# const char * crypto_pwhash_argon2id_strprefix(void)
+--- !function
+name: crypto_pwhash_argon2id_strprefix
+type: const char *
+definition:
+  file: sodium/crypto_pwhash_argon2id.h
+  line: 47
+
+# size_t crypto_pwhash_bytes_max(void)
+--- !function
+name: crypto_pwhash_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 35
+
+# size_t crypto_pwhash_bytes_min(void)
+--- !function
+name: crypto_pwhash_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 31
+
+# size_t crypto_pwhash_memlimit_interactive(void)
+--- !function
+name: crypto_pwhash_memlimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 79
+
+# size_t crypto_pwhash_memlimit_max(void)
+--- !function
+name: crypto_pwhash_memlimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 71
+
+# size_t crypto_pwhash_memlimit_min(void)
+--- !function
+name: crypto_pwhash_memlimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 67
+
+# size_t crypto_pwhash_memlimit_moderate(void)
+--- !function
+name: crypto_pwhash_memlimit_moderate
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 87
+
+# size_t crypto_pwhash_memlimit_sensitive(void)
+--- !function
+name: crypto_pwhash_memlimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 95
+
+# size_t crypto_pwhash_opslimit_interactive(void)
+--- !function
+name: crypto_pwhash_opslimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 75
+
+# size_t crypto_pwhash_opslimit_max(void)
+--- !function
+name: crypto_pwhash_opslimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 63
+
+# size_t crypto_pwhash_opslimit_min(void)
+--- !function
+name: crypto_pwhash_opslimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 59
+
+# size_t crypto_pwhash_opslimit_moderate(void)
+--- !function
+name: crypto_pwhash_opslimit_moderate
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 83
+
+# size_t crypto_pwhash_opslimit_sensitive(void)
+--- !function
+name: crypto_pwhash_opslimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 91
+
+# size_t crypto_pwhash_passwd_max(void)
+--- !function
+name: crypto_pwhash_passwd_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 43
+
+# size_t crypto_pwhash_passwd_min(void)
+--- !function
+name: crypto_pwhash_passwd_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 39
+
+# const char * crypto_pwhash_primitive(void)
+--- !function
+name: crypto_pwhash_primitive
+type: const char *
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 140
+
+# size_t crypto_pwhash_saltbytes(void)
+--- !function
+name: crypto_pwhash_saltbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 47
+
+# int crypto_pwhash_scryptsalsa208sha256(unsigned char *const, unsigned long long, const char *const, unsigned long long, const unsigned char *const, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256
+type: int
+parameters:
+  out: unsigned char *
+  outlen: unsigned long long
+  passwd: const char *
+  passwdlen: unsigned long long
+  salt: const unsigned char *
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 80
+
+# size_t crypto_pwhash_scryptsalsa208sha256_bytes_max(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_bytes_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 24
+
+# size_t crypto_pwhash_scryptsalsa208sha256_bytes_min(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_bytes_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 19
+
+# int crypto_pwhash_scryptsalsa208sha256_ll(const uint8_t *, size_t, const uint8_t *, size_t, uint64_t, uint32_t, uint32_t, uint8_t *, size_t)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_ll
+type: int
+parameters:
+  passwd: const unsigned char *
+  passwdlen: size_t
+  salt: const unsigned char *
+  saltlen: size_t
+  N: uint64_t
+  r: uint32_t
+  p: uint32_t
+  buf: uint8_t *
+  buflen: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 104
+
+# size_t crypto_pwhash_scryptsalsa208sha256_memlimit_interactive(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_memlimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 69
+
+# size_t crypto_pwhash_scryptsalsa208sha256_memlimit_max(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_memlimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 61
+
+# size_t crypto_pwhash_scryptsalsa208sha256_memlimit_min(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_memlimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 56
+
+# size_t crypto_pwhash_scryptsalsa208sha256_memlimit_sensitive(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_memlimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 77
+
+# size_t crypto_pwhash_scryptsalsa208sha256_opslimit_interactive(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_opslimit_interactive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 65
+
+# size_t crypto_pwhash_scryptsalsa208sha256_opslimit_max(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_opslimit_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 52
+
+# size_t crypto_pwhash_scryptsalsa208sha256_opslimit_min(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_opslimit_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 48
+
+# size_t crypto_pwhash_scryptsalsa208sha256_opslimit_sensitive(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_opslimit_sensitive
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 73
+
+# size_t crypto_pwhash_scryptsalsa208sha256_passwd_max(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_passwd_max
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 32
+
+# size_t crypto_pwhash_scryptsalsa208sha256_passwd_min(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_passwd_min
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 28
+
+# size_t crypto_pwhash_scryptsalsa208sha256_saltbytes(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_saltbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 36
+
+# int crypto_pwhash_scryptsalsa208sha256_str(char *, const char *const, unsigned long long, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_str
+type: int
+parameters:
+  out: char [102]
+  passwd: const char *
+  passwdlen: unsigned long long
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 90
+
+# int crypto_pwhash_scryptsalsa208sha256_str_needs_rehash(const char *, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_str_needs_rehash
+type: int
+parameters:
+  str: char const[102]
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 111
+
+# int crypto_pwhash_scryptsalsa208sha256_str_verify(const char *, const char *const, unsigned long long)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_str_verify
+type: int
+parameters:
+  str: char const[102]
+  passwd: const char *
+  passwdlen: unsigned long long
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 98
+
+# size_t crypto_pwhash_scryptsalsa208sha256_strbytes(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_strbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 40
+
+# const char * crypto_pwhash_scryptsalsa208sha256_strprefix(void)
+--- !function
+name: crypto_pwhash_scryptsalsa208sha256_strprefix
+type: const char *
+definition:
+  file: sodium/crypto_pwhash_scryptsalsa208sha256.h
+  line: 44
+
+# int crypto_pwhash_str(char *, const char *const, unsigned long long, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_str
+type: int
+parameters:
+  out: char [128]
+  passwd: const char *
+  passwdlen: unsigned long long
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 116
+
+# int crypto_pwhash_str_alg(char *, const char *const, unsigned long long, unsigned long long, size_t, int)
+--- !function
+name: crypto_pwhash_str_alg
+type: int
+parameters:
+  out: char [128]
+  passwd: const char *
+  passwdlen: unsigned long long
+  opslimit: unsigned long long
+  memlimit: size_t
+  alg: int
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 122
+
+# int crypto_pwhash_str_needs_rehash(const char *, unsigned long long, size_t)
+--- !function
+name: crypto_pwhash_str_needs_rehash
+type: int
+parameters:
+  str: char const[128]
+  opslimit: unsigned long long
+  memlimit: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 134
+
+# int crypto_pwhash_str_verify(const char *, const char *const, unsigned long long)
+--- !function
+name: crypto_pwhash_str_verify
+type: int
+parameters:
+  str: char const[128]
+  passwd: const char *
+  passwdlen: unsigned long long
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 128
+
+# size_t crypto_pwhash_strbytes(void)
+--- !function
+name: crypto_pwhash_strbytes
+type: size_t
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 51
+
+# const char * crypto_pwhash_strprefix(void)
+--- !function
+name: crypto_pwhash_strprefix
+type: const char *
+definition:
+  file: sodium/crypto_pwhash.h
+  line: 55
+
+# int crypto_scalarmult(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+  p: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult.h
+  line: 38
+
+# int crypto_scalarmult_base(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_base
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult.h
+  line: 26
+
+# size_t crypto_scalarmult_bytes(void)
+--- !function
+name: crypto_scalarmult_bytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult.h
+  line: 15
+
+# int crypto_scalarmult_curve25519(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_curve25519
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+  p: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_curve25519.h
+  line: 29
+
+# int crypto_scalarmult_curve25519_base(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_curve25519_base
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_curve25519.h
+  line: 34
+
+# size_t crypto_scalarmult_curve25519_bytes(void)
+--- !function
+name: crypto_scalarmult_curve25519_bytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult_curve25519.h
+  line: 14
+
+# size_t crypto_scalarmult_curve25519_scalarbytes(void)
+--- !function
+name: crypto_scalarmult_curve25519_scalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult_curve25519.h
+  line: 18
+
+# int crypto_scalarmult_ed25519(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_ed25519
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+  p: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_ed25519.h
+  line: 30
+
+# int crypto_scalarmult_ed25519_base(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_ed25519_base
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_ed25519.h
+  line: 40
+
+# int crypto_scalarmult_ed25519_base_noclamp(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_ed25519_base_noclamp
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_ed25519.h
+  line: 44
+
+# size_t crypto_scalarmult_ed25519_bytes(void)
+--- !function
+name: crypto_scalarmult_ed25519_bytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult_ed25519.h
+  line: 15
+
+# int crypto_scalarmult_ed25519_noclamp(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_ed25519_noclamp
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+  p: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_ed25519.h
+  line: 35
+
+# size_t crypto_scalarmult_ed25519_scalarbytes(void)
+--- !function
+name: crypto_scalarmult_ed25519_scalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult_ed25519.h
+  line: 19
+
+# const char * crypto_scalarmult_primitive(void)
+--- !function
+name: crypto_scalarmult_primitive
+type: const char *
+definition:
+  file: sodium/crypto_scalarmult.h
+  line: 23
+
+# int crypto_scalarmult_ristretto255(unsigned char *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_ristretto255
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+  p: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_ristretto255.h
+  line: 30
+
+# int crypto_scalarmult_ristretto255_base(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_scalarmult_ristretto255_base
+type: int
+parameters:
+  q: unsigned char *
+  n: const unsigned char *
+definition:
+  file: sodium/crypto_scalarmult_ristretto255.h
+  line: 35
+
+# size_t crypto_scalarmult_ristretto255_bytes(void)
+--- !function
+name: crypto_scalarmult_ristretto255_bytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult_ristretto255.h
+  line: 15
+
+# size_t crypto_scalarmult_ristretto255_scalarbytes(void)
+--- !function
+name: crypto_scalarmult_ristretto255_scalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult_ristretto255.h
+  line: 19
+
+# size_t crypto_scalarmult_scalarbytes(void)
+--- !function
+name: crypto_scalarmult_scalarbytes
+type: size_t
+definition:
+  file: sodium/crypto_scalarmult.h
+  line: 19
+
+# int crypto_secretbox(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 79
+
+# size_t crypto_secretbox_boxzerobytes(void)
+--- !function
+name: crypto_secretbox_boxzerobytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 76
+
+# int crypto_secretbox_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 48
+
+# int crypto_secretbox_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_easy
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 37
+
+# size_t crypto_secretbox_keybytes(void)
+--- !function
+name: crypto_secretbox_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 18
+
+# void crypto_secretbox_keygen(unsigned char *)
+--- !function
+name: crypto_secretbox_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 65
+
+# size_t crypto_secretbox_macbytes(void)
+--- !function
+name: crypto_secretbox_macbytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 26
+
+# size_t crypto_secretbox_messagebytes_max(void)
+--- !function
+name: crypto_secretbox_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 34
+
+# size_t crypto_secretbox_noncebytes(void)
+--- !function
+name: crypto_secretbox_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 22
+
+# int crypto_secretbox_open(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_open
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 84
+
+# int crypto_secretbox_open_detached(unsigned char *, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_open_detached
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  mac: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 56
+
+# int crypto_secretbox_open_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_open_easy
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 42
+
+# const char * crypto_secretbox_primitive(void)
+--- !function
+name: crypto_secretbox_primitive
+type: const char *
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 30
+
+# int crypto_secretbox_xchacha20poly1305_detached(unsigned char *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_detached
+type: int
+parameters:
+  c: unsigned char *
+  mac: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 49
+
+# int crypto_secretbox_xchacha20poly1305_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_easy
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 33
+
+# size_t crypto_secretbox_xchacha20poly1305_keybytes(void)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 17
+
+# size_t crypto_secretbox_xchacha20poly1305_macbytes(void)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_macbytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 25
+
+# size_t crypto_secretbox_xchacha20poly1305_messagebytes_max(void)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 30
+
+# size_t crypto_secretbox_xchacha20poly1305_noncebytes(void)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 21
+
+# int crypto_secretbox_xchacha20poly1305_open_detached(unsigned char *, const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_open_detached
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  mac: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 58
+
+# int crypto_secretbox_xchacha20poly1305_open_easy(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_xchacha20poly1305_open_easy
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox_xchacha20poly1305.h
+  line: 41
+
+# int crypto_secretbox_xsalsa20poly1305(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 34
+
+# size_t crypto_secretbox_xsalsa20poly1305_boxzerobytes(void)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_boxzerobytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 57
+
+# size_t crypto_secretbox_xsalsa20poly1305_keybytes(void)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 17
+
+# void crypto_secretbox_xsalsa20poly1305_keygen(unsigned char *)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 50
+
+# size_t crypto_secretbox_xsalsa20poly1305_macbytes(void)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_macbytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 25
+
+# size_t crypto_secretbox_xsalsa20poly1305_messagebytes_max(void)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 31
+
+# size_t crypto_secretbox_xsalsa20poly1305_noncebytes(void)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 21
+
+# int crypto_secretbox_xsalsa20poly1305_open(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_open
+type: int
+parameters:
+  m: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 42
+
+# size_t crypto_secretbox_xsalsa20poly1305_zerobytes(void)
+--- !function
+name: crypto_secretbox_xsalsa20poly1305_zerobytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox_xsalsa20poly1305.h
+  line: 63
+
+# size_t crypto_secretbox_zerobytes(void)
+--- !function
+name: crypto_secretbox_zerobytes
+type: size_t
+definition:
+  file: sodium/crypto_secretbox.h
+  line: 72
+
+# size_t crypto_secretstream_xchacha20poly1305_abytes(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_abytes
+type: size_t
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 20
+
+# size_t crypto_secretstream_xchacha20poly1305_headerbytes(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_headerbytes
+type: size_t
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 25
+
+# int crypto_secretstream_xchacha20poly1305_init_pull(crypto_secretstream_xchacha20poly1305_state *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_init_pull
+type: int
+parameters:
+  state: struct crypto_secretstream_xchacha20poly1305_state *
+  header: unsigned char const[24]
+  k: unsigned char const[32]
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 86
+
+# int crypto_secretstream_xchacha20poly1305_init_push(crypto_secretstream_xchacha20poly1305_state *, unsigned char *, const unsigned char *)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_init_push
+type: int
+parameters:
+  state: struct crypto_secretstream_xchacha20poly1305_state *
+  header: unsigned char [24]
+  k: unsigned char const[32]
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 71
+
+# size_t crypto_secretstream_xchacha20poly1305_keybytes(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 30
+
+# void crypto_secretstream_xchacha20poly1305_keygen(unsigned char *)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 66
+
+# size_t crypto_secretstream_xchacha20poly1305_messagebytes_max(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 36
+
+# int crypto_secretstream_xchacha20poly1305_pull(crypto_secretstream_xchacha20poly1305_state *, unsigned char *, unsigned long long *, unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_pull
+type: int
+parameters:
+  state: struct crypto_secretstream_xchacha20poly1305_state *
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  tag_p: unsigned char *
+  c: const unsigned char *
+  clen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 93
+
+# int crypto_secretstream_xchacha20poly1305_push(crypto_secretstream_xchacha20poly1305_state *, unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *, unsigned long long, unsigned char)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_push
+type: int
+parameters:
+  state: struct crypto_secretstream_xchacha20poly1305_state *
+  c: unsigned char *
+  clen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  ad: const unsigned char *
+  adlen: unsigned long long
+  tag: unsigned char
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 78
+
+# void crypto_secretstream_xchacha20poly1305_rekey(crypto_secretstream_xchacha20poly1305_state *)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_rekey
+type: void
+parameters:
+  state: struct crypto_secretstream_xchacha20poly1305_state *
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 101
+
+# size_t crypto_secretstream_xchacha20poly1305_statebytes(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 63
+
+# unsigned char crypto_secretstream_xchacha20poly1305_tag_final(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_tag_final
+type: unsigned char
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 54
+
+# unsigned char crypto_secretstream_xchacha20poly1305_tag_message(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_tag_message
+type: unsigned char
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 40
+
+# unsigned char crypto_secretstream_xchacha20poly1305_tag_push(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_tag_push
+type: unsigned char
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 44
+
+# unsigned char crypto_secretstream_xchacha20poly1305_tag_rekey(void)
+--- !function
+name: crypto_secretstream_xchacha20poly1305_tag_rekey
+type: unsigned char
+definition:
+  file: sodium/crypto_secretstream_xchacha20poly1305.h
+  line: 48
+
+# int crypto_shorthash(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_shorthash
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_shorthash.h
+  line: 29
+
+# size_t crypto_shorthash_bytes(void)
+--- !function
+name: crypto_shorthash_bytes
+type: size_t
+definition:
+  file: sodium/crypto_shorthash.h
+  line: 18
+
+# size_t crypto_shorthash_keybytes(void)
+--- !function
+name: crypto_shorthash_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_shorthash.h
+  line: 22
+
+# void crypto_shorthash_keygen(unsigned char *)
+--- !function
+name: crypto_shorthash_keygen
+type: void
+parameters:
+  k: unsigned char [16]
+definition:
+  file: sodium/crypto_shorthash.h
+  line: 34
+
+# const char * crypto_shorthash_primitive(void)
+--- !function
+name: crypto_shorthash_primitive
+type: const char *
+definition:
+  file: sodium/crypto_shorthash.h
+  line: 26
+
+# int crypto_shorthash_siphash24(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_shorthash_siphash24
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_shorthash_siphash24.h
+  line: 25
+
+# size_t crypto_shorthash_siphash24_bytes(void)
+--- !function
+name: crypto_shorthash_siphash24_bytes
+type: size_t
+definition:
+  file: sodium/crypto_shorthash_siphash24.h
+  line: 18
+
+# size_t crypto_shorthash_siphash24_keybytes(void)
+--- !function
+name: crypto_shorthash_siphash24_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_shorthash_siphash24.h
+  line: 22
+
+# int crypto_shorthash_siphashx24(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_shorthash_siphashx24
+type: int
+parameters:
+  out: unsigned char *
+  in: const unsigned char *
+  inlen: unsigned long long
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_shorthash_siphash24.h
+  line: 41
+
+# size_t crypto_shorthash_siphashx24_bytes(void)
+--- !function
+name: crypto_shorthash_siphashx24_bytes
+type: size_t
+definition:
+  file: sodium/crypto_shorthash_siphash24.h
+  line: 34
+
+# size_t crypto_shorthash_siphashx24_keybytes(void)
+--- !function
+name: crypto_shorthash_siphashx24_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_shorthash_siphash24.h
+  line: 38
+
+# int crypto_sign(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign
+type: int
+parameters:
+  sm: unsigned char *
+  smlen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 62
+
+# size_t crypto_sign_bytes(void)
+--- !function
+name: crypto_sign_bytes
+type: size_t
+definition:
+  file: sodium/crypto_sign.h
+  line: 30
+
+# int crypto_sign_detached(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign_detached
+type: int
+parameters:
+  sig: unsigned char *
+  siglen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 73
+
+# int crypto_sign_ed25519(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519
+type: int
+parameters:
+  sm: unsigned char *
+  smlen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 43
+
+# size_t crypto_sign_ed25519_bytes(void)
+--- !function
+name: crypto_sign_ed25519_bytes
+type: size_t
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 24
+
+# int crypto_sign_ed25519_detached(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_detached
+type: int
+parameters:
+  sig: unsigned char *
+  siglen_p: unsigned long long *
+  m: const unsigned char *
+  mlen: unsigned long long
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 55
+
+# int crypto_sign_ed25519_keypair(unsigned char *, unsigned char *)
+--- !function
+name: crypto_sign_ed25519_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 70
+
+# size_t crypto_sign_ed25519_messagebytes_max(void)
+--- !function
+name: crypto_sign_ed25519_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 40
+
+# int crypto_sign_ed25519_open(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_open
+type: int
+parameters:
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  sm: const unsigned char *
+  smlen: unsigned long long
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 49
+
+# int crypto_sign_ed25519_pk_to_curve25519(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_pk_to_curve25519
+type: int
+parameters:
+  curve25519_pk: unsigned char *
+  ed25519_pk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 79
+
+# size_t crypto_sign_ed25519_publickeybytes(void)
+--- !function
+name: crypto_sign_ed25519_publickeybytes
+type: size_t
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 32
+
+# size_t crypto_sign_ed25519_secretkeybytes(void)
+--- !function
+name: crypto_sign_ed25519_secretkeybytes
+type: size_t
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 36
+
+# int crypto_sign_ed25519_seed_keypair(unsigned char *, unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_seed_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+  seed: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 74
+
+# size_t crypto_sign_ed25519_seedbytes(void)
+--- !function
+name: crypto_sign_ed25519_seedbytes
+type: size_t
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 28
+
+# int crypto_sign_ed25519_sk_to_curve25519(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_sk_to_curve25519
+type: int
+parameters:
+  curve25519_sk: unsigned char *
+  ed25519_sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 84
+
+# int crypto_sign_ed25519_sk_to_pk(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_sk_to_pk
+type: int
+parameters:
+  pk: unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 94
+
+# int crypto_sign_ed25519_sk_to_seed(unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_sk_to_seed
+type: int
+parameters:
+  seed: unsigned char *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 89
+
+# int crypto_sign_ed25519_verify_detached(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519_verify_detached
+type: int
+parameters:
+  sig: const unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 63
+
+# int crypto_sign_ed25519ph_final_create(crypto_sign_ed25519ph_state *, unsigned char *, unsigned long long *, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519ph_final_create
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+  sig: unsigned char *
+  siglen_p: unsigned long long *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 108
+
+# int crypto_sign_ed25519ph_final_verify(crypto_sign_ed25519ph_state *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_ed25519ph_final_verify
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+  sig: const unsigned char *
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 115
+
+# int crypto_sign_ed25519ph_init(crypto_sign_ed25519ph_state *)
+--- !function
+name: crypto_sign_ed25519ph_init
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 98
+
+# size_t crypto_sign_ed25519ph_statebytes(void)
+--- !function
+name: crypto_sign_ed25519ph_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 20
+
+# int crypto_sign_ed25519ph_update(crypto_sign_ed25519ph_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_sign_ed25519ph_update
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+  m: const unsigned char *
+  mlen: unsigned long long
+definition:
+  file: sodium/crypto_sign_ed25519.h
+  line: 102
+
+# int crypto_sign_final_create(crypto_sign_state *, unsigned char *, unsigned long long *, const unsigned char *)
+--- !function
+name: crypto_sign_final_create
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+  sig: unsigned char *
+  siglen_p: unsigned long long *
+  sk: const unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 93
+
+# int crypto_sign_final_verify(crypto_sign_state *, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_final_verify
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+  sig: const unsigned char *
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 99
+
+# int crypto_sign_init(crypto_sign_state *)
+--- !function
+name: crypto_sign_init
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+definition:
+  file: sodium/crypto_sign.h
+  line: 85
+
+# int crypto_sign_keypair(unsigned char *, unsigned char *)
+--- !function
+name: crypto_sign_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 58
+
+# size_t crypto_sign_messagebytes_max(void)
+--- !function
+name: crypto_sign_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_sign.h
+  line: 46
+
+# int crypto_sign_open(unsigned char *, unsigned long long *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign_open
+type: int
+parameters:
+  m: unsigned char *
+  mlen_p: unsigned long long *
+  sm: const unsigned char *
+  smlen: unsigned long long
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 67
+
+# const char * crypto_sign_primitive(void)
+--- !function
+name: crypto_sign_primitive
+type: const char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 50
+
+# size_t crypto_sign_publickeybytes(void)
+--- !function
+name: crypto_sign_publickeybytes
+type: size_t
+definition:
+  file: sodium/crypto_sign.h
+  line: 38
+
+# size_t crypto_sign_secretkeybytes(void)
+--- !function
+name: crypto_sign_secretkeybytes
+type: size_t
+definition:
+  file: sodium/crypto_sign.h
+  line: 42
+
+# int crypto_sign_seed_keypair(unsigned char *, unsigned char *, const unsigned char *)
+--- !function
+name: crypto_sign_seed_keypair
+type: int
+parameters:
+  pk: unsigned char *
+  sk: unsigned char *
+  seed: const unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 53
+
+# size_t crypto_sign_seedbytes(void)
+--- !function
+name: crypto_sign_seedbytes
+type: size_t
+definition:
+  file: sodium/crypto_sign.h
+  line: 34
+
+# size_t crypto_sign_statebytes(void)
+--- !function
+name: crypto_sign_statebytes
+type: size_t
+definition:
+  file: sodium/crypto_sign.h
+  line: 26
+
+# int crypto_sign_update(crypto_sign_state *, const unsigned char *, unsigned long long)
+--- !function
+name: crypto_sign_update
+type: int
+parameters:
+  state: struct crypto_sign_ed25519ph_state *
+  m: const unsigned char *
+  mlen: unsigned long long
+definition:
+  file: sodium/crypto_sign.h
+  line: 88
+
+# int crypto_sign_verify_detached(const unsigned char *, const unsigned char *, unsigned long long, const unsigned char *)
+--- !function
+name: crypto_sign_verify_detached
+type: int
+parameters:
+  sig: const unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  pk: const unsigned char *
+definition:
+  file: sodium/crypto_sign.h
+  line: 78
+
+# int crypto_stream(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream.h
+  line: 41
+
+# int crypto_stream_chacha20(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_chacha20
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 38
+
+# int crypto_stream_chacha20_ietf(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_chacha20_ietf
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 75
+
+# size_t crypto_stream_chacha20_ietf_keybytes(void)
+--- !function
+name: crypto_stream_chacha20_ietf_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 63
+
+# void crypto_stream_chacha20_ietf_keygen(unsigned char *)
+--- !function
+name: crypto_stream_chacha20_ietf_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 93
+
+# size_t crypto_stream_chacha20_ietf_messagebytes_max(void)
+--- !function
+name: crypto_stream_chacha20_ietf_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 72
+
+# size_t crypto_stream_chacha20_ietf_noncebytes(void)
+--- !function
+name: crypto_stream_chacha20_ietf_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 67
+
+# int crypto_stream_chacha20_ietf_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_chacha20_ietf_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 80
+
+# int crypto_stream_chacha20_ietf_xor_ic(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, uint32_t, const unsigned char *)
+--- !function
+name: crypto_stream_chacha20_ietf_xor_ic
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  ic: uint32_t
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 86
+
+# size_t crypto_stream_chacha20_keybytes(void)
+--- !function
+name: crypto_stream_chacha20_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 25
+
+# void crypto_stream_chacha20_keygen(unsigned char *)
+--- !function
+name: crypto_stream_chacha20_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 56
+
+# size_t crypto_stream_chacha20_messagebytes_max(void)
+--- !function
+name: crypto_stream_chacha20_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 33
+
+# size_t crypto_stream_chacha20_noncebytes(void)
+--- !function
+name: crypto_stream_chacha20_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 29
+
+# int crypto_stream_chacha20_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_chacha20_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 43
+
+# int crypto_stream_chacha20_xor_ic(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, uint64_t, const unsigned char *)
+--- !function
+name: crypto_stream_chacha20_xor_ic
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  ic: uint64_t
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_chacha20.h
+  line: 49
+
+# size_t crypto_stream_keybytes(void)
+--- !function
+name: crypto_stream_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream.h
+  line: 26
+
+# void crypto_stream_keygen(unsigned char *)
+--- !function
+name: crypto_stream_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream.h
+  line: 52
+
+# size_t crypto_stream_messagebytes_max(void)
+--- !function
+name: crypto_stream_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream.h
+  line: 34
+
+# size_t crypto_stream_noncebytes(void)
+--- !function
+name: crypto_stream_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream.h
+  line: 30
+
+# const char * crypto_stream_primitive(void)
+--- !function
+name: crypto_stream_primitive
+type: const char *
+definition:
+  file: sodium/crypto_stream.h
+  line: 38
+
+# int crypto_stream_salsa20(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_salsa20
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_salsa20.h
+  line: 36
+
+# int crypto_stream_salsa2012(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_salsa2012
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_salsa2012.h
+  line: 35
+
+# size_t crypto_stream_salsa2012_keybytes(void)
+--- !function
+name: crypto_stream_salsa2012_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa2012.h
+  line: 24
+
+# void crypto_stream_salsa2012_keygen(unsigned char *)
+--- !function
+name: crypto_stream_salsa2012_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream_salsa2012.h
+  line: 46
+
+# size_t crypto_stream_salsa2012_messagebytes_max(void)
+--- !function
+name: crypto_stream_salsa2012_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa2012.h
+  line: 32
+
+# size_t crypto_stream_salsa2012_noncebytes(void)
+--- !function
+name: crypto_stream_salsa2012_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa2012.h
+  line: 28
+
+# int crypto_stream_salsa2012_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_salsa2012_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_salsa2012.h
+  line: 40
+
+# int crypto_stream_salsa208(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_salsa208
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_salsa208.h
+  line: 38
+
+# size_t crypto_stream_salsa208_keybytes(void)
+--- !function
+name: crypto_stream_salsa208_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa208.h
+  line: 24
+
+# void crypto_stream_salsa208_keygen(unsigned char *)
+--- !function
+name: crypto_stream_salsa208_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream_salsa208.h
+  line: 49
+
+# size_t crypto_stream_salsa208_messagebytes_max(void)
+--- !function
+name: crypto_stream_salsa208_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa208.h
+  line: 34
+
+# size_t crypto_stream_salsa208_noncebytes(void)
+--- !function
+name: crypto_stream_salsa208_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa208.h
+  line: 29
+
+# int crypto_stream_salsa208_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_salsa208_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_salsa208.h
+  line: 43
+
+# size_t crypto_stream_salsa20_keybytes(void)
+--- !function
+name: crypto_stream_salsa20_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa20.h
+  line: 25
+
+# void crypto_stream_salsa20_keygen(unsigned char *)
+--- !function
+name: crypto_stream_salsa20_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream_salsa20.h
+  line: 54
+
+# size_t crypto_stream_salsa20_messagebytes_max(void)
+--- !function
+name: crypto_stream_salsa20_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa20.h
+  line: 33
+
+# size_t crypto_stream_salsa20_noncebytes(void)
+--- !function
+name: crypto_stream_salsa20_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_salsa20.h
+  line: 29
+
+# int crypto_stream_salsa20_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_salsa20_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_salsa20.h
+  line: 41
+
+# int crypto_stream_salsa20_xor_ic(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, uint64_t, const unsigned char *)
+--- !function
+name: crypto_stream_salsa20_xor_ic
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  ic: uint64_t
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_salsa20.h
+  line: 47
+
+# int crypto_stream_xchacha20(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_xchacha20
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_xchacha20.h
+  line: 36
+
+# size_t crypto_stream_xchacha20_keybytes(void)
+--- !function
+name: crypto_stream_xchacha20_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_xchacha20.h
+  line: 25
+
+# void crypto_stream_xchacha20_keygen(unsigned char *)
+--- !function
+name: crypto_stream_xchacha20_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream_xchacha20.h
+  line: 54
+
+# size_t crypto_stream_xchacha20_messagebytes_max(void)
+--- !function
+name: crypto_stream_xchacha20_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream_xchacha20.h
+  line: 33
+
+# size_t crypto_stream_xchacha20_noncebytes(void)
+--- !function
+name: crypto_stream_xchacha20_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_xchacha20.h
+  line: 29
+
+# int crypto_stream_xchacha20_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_xchacha20_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_xchacha20.h
+  line: 41
+
+# int crypto_stream_xchacha20_xor_ic(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, uint64_t, const unsigned char *)
+--- !function
+name: crypto_stream_xchacha20_xor_ic
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  ic: uint64_t
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_xchacha20.h
+  line: 47
+
+# int crypto_stream_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream.h
+  line: 46
+
+# int crypto_stream_xsalsa20(unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_xsalsa20
+type: int
+parameters:
+  c: unsigned char *
+  clen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_xsalsa20.h
+  line: 36
+
+# size_t crypto_stream_xsalsa20_keybytes(void)
+--- !function
+name: crypto_stream_xsalsa20_keybytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_xsalsa20.h
+  line: 25
+
+# void crypto_stream_xsalsa20_keygen(unsigned char *)
+--- !function
+name: crypto_stream_xsalsa20_keygen
+type: void
+parameters:
+  k: unsigned char [32]
+definition:
+  file: sodium/crypto_stream_xsalsa20.h
+  line: 54
+
+# size_t crypto_stream_xsalsa20_messagebytes_max(void)
+--- !function
+name: crypto_stream_xsalsa20_messagebytes_max
+type: size_t
+definition:
+  file: sodium/crypto_stream_xsalsa20.h
+  line: 33
+
+# size_t crypto_stream_xsalsa20_noncebytes(void)
+--- !function
+name: crypto_stream_xsalsa20_noncebytes
+type: size_t
+definition:
+  file: sodium/crypto_stream_xsalsa20.h
+  line: 29
+
+# int crypto_stream_xsalsa20_xor(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_stream_xsalsa20_xor
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_xsalsa20.h
+  line: 41
+
+# int crypto_stream_xsalsa20_xor_ic(unsigned char *, const unsigned char *, unsigned long long, const unsigned char *, uint64_t, const unsigned char *)
+--- !function
+name: crypto_stream_xsalsa20_xor_ic
+type: int
+parameters:
+  c: unsigned char *
+  m: const unsigned char *
+  mlen: unsigned long long
+  n: const unsigned char *
+  ic: uint64_t
+  k: const unsigned char *
+definition:
+  file: sodium/crypto_stream_xsalsa20.h
+  line: 47
+
+# int crypto_verify_16(const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_verify_16
+type: int
+parameters:
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_verify_16.h
+  line: 16
+
+# size_t crypto_verify_16_bytes(void)
+--- !function
+name: crypto_verify_16_bytes
+type: size_t
+definition:
+  file: sodium/crypto_verify_16.h
+  line: 13
+
+# int crypto_verify_32(const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_verify_32
+type: int
+parameters:
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_verify_32.h
+  line: 16
+
+# size_t crypto_verify_32_bytes(void)
+--- !function
+name: crypto_verify_32_bytes
+type: size_t
+definition:
+  file: sodium/crypto_verify_32.h
+  line: 13
+
+# int crypto_verify_64(const unsigned char *, const unsigned char *)
+--- !function
+name: crypto_verify_64
+type: int
+parameters:
+  x: const unsigned char *
+  y: const unsigned char *
+definition:
+  file: sodium/crypto_verify_64.h
+  line: 16
+
+# size_t crypto_verify_64_bytes(void)
+--- !function
+name: crypto_verify_64_bytes
+type: size_t
+definition:
+  file: sodium/crypto_verify_64.h
+  line: 13
+
+# void randombytes(unsigned char *const, const unsigned long long)
+--- !function
+name: randombytes
+type: void
+parameters:
+  buf: unsigned char *
+  buf_len: const unsigned long long
+definition:
+  file: sodium/randombytes.h
+  line: 65
+
+# void randombytes_buf(void *const, const size_t)
+--- !function
+name: randombytes_buf
+type: void
+parameters:
+  buf: void *
+  size: const size_t
+definition:
+  file: sodium/randombytes.h
+  line: 35
+
+# void randombytes_buf_deterministic(void *const, const size_t, const unsigned char *)
+--- !function
+name: randombytes_buf_deterministic
+type: void
+parameters:
+  buf: void *
+  size: const size_t
+  seed: unsigned char const[32]
+definition:
+  file: sodium/randombytes.h
+  line: 39
+
+# int randombytes_close(void)
+--- !function
+name: randombytes_close
+type: int
+definition:
+  file: sodium/randombytes.h
+  line: 53
+
+# const char * randombytes_implementation_name(void)
+--- !function
+name: randombytes_implementation_name
+type: const char *
+definition:
+  file: sodium/randombytes.h
+  line: 60
+
+# uint32_t randombytes_random(void)
+--- !function
+name: randombytes_random
+type: uint32_t
+definition:
+  file: sodium/randombytes.h
+  line: 44
+
+# size_t randombytes_seedbytes(void)
+--- !function
+name: randombytes_seedbytes
+type: size_t
+definition:
+  file: sodium/randombytes.h
+  line: 32
+
+# int randombytes_set_implementation(randombytes_implementation *)
+--- !function
+name: randombytes_set_implementation
+type: int
+parameters:
+  impl: struct randombytes_implementation *
+definition:
+  file: sodium/randombytes.h
+  line: 56
+
+# void randombytes_stir(void)
+--- !function
+name: randombytes_stir
+type: void
+definition:
+  file: sodium/randombytes.h
+  line: 50
+
+# uint32_t randombytes_uniform(const uint32_t)
+--- !function
+name: randombytes_uniform
+type: uint32_t
+parameters:
+  upper_bound: const unsigned int
+definition:
+  file: sodium/randombytes.h
+  line: 47
+
+# void sodium_add(unsigned char *, const unsigned char *, const size_t)
+--- !function
+name: sodium_add
+type: void
+parameters:
+  a: unsigned char *
+  b: const unsigned char *
+  len: const size_t
+definition:
+  file: sodium/utils.h
+  line: 54
+
+# void * sodium_allocarray(size_t, size_t)
+--- !function
+name: sodium_allocarray
+type: void *
+parameters:
+  count: size_t
+  size: size_t
+definition:
+  file: sodium/utils.h
+  line: 146
+
+# int sodium_base642bin(unsigned char *const, const size_t, const char *const, const size_t, const char *const, size_t *const, const char **const, const int)
+--- !function
+name: sodium_base642bin
+type: int
+parameters:
+  bin: unsigned char *
+  bin_maxlen: const size_t
+  b64: const char *
+  b64_len: const size_t
+  ignore: const char *
+  bin_len: size_t *
+  b64_end: const char **
+  variant: const int
+definition:
+  file: sodium/utils.h
+  line: 94
+
+# size_t sodium_base64_encoded_len(const size_t, const int)
+--- !function
+name: sodium_base64_encoded_len
+type: size_t
+parameters:
+  bin_len: const size_t
+  variant: const int
+definition:
+  file: sodium/utils.h
+  line: 86
+
+# char * sodium_bin2base64(char *const, const size_t, const unsigned char *const, const size_t, const int)
+--- !function
+name: sodium_bin2base64
+type: char *
+parameters:
+  b64: char *
+  b64_maxlen: const size_t
+  bin: const unsigned char *
+  bin_len: const size_t
+  variant: const int
+definition:
+  file: sodium/utils.h
+  line: 89
+
+# char * sodium_bin2hex(char *const, const size_t, const unsigned char *const, const size_t)
+--- !function
+name: sodium_bin2hex
+type: char *
+parameters:
+  hex: char *
+  hex_maxlen: const size_t
+  bin: const unsigned char *
+  bin_len: const size_t
+definition:
+  file: sodium/utils.h
+  line: 60
+
+# int sodium_compare(const unsigned char *, const unsigned char *, size_t)
+--- !function
+name: sodium_compare
+type: int
+parameters:
+  b1_: const unsigned char *
+  b2_: const unsigned char *
+  len: size_t
+definition:
+  file: sodium/utils.h
+  line: 44
+
+# void sodium_free(void *)
+--- !function
+name: sodium_free
+type: void
+parameters:
+  ptr: void *
+definition:
+  file: sodium/utils.h
+  line: 150
+
+# int sodium_hex2bin(unsigned char *const, const size_t, const char *const, const size_t, const char *const, size_t *const, const char **const)
+--- !function
+name: sodium_hex2bin
+type: int
+parameters:
+  bin: unsigned char *
+  bin_maxlen: const size_t
+  hex: const char *
+  hex_len: const size_t
+  ignore: const char *
+  bin_len: size_t *
+  hex_end: const char **
+definition:
+  file: sodium/utils.h
+  line: 65
+
+# void sodium_increment(unsigned char *, const size_t)
+--- !function
+name: sodium_increment
+type: void
+parameters:
+  n: unsigned char *
+  nlen: const size_t
+definition:
+  file: sodium/utils.h
+  line: 51
+
+# int sodium_init(void)
+--- !function
+name: sodium_init
+type: int
+definition:
+  file: sodium/core.h
+  line: 12
+
+# int sodium_is_zero(const unsigned char *, const size_t)
+--- !function
+name: sodium_is_zero
+type: int
+parameters:
+  n: const unsigned char *
+  nlen: const size_t
+definition:
+  file: sodium/utils.h
+  line: 48
+
+# int sodium_library_minimal(void)
+--- !function
+name: sodium_library_minimal
+type: int
+definition:
+  file: sodium/version.h
+  line: 27
+
+# int sodium_library_version_major(void)
+--- !function
+name: sodium_library_version_major
+type: int
+definition:
+  file: sodium/version.h
+  line: 21
+
+# int sodium_library_version_minor(void)
+--- !function
+name: sodium_library_version_minor
+type: int
+definition:
+  file: sodium/version.h
+  line: 24
+
+# void * sodium_malloc(const size_t)
+--- !function
+name: sodium_malloc
+type: void *
+parameters:
+  size: const size_t
+definition:
+  file: sodium/utils.h
+  line: 142
+
+# int sodium_memcmp(const void *const, const void *const, size_t)
+--- !function
+name: sodium_memcmp
+type: int
+parameters:
+  b1_: const void *
+  b2_: const void *
+  len: size_t
+definition:
+  file: sodium/utils.h
+  line: 34
+
+# void sodium_memzero(void *const, const size_t)
+--- !function
+name: sodium_memzero
+type: void
+parameters:
+  pnt: void *
+  len: const size_t
+definition:
+  file: sodium/utils.h
+  line: 22
+
+# void sodium_misuse(void) __attribute__((noreturn))
+--- !function
+name: sodium_misuse
+type: void
+definition:
+  file: sodium/core.h
+  line: 21
+
+# int sodium_mlock(void *const, const size_t)
+--- !function
+name: sodium_mlock
+type: int
+parameters:
+  addr: void *
+  len: const size_t
+definition:
+  file: sodium/utils.h
+  line: 101
+
+# int sodium_mprotect_noaccess(void *)
+--- !function
+name: sodium_mprotect_noaccess
+type: int
+parameters:
+  ptr: void *
+definition:
+  file: sodium/utils.h
+  line: 153
+
+# int sodium_mprotect_readonly(void *)
+--- !function
+name: sodium_mprotect_readonly
+type: int
+parameters:
+  ptr: void *
+definition:
+  file: sodium/utils.h
+  line: 156
+
+# int sodium_mprotect_readwrite(void *)
+--- !function
+name: sodium_mprotect_readwrite
+type: int
+parameters:
+  ptr: void *
+definition:
+  file: sodium/utils.h
+  line: 159
+
+# int sodium_munlock(void *const, const size_t)
+--- !function
+name: sodium_munlock
+type: int
+parameters:
+  addr: void *
+  len: const size_t
+definition:
+  file: sodium/utils.h
+  line: 105
+
+# int sodium_pad(size_t *, unsigned char *, size_t, size_t, size_t)
+--- !function
+name: sodium_pad
+type: int
+parameters:
+  padded_buflen_p: size_t *
+  buf: unsigned char *
+  unpadded_buflen: size_t
+  blocksize: size_t
+  max_buflen: size_t
+definition:
+  file: sodium/utils.h
+  line: 162
+
+# int sodium_runtime_has_aesni(void)
+--- !function
+name: sodium_runtime_has_aesni
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 39
+
+# int sodium_runtime_has_avx(void)
+--- !function
+name: sodium_runtime_has_avx
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 27
+
+# int sodium_runtime_has_avx2(void)
+--- !function
+name: sodium_runtime_has_avx2
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 30
+
+# int sodium_runtime_has_avx512f(void)
+--- !function
+name: sodium_runtime_has_avx512f
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 33
+
+# int sodium_runtime_has_neon(void)
+--- !function
+name: sodium_runtime_has_neon
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 12
+
+# int sodium_runtime_has_pclmul(void)
+--- !function
+name: sodium_runtime_has_pclmul
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 36
+
+# int sodium_runtime_has_rdrand(void)
+--- !function
+name: sodium_runtime_has_rdrand
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 42
+
+# int sodium_runtime_has_sse2(void)
+--- !function
+name: sodium_runtime_has_sse2
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 15
+
+# int sodium_runtime_has_sse3(void)
+--- !function
+name: sodium_runtime_has_sse3
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 18
+
+# int sodium_runtime_has_sse41(void)
+--- !function
+name: sodium_runtime_has_sse41
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 24
+
+# int sodium_runtime_has_ssse3(void)
+--- !function
+name: sodium_runtime_has_ssse3
+type: int
+definition:
+  file: sodium/runtime.h
+  line: 21
+
+# int sodium_set_misuse_handler(void (*)(void))
+--- !function
+name: sodium_set_misuse_handler
+type: int
+parameters:
+  handler: void (*)(void)
+definition:
+  file: sodium/core.h
+  line: 18
+
+# void sodium_stackzero(const size_t)
+--- !function
+name: sodium_stackzero
+type: void
+parameters:
+  len: const size_t
+definition:
+  file: sodium/utils.h
+  line: 25
+
+# void sodium_sub(unsigned char *, const unsigned char *, const size_t)
+--- !function
+name: sodium_sub
+type: void
+parameters:
+  a: unsigned char *
+  b: const unsigned char *
+  len: const size_t
+definition:
+  file: sodium/utils.h
+  line: 57
+
+# int sodium_unpad(size_t *, const unsigned char *, size_t, size_t)
+--- !function
+name: sodium_unpad
+type: int
+parameters:
+  unpadded_buflen_p: size_t *
+  buf: const unsigned char *
+  padded_buflen: size_t
+  blocksize: size_t
+definition:
+  file: sodium/utils.h
+  line: 167
+
+# const char * sodium_version_string(void)
+--- !function
+name: sodium_version_string
+type: const char *
+definition:
+  file: sodium/version.h
+  line: 18

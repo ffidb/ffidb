@@ -14,3 +14,6 @@ objects:
   - libsodium.23.dylib  # Homebrew
 headers:
   - sodium.h
+exclude:
+  - _sodium_alloc_init                # undocumented
+  - _sodium_runtime_get_cpu_features  # undocumented

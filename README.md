@@ -9,6 +9,7 @@ Libraries
 | glew          |   2.1.0 | `GLEW`          | `GL/glew.h`                      |
 | hidapi        |   0.9.0 | `hidapi`        | `hidapi.h`                       |
 | libffi        |   3.3.0 | `ffi`           | `ffi.h`                          |
+| libsodium     |  1.0.18 | `sodium`        | `sodium.h`                       |
 | libuvc        |   0.0.6 | `uvc`           | `libuvc/libuvc.h`                |
 | lua           |   5.3.5 | `lua`           | `lua.h`, `lualib.h`, `lauxlib.h` |
 | openhmd       |   0.3.0 | `openhmd`       | `openhmd.h`                      |
