@@ -1,0 +1,16 @@
+--- !library
+name: glfw
+summary: A cross-platform library for Vulkan and OpenGL applications
+website: https://www.glfw.org
+source: https://github.com/glfw/glfw
+packages:
+  alpine: glfw
+  debian: libglfw3
+  homebrew: glfw3
+  ubuntu: libglfw3
+dlopen: glfw
+objects:
+  - libglfw.so.3     # Alpine, Debian, Ubuntu
+  - libglfw.3.dylib  # Homebrew
+headers:
+  - GLFW/glfw3.h
