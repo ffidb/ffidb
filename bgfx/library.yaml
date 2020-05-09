@@ -1,0 +1,17 @@
+--- !library
+name: bgfx
+summary: A cross-platform, graphic API agnostic rendering library
+website: https://github.com/bkaradzic/bgfx
+source: https://github.com/bkaradzic/bgfx
+packages:
+  alpine:
+  debian:
+  homebrew:
+  ubuntu:
+dlopen: bgfx
+objects:
+  - libbgfx.so                # Linux
+  - libbgfx.dylib             # macOS
+  - libbgfx-shared-lib.dylib  # macOS
+headers:
+  - GLFW/glfw3.h
