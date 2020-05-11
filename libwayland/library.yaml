@@ -1,0 +1,15 @@
+--- !library
+name: libwayland
+summary: Wayland compositor client library
+website: https://wayland.freedesktop.org
+source: https://gitlab.freedesktop.org/wayland/wayland
+packages:
+  alpine: wayland
+  debian: libwayland-client0
+  homebrew:
+  ubuntu: libwayland-client0
+dlopen: libwayland-client
+objects:
+  - libwayland-client.so.0  # Alpine, Debian, Ubuntu
+headers:
+  - wayland-client.h
