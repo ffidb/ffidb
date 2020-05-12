@@ -20,13 +20,14 @@ end
 
 task :parse_xml, [:path] do |t, args|
   path = (args.path || 'xr.xml')
+  input = File.read(path)
 
   require 'ox' # https://rubygems.org/gems/ox
   class Ox::Node; include Enumerable; end
 
   # https://raw.githubusercontent.com/KhronosGroup/OpenXR-SDK/release-1.0.8/specification/registry/xr.xml
   functions = []
-  xml = Ox.load_file(path).registry
+  xml = Ox.parse(input).registry
   commands = xml.locate("feature[@name=XR_VERSION_1_0]/require/command/@name").to_a.sort.freeze
   xml.locate("commands/command").each do |command|
     command_name = command.locate("proto/name").first.text
@@ -42,6 +43,9 @@ task :parse_xml, [:path] do |t, args|
       end
       function.parameters[parameter_name] = FFIDB::Parameter.new(parameter_name, FFIDB::Type.new(parameter_type.join(' ')))
     end
+    command_tag = "<name>#{command_name}</name>"
+    line = input.each_line.find_index { |line| line.include?(command_tag) }
+    function.definition = FFIDB::Location.new(file: path, line: line)
     functions << function
   end
 
