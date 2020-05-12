@@ -4,7 +4,7 @@ require 'ffidb'
 require 'open-uri'
 require 'rake'
 
-task default: %w(update)
+task default: %w(parse_xml)
 
 task :update do
   # TODO: https://github.com/KhronosGroup/OpenXR-SDK/tags
@@ -16,4 +16,41 @@ end
 
 task :parse do
   # TODO
+end
+
+task :parse_xml, [:path] do |t, args|
+  path = (args.path || 'xr.xml')
+
+  require 'ox' # https://rubygems.org/gems/ox
+  class Ox::Node; include Enumerable; end
+
+  # https://raw.githubusercontent.com/KhronosGroup/OpenXR-SDK/release-1.0.8/specification/registry/xr.xml
+  functions = []
+  xml = Ox.load_file(path).registry
+  commands = xml.locate("feature[@name=XR_VERSION_1_0]/require/command/@name").to_a.sort.freeze
+  xml.locate("commands/command").each do |command|
+    command_name = command.locate("proto/name").first.text
+    next unless commands.include?(command_name)
+    function = FFIDB::Function.new(name: command_name, parameters: {})
+    function.type = FFIDB::Type.new(command.locate("proto/type").first.text)
+    command.locate("param").each do |param|
+      parameter_name = param.locate("name").first.text.to_sym
+      parameter_type = param.remove_children_by_path("name").map { |node| (node.is_a?(String) ? node : node.text).strip }
+      parameter_type = case parameter_type
+        in [base_type, '[', _, ']'] then [base_type, '*']
+        else parameter_type
+      end
+      function.parameters[parameter_name] = FFIDB::Parameter.new(parameter_name, FFIDB::Type.new(parameter_type.join(' ')))
+    end
+    functions << function
+  end
+
+  c = FFIDB::Exporter.for(:c).new($stdout, parameter_names: false, semicolon: false)
+  class <<c; def extern_qualifier() nil end; end
+  functions.sort.each_with_index do |function, index|
+    puts unless index.zero?
+    print '# '
+    c.export_function(function)
+    puts function.to_yaml
+  end
 end
