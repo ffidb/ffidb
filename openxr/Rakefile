@@ -26,8 +26,16 @@ task :parse_xml, [:path] do |t, args|
   class Ox::Node; include Enumerable; end
 
   # https://raw.githubusercontent.com/KhronosGroup/OpenXR-SDK/release-1.0.8/specification/registry/xr.xml
-  functions = []
   xml = Ox.parse(input).registry
+
+  constants = {}
+  xml.locate("enums[@name=API Constants]/enum").each do |element|
+    name = element.attributes[:name]
+    value = element.attributes[:value].to_i
+    constants[name] = value
+  end
+
+  functions = []
   commands = xml.locate("feature[@name=XR_VERSION_1_0]/require/command/@name").to_a.sort.freeze
   xml.locate("commands/command").each do |command|
     command_name = command.locate("proto/name").first.text
@@ -49,12 +57,53 @@ task :parse_xml, [:path] do |t, args|
     functions << function
   end
 
+  enums = []
+  xml.locate("types/type[@category=enum]").each do |element|
+    enum = FFIDB::Enum.new(element.attributes[:name])
+    xml.locate("enums[@name=#{enum.name}]").each do |element|
+      enum.comment = element.attributes[:comment]
+      enum.comment = nil if enum.comment == ''
+      element.locate("enum").each do |element|
+        name = element.attributes[:name]
+        value = if element.attributes[:bitpos]
+          1 << element.attributes[:bitpos].to_i
+        else
+          element.attributes[:value].to_i
+        end
+        enum.values[name] = value
+      end
+      enums << enum
+    end
+  end
+
+  structs = []
+  xml.locate("types/type[@category=struct]").each do |element|
+    struct = FFIDB::Struct.new(element.attributes[:name])
+    element.locate("member").each do |element|
+      field_name = element.locate("name").first.text.to_sym
+      field_type = element.remove_children_by_path("name").map { |node| (node.is_a?(String) ? node : node.text).strip }
+      field_type = case field_type
+        in [t, '[', s, ']'] then [t, '[' + constants[s].to_s + ']']
+        in ['const', t, '* const*'] then ['const', t, '**']
+        else field_type
+      end
+      struct.fields[field_name] = FFIDB::Type.new(field_type.join(' '))
+    end
+    structs << struct
+  end
+
   c = FFIDB::Exporter.for(:c).new($stdout, parameter_names: false, semicolon: false)
-  class <<c; def extern_qualifier() nil end; end
-  functions.sort.each_with_index do |function, index|
-    puts unless index.zero?
-    print '# '
-    c.export_function(function)
-    puts function.to_yaml
+  class << c; def extern_qualifier() nil end; end
+  [enums, structs, functions].reject { |a| a.empty? }.each_with_index do |symbols, i|
+    symbols.sort.each_with_index do |symbol, j|
+      puts unless i.zero? && j.zero?
+      print '# '
+      if symbol.function?
+        c.export_function(symbol)
+      else
+        puts symbol.to_s
+      end
+      puts symbol.to_yaml
+    end
   end
 end
