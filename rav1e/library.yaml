@@ -1,0 +1,16 @@
+--- !library
+name: rav1e
+summary: AV1 video encoder
+website: https://github.com/xiph/rav1e
+source: https://github.com/xiph/rav1e
+packages:
+  alpine: rav1e-libs
+  debian:
+  homebrew: rav1e
+  ubuntu:
+dlopen: rav1e
+objects:
+  - librav1e.so.0     # Alpine
+  - librav1e.0.dylib  # Homebrew
+headers:
+  - rav1e.h
